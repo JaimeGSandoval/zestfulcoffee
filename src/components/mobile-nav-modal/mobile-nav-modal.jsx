@@ -1,40 +1,53 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/icons/logo.svg';
+import close from '../../assets/icons/icon-close.svg';
 import './mobile-nav-modal';
-import logo from "../../assets/icons/logo.svg";
-import close from "../../assets/icons/icon-close.svg";
 
-const MobileNavModal = () => {
+const MobileNavModal = ({ showModal, setShowModal }) => {
+  const show = showModal ? 'mobile-nav-page' : 'hide';
+
   return (
     <>
-      <div class="mobile-nav-page">
-        <div class="mobile-page-header">
-          <img
-            src={logo}
-            alt="logo"
-            class="mobile-nav-logo"
-          />
+      <div className={show}>
+        <div className="mobile-page-header">
+          <img src={logo} alt="logo" className="mobile-nav-logo" />
           <img
             src={close}
             alt="mobile icon close"
-            class="mobile-close"
+            className="mobile-close"
+            onClick={() => setShowModal(false)}
           />
         </div>
 
-        <nav class="mobile-nav" aria-label="mobile navigation">
-          <ul class="mobile-nav-list">
+        <nav className="mobile-nav" aria-label="mobile navigation">
+          <ul className="mobile-nav-list">
             <li>
-              <a href="/" class="mobile-nav-links" data-link>
+              <Link
+                to="/"
+                className="mobile-nav-links"
+                onClick={() => setShowModal(false)}
+              >
                 home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" class="mobile-nav-links" data-link>
-                about us
-              </a>
+              <Link
+                to="/about"
+                className="mobile-nav-links"
+                onClick={() => setShowModal(false)}
+              >
+                about
+              </Link>
             </li>
             <li>
-              <a href="/plan" class="mobile-nav-links" data-link>
+              <Link
+                to="/plan"
+                className="mobile-nav-links"
+                onClick={() => setShowModal(false)}
+              >
                 create a plan
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
