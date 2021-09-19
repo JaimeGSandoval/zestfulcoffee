@@ -6,7 +6,7 @@ import './mobile-header';
 const MobileHeader = ({ setShowModal }) => {
   return (
     <>
-      <header class="mobile-header">
+      <header className="mobile-header">
         <img src={logo} class="mobile-logo" alt="logo" />
         <img
           src={hamburgerMenu}

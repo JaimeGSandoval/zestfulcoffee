@@ -3,12 +3,11 @@
 @import './abstract/vars';
 @import '../components/mobile-nav-modal/mobile-nav-modal';
 @import '../components/mobile-header/mobile-header';
-
+@import '../components/home-page/hero-section/_hero-styles';
 
 html {
   height: 100%;
   overflow-y: hidden;
-  // position: fixed;
 }
 
 body {
@@ -23,4 +22,9 @@ body {
 
 .App {
   height: 100%;
+}
+
+.container {
+  width: 88%;
+  margin: auto;
 }
