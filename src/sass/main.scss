@@ -4,10 +4,11 @@
 @import '../components/mobile-nav-modal/mobile-nav-modal';
 @import '../components/mobile-header/mobile-header';
 @import '../components/home-page/hero-section/_hero-styles';
+@import '../components/home-page/collection-section/collection';
+
 
 html {
   height: 100%;
-  overflow-y: hidden;
 }
 
 body {
