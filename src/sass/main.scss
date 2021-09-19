@@ -1,0 +1,26 @@
+@import './base/reset';
+@import './base/typography';
+@import './abstract/vars';
+@import '../components/mobile-nav-modal/mobile-nav-modal';
+@import '../components/mobile-header/mobile-header';
+
+
+html {
+  height: 100%;
+  overflow-y: hidden;
+  // position: fixed;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  max-width: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+}
