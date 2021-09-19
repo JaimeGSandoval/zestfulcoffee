@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import MobileNavModal from './components/mobile-nav-modal/mobile-nav-modal';
+import MobileHeader from './components/mobile-header/mobile-header';
+import './sass/main.scss';
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MobileNavModal showModal={showModal} setShowModal={setShowModal} />
+      <MobileHeader setShowModal={setShowModal} />
+      <Switch>
+        <Route exact path="/" render={() => <h1>Home Page</h1>} />
+        <Route exact path="/about" render={() => <h1>About Page</h1>} />
+        <Route exact path="/plan" render={() => <h1>Plan Page</h1>} />
+      </Switch>
     </div>
   );
 }
