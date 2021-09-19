@@ -1,0 +1,62 @@
+@import '../../../sass/abstract/vars';
+
+.plan-how-to-home {
+  margin-top: 8rem;
+}
+
+.how-to-title {
+  text-align: center;
+  font-family: $title_font, serif;
+  color: $grey;
+}
+
+.step-number {
+  text-align: center;
+  color: $pale_orange;
+  font-family: $title_font, serif;
+  font-size: 4rem;
+  display: block;
+  margin-top: 5rem;
+}
+
+.step-title {
+  text-align: center;
+  font-family: $title_font, serif;
+  color: $dark_grey_blue;
+  font-size: 1.7rem;
+  margin-top: 1.4rem;
+}
+
+.step-description {
+  margin-top: 1.8rem;
+  text-align: center;
+  font-family: $description_font;
+  color: $grey;
+  line-height: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.custom-step-padding-1 {
+  padding: 0 1rem;
+}
+
+.create-plan-btn-steps {
+  color: $bg_light_cream;
+  text-align: center;
+  background-color: $dark_cyan;
+  outline: 0;
+  border: 0;
+  text-transform: capitalize;
+  padding: 1.2rem 1.3rem;
+  font-family: $title_font, sans-serif;
+  font-size: 1.2rem;
+  width: 59%;
+  border-radius: 10px;
+  margin:  5rem auto;
+  display: block;
+}
+
+.create-plan-btn-steps a {
+  color: $bg_light_cream;
+  text-decoration: none;
+}
