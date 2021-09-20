@@ -6,11 +6,11 @@ import './mobile-header';
 const MobileHeader = ({ setShowModal }) => {
   return (
     <>
-      <header class="mobile-header">
-        <img src={logo} class="mobile-logo" alt="logo" />
+      <header className="mobile-header">
+        <img src={logo} className="mobile-logo" alt="logo" />
         <img
           src={hamburgerMenu}
-          class="hamburger-menu"
+          className="hamburger-menu"
           alt="mobile menu icon"
           onClick={() => setShowModal(true)}
         />

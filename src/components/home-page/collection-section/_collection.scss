@@ -1,0 +1,47 @@
+@import '../../../sass/abstract/vars';
+
+.collection-section {
+  margin-top: 9rem;
+}
+
+.collection-header-text {
+  text-align: center;
+  font-family: $title_font, serif;
+  font-size: 2.5rem;
+  background: linear-gradient(to bottom, #333D4B 0%, #FFFFFF 88%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coffee-box {
+  margin-top: 4.5rem;
+  width: 100%;
+}
+
+.coffee-img-container {
+  width: 100%;
+}
+
+.coffee-img {
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+
+.coffee-title {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-family: $title_font, serif;
+  color: $dark_grey_blue;
+  text-transform: capitalize;
+  font-size: 1.7rem;
+}
+
+.coffee-description {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-family: $description_font, sans-serif;
+  line-height: 1.9rem;
+  font-size: 1.1rem;
+  color: $dark_grey_blue;
+}
