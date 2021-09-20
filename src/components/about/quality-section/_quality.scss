@@ -1,0 +1,42 @@
+@import '../../../sass/abstract/vars';
+
+.quality-section {
+  width: 100%;
+  margin: 13rem auto 0 auto;
+  background-color: $dark_grey_blue;
+  border-radius: .8rem;
+}
+
+.quality-img {
+  bottom: 20%;
+  margin: auto;
+  width: 90%;
+  height: 100%;
+  border-radius: .8rem;
+  display: block;
+  transform: translateY(-50%);
+}
+
+.quality-title {
+  text-align: center;
+  font-family: $title_font, serif;
+  color: $bg_light_cream;
+  font-size: 2rem;
+  margin: 5rem 0 3rem 0;
+}
+
+.quality-description {
+  font-family: $description_font, sans-serif;
+  color: $grey;
+  line-height: 1.7rem;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.quality-text-box {
+  transform: translateY(-20%);
+}
