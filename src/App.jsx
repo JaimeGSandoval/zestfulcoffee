@@ -3,7 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import MobileNavModal from './components/mobile-nav-modal/mobile-nav-modal';
 import MobileHeader from './components/mobile-header/mobile-header';
 import Home from './components/home-page/Home';
-import About from './components/about/About';
+import About from './components/about-page/About';
+import Plan from './components/plan-page/Plan';
 import Footer from './components/footer/Footer';
 import './sass/main.scss';
 
@@ -23,7 +24,7 @@ function App() {
             render={() => <Home showModal={setShowModal} />}
           />
           <Route exact path="/about" render={() => <About />} />
-          <Route exact path="/plan" render={() => <h1>Plan Page</h1>} />
+          <Route exact path="/plan" render={() => <Plan />} />
         </Switch>
       </main>
       <Footer />
