@@ -1,0 +1,44 @@
+@import '../../../sass/abstract/vars';
+
+.headquarters-section {
+  margin: 9rem 0;
+  width: 100%;
+}
+
+.headquarters-title {
+  color: $grey;
+  font-family: $title_font, serif;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.country-icons {
+  margin: 5rem auto 3.5rem auto;
+  display: block;
+  width: 16%;
+}
+
+.country-title {
+  color: $dark_grey_blue;
+  text-align: center;
+  font-size: 2.1rem;
+  font-family: $title_font, serif;
+  text-transform: capitalize;
+}
+
+.address-text-box {
+  margin-top: 2.5rem;
+}
+
+.address-text {
+  display: block;
+  text-align: center;
+  font-family: $description_font;
+  color: $dark_grey_blue;
+  font-size: 1.2rem;
+  padding-bottom: .7rem;
+}
+
+.address-text-box span:nth-of-type(3) {
+  padding-bottom: .8rem;
+}
