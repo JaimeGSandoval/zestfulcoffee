@@ -1,0 +1,43 @@
+  @import '../../sass/abstract/vars';
+
+.footer {
+  margin: 0 auto 4rem auto;
+  width: 100%;
+  background-color: $dark_grey_blue;
+}
+
+
+.footer-nav {
+  list-style: none;
+}
+
+.footer-nav {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-family: $description_font, sans-serif;
+}
+
+.footer-nav-link {
+  color: $grey;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-logo {
+  width: 62%;
+  margin: auto;
+  padding: 2.5rem 0;
+  display: block;
+}
+
+
+.social-icons-box {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 2.1rem 0;
+}
