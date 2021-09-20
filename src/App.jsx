@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import MobileNavModal from './components/mobile-nav-modal/mobile-nav-modal';
 import MobileHeader from './components/mobile-header/mobile-header';
 import Home from './components/home-page/Home';
+import Footer from './components/footer/Footer';
 import './sass/main.scss';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/plan" render={() => <h1>Plan Page</h1>} />
         </Switch>
       </div>
+      <Footer />
     </div>
   );
 }
