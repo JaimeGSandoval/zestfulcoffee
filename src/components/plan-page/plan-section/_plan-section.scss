@@ -1,0 +1,63 @@
+@import '../../../sass/abstract/vars';
+
+.plan-how-to-section {
+  margin-top: 7rem;
+  background-color: $dark_grey_blue;
+  border-radius: .8rem;
+  width: 100vw;
+  margin-left: -7%;
+}
+
+.plan-how-to-section div:nth-of-type(1) {
+  padding-top: .8rem;
+}
+
+.plan-how-to-section div:last-of-type {
+  padding-bottom: 5.8rem;
+}
+
+.plan-step-number {
+  text-align: center;
+  color: $pale_orange;
+  font-family: $title_font, serif;
+  font-size: 4rem;
+  display: block;
+  margin-top: 5rem;
+}
+
+.plan-step-title {
+  text-align: center;
+  font-family: $title_font, serif;
+  color: $bg_light_cream;
+  font-size: 1.7rem;
+  margin-top: 1.4rem;
+}
+
+.plan-step-description {
+  margin-top: 1.8rem;
+  text-align: center;
+  font-family: $description_font;
+  color: $grey;
+  line-height: 1.5rem;
+  padding: 0 1.1rem;
+}
+
+.custom-step-padding-1 {
+  padding: 0 1rem;
+}
+
+.create-plan-btn-steps {
+  color: $bg_light_cream;
+  text-align: center;
+  background-color: $dark_cyan;
+  outline: 0;
+  border: 0;
+  text-transform: capitalize;
+  padding: 1.2rem 1.3rem;
+  font-family: $title_font, sans-serif;
+  font-size: 1.2rem;
+  width: 59%;
+  border-radius: 10px;
+  margin: 5rem auto;
+  display: block;
+}
