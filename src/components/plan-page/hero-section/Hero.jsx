@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="plan-about-section">
       <picture>
-        <source srcset={blackcupWebp} />
+        <source srcSet={blackcupWebp} />
         <img src={blackcupJpg} alt="White cupcake" className="hero-about" />
       </picture>
       <span className="plan-title">Create a plan</span>

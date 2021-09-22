@@ -23,7 +23,7 @@ const steps = [
 
 const PlanSteps = () => {
   return (
-    <section class="plan-how-to-section">
+    <section className="plan-how-to-section">
       {steps.map((step, i) => (
         <StepBox step={step} stepNumber={i + 1} key={step.title} />
       ))}
