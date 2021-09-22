@@ -1,5 +1,6 @@
 import React from 'react';
 import OptionContainer from './OptionContainer';
+import OptionBox from './OptionBox';
 import coffeeOptions from './coffeeOptions';
 import './_options.scss';
 
@@ -7,12 +8,16 @@ const Options = () => {
   return (
     <>
       <section className="options-section">
-        {coffeeOptions.map((option) => {
+        {coffeeOptions.map((option, i) => {
           return (
             <OptionContainer
               optionQuestion={option.question}
-              option={option.options}
-            />
+              key={option.question}
+            >
+              {option.options.map((option, i) => {
+                return <OptionBox option={option} key={i} />;
+              })}
+            </OptionContainer>
           );
         })}
       </section>
