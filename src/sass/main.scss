@@ -7,9 +7,13 @@
 @import '../components/home-page/collection-section/collection';
 @import '../components/home-page/plan-section/plan';
 @import '../components/footer/footer';
-@import '../components/about/hero-section/hero-about';
-@import '../components/about/commitment-section/commitment';
-@import '../components/about/headquarter-section/headquarters';
+@import '../components/about-page/hero-section/hero-about';
+@import '../components/about-page/commitment-section/commitment';
+@import '../components/about-page/headquarter-section/headquarters';
+@import '../components/about-page/quality-section/quality';
+@import '../components/plan-page/hero-section/hero-plan';
+@import '../components/plan-page/plan-section/plan-section';
+@import '../components/plan-page/options-section/options';
 
 html {
   height: 100%;

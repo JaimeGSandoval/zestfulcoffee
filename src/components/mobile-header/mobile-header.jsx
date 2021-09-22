@@ -3,7 +3,7 @@ import hamburgerMenu from '../../assets/icons/icon-hamburger.svg';
 import logo from '../../assets/icons/logo.svg';
 import './mobile-header';
 
-const MobileHeader = ({ setShowModal }) => {
+const MobileHeader = ({ openModal }) => {
   return (
     <>
       <header className="mobile-header">
@@ -12,7 +12,7 @@ const MobileHeader = ({ setShowModal }) => {
           src={hamburgerMenu}
           className="hamburger-menu"
           alt="mobile menu icon"
-          onClick={() => setShowModal(true)}
+          onClick={openModal}
         />
       </header>
     </>

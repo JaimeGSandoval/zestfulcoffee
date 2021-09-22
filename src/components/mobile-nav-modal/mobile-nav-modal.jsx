@@ -1,22 +1,45 @@
-import React from 'react';
+import React, { useState, forwardRef, useImperativeHandle } from 'react';
+import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/logo.svg';
-import close from '../../assets/icons/icon-close.svg';
+import closeIcon from '../../assets/icons/icon-close.svg';
 import './mobile-nav-modal';
 
-const MobileNavModal = ({ showModal, setShowModal }) => {
-  const show = showModal ? 'mobile-nav-page' : 'hide';
+const MobileNavModal = forwardRef((props, ref) => {
+  const [showModal, setShowModal] = useState(false);
 
-  return (
-    <>
-      <div className={show}>
+  const openModalClick = () => {
+    setShowModal(true);
+  };
+
+  const closeModalClick = () => {
+    setShowModal(false);
+  };
+
+  // attaching functions to the ref that can be used in the component where the ref lives
+  useImperativeHandle(ref, () => {
+    return {
+      open: () => openModalClick(),
+      close: () => closeModalClick(),
+    };
+  });
+
+  if (showModal) {
+    return ReactDOM.createPortal(
+      <div className="mobile-nav-page" onClick={closeModalClick}>
         <div className="mobile-page-header">
-          <img src={logo} alt="logo" className="mobile-nav-logo" />
           <img
-            src={close}
+            src={logo}
+            alt="logo"
+            className="mobile-nav-logo"
+            onError={(e) => (e.target.onerror = null)}
+          />
+          <img
+            src={closeIcon}
             alt="mobile icon close"
             className="mobile-close"
-            onClick={() => setShowModal(false)}
+            onClick={closeModalClick}
+            onError={(e) => (e.target.onerror = null)}
           />
         </div>
 
@@ -26,7 +49,7 @@ const MobileNavModal = ({ showModal, setShowModal }) => {
               <Link
                 to="/"
                 className="mobile-nav-links"
-                onClick={() => setShowModal(false)}
+                onClick={closeModalClick}
               >
                 home
               </Link>
@@ -35,7 +58,7 @@ const MobileNavModal = ({ showModal, setShowModal }) => {
               <Link
                 to="/about"
                 className="mobile-nav-links"
-                onClick={() => setShowModal(false)}
+                onClick={closeModalClick}
               >
                 about
               </Link>
@@ -44,16 +67,19 @@ const MobileNavModal = ({ showModal, setShowModal }) => {
               <Link
                 to="/plan"
                 className="mobile-nav-links"
-                onClick={() => setShowModal(false)}
+                onClick={closeModalClick}
               >
                 create a plan
               </Link>
             </li>
           </ul>
         </nav>
-      </div>
-    </>
-  );
-};
+      </div>,
+      document.getElementById('modal-root')
+    );
+  }
+
+  return null;
+});
 
 export default MobileNavModal;
