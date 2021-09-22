@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <MobileNavModal ref={modalRef} closeModal={closeModal} />
+      <MobileNavModal ref={modalRef} />
       <MobileHeader openModal={openModal} />
 
       <main className="container">
