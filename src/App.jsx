@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import MobileNavModal from './components/mobile-nav-modal/mobile-nav-modal';
 import MobileHeader from './components/mobile-header/mobile-header';
@@ -18,6 +18,18 @@ function App() {
   const closeModal = () => {
     modalRef.current.close();
   };
+
+  useEffect(() => {
+    document.body.addEventListener('click', (e) => {
+      e.preventDefault();
+      const panel = e.target.nextElementSibling;
+      if (e.target.matches('[data-arrow]')) {
+        panel.classList.toggle('show-option');
+        e.target.classList.toggle('toggle-arrow');
+        console.log('CHIDORI ARROW!!');
+      }
+    });
+  }, []);
 
   return (
     <div className="App">
