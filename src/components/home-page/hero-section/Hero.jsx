@@ -4,7 +4,7 @@ import './_hero-styles.scss';
 import heroWebp from '../../../assets/images/home/mobile/hero-coffeepress.webp';
 import heroPng from '../../../assets/images/home/mobile/hero-coffeepress.jpg';
 
-const Hero = ({ setShowModal }) => {
+const Hero = () => {
   return (
     <>
       <section className="hero-section">
@@ -22,9 +22,6 @@ const Hero = ({ setShowModal }) => {
         <button className="create-plan-btn" data-plan>
           <Link to="/plan">create a plan</Link>
         </button>
-        {/* <Link to="/plan" className="create-plan-btn" data-plan>
-          create a plan
-        </Link> */}
       </section>
     </>
   );
