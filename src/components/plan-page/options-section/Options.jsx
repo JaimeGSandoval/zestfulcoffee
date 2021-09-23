@@ -1,5 +1,5 @@
 import React from 'react';
-import OptionBox from './OptionBox';
+import OptionContainer from './OptionContainer';
 import {
   drinkTypes,
   coffeeTypes,
@@ -19,52 +19,25 @@ const Options = () => {
             How do you drink your coffee?
           </h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <div className="options-container">
-            {drinkTypes.map((drinkType) => {
-              return (
-                <OptionBox option={drinkType} key={drinkType.optionTitle} />
-              );
-            })}
-          </div>
+          <OptionContainer items={drinkTypes} />
         </div>
 
         <div className="option-container">
           <h1 className="option-title-question">What type of coffee?</h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <div className="options-container">
-            {coffeeTypes.map((coffeeType) => {
-              return (
-                <OptionBox option={coffeeType} key={coffeeType.optionTitle} />
-              );
-            })}
-          </div>
+          <OptionContainer items={coffeeTypes} />
         </div>
 
         <div className="option-container">
           <h1 className="option-title-question">How much would you like?</h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <div className="options-container">
-            {coffeeAmounts.map((coffeeAmount) => {
-              return (
-                <OptionBox
-                  option={coffeeAmount}
-                  key={coffeeAmount.optionTitle}
-                />
-              );
-            })}
-          </div>
+          <OptionContainer items={coffeeAmounts} />
         </div>
 
         <div className="option-container">
           <h1 className="option-title-question">Want us to grind them?</h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <div className="options-container">
-            {grindTypes.map((grindType) => {
-              return (
-                <OptionBox option={grindType} key={grindType.optionTitle} />
-              );
-            })}
-          </div>
+          <OptionContainer items={grindTypes} />
         </div>
 
         <div className="option-container">
@@ -72,16 +45,7 @@ const Options = () => {
             How often should we deliver?
           </h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <div className="options-container">
-            {deliveryTypes.map((deliveryType) => {
-              return (
-                <OptionBox
-                  option={deliveryType}
-                  key={deliveryType.optionTitle}
-                />
-              );
-            })}
-          </div>
+          <OptionContainer items={deliveryTypes} />
         </div>
       </section>
 
