@@ -26,7 +26,6 @@ function App() {
       if (e.target.matches('[data-arrow]')) {
         panel.classList.toggle('show-option');
         e.target.classList.toggle('toggle-arrow');
-        console.log('CHIDORI ARROW!!');
       }
     });
   }, []);
