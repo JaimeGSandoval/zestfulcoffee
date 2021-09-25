@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CreatePlanBtn from '../../utilities/CreatePlanBtn';
 import StepBox from './StepBox';
 import './_plan.scss';
 
@@ -30,9 +30,7 @@ const Plan = () => {
         <StepBox step={step} stepNumber={i + 1} key={step.title} />
       ))}
 
-      <button className="create-plan-btn-steps" data-plan>
-        <Link to="/plan">create a plan</Link>
-      </button>
+      <CreatePlanBtn text={'create a plan'} className="create-plan-btn-steps" />
     </section>
   );
 };
