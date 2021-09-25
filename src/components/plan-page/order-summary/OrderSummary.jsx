@@ -1,22 +1,29 @@
 import React from 'react';
 
-export const gatherOrderData = (orderData) => {
-  console.log('order data is ', orderData);
-  return orderData;
-};
-
-const OrderSummary = () => {
+const OrderSummary = ({ orderData }) => {
   return (
     <>
-      <section class="order-container">
-        <div class="order-summary-text-box">
-          <h1 class="order-summary-title">order summary</h1>
-          <p class="order-summary-text">
-            “I drink my coffee <span class="drinkType order-text"> Filter</span>
-            , with a <span class="coffee order-text"> Decaf</span> type of bean.
-            <span class="amount order-text"> 250g</span> ground ala
-            <span class="grind order-text"> Cafetiére</span>, sent to me
-            <span class="deliver order-text"> Every Week</span>.”
+      <section className="order-container">
+        <div className="order-summary-text-box">
+          <h1 className="order-summary-title">order summary</h1>
+          <p className="order-summary-text">
+            “I drink my coffee as
+            <span className="drinkType order-text"> {orderData.drinkType}</span>
+            , with a
+            <span className="coffee order-text"> {orderData.coffeeType}</span>{' '}
+            type of bean.
+            <span className="amount order-text">
+              {' '}
+              {orderData.coffeeAmount}
+            </span>{' '}
+            ground ala
+            <span className="grind order-text"> {orderData.grindType}</span>,
+            sent to me
+            <span className="deliver order-text">
+              {' '}
+              {orderData.deliveryType}
+            </span>
+            .”
           </p>
         </div>
       </section>

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { gatherOrderData } from '../order-summary/OrderSummary';
 import './_options.scss';
 
-const OptionContainer = ({ options }) => {
+const OptionContainer = ({ options, setOrderData, orderData }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const onOptionClick = (index, e) => {
-    gatherOrderData(e.target.dataset.name);
+    setOrderData((prev) => ({
+      ...prev,
+      [e.target.dataset.type]: e.target.dataset.name,
+    }));
     setActiveIndex(index);
   };
 
@@ -19,11 +21,20 @@ const OptionContainer = ({ options }) => {
           className={`option-box ${active}`}
           onClick={(e) => onOptionClick(index, e)}
           data-name={option.optionTitle}
+          data-type={option.dataType}
         >
-          <h2 className="option-title" data-name={option.optionTitle}>
+          <h2
+            className="option-title"
+            data-name={option.optionTitle}
+            data-type={option.dataType}
+          >
             {option.optionTitle}
           </h2>
-          <p className="option-description" data-name={option.optionTitle}>
+          <p
+            className="option-description"
+            data-name={option.optionTitle}
+            data-type={option.dataType}
+          >
             {option.optionDescription}
           </p>
         </div>
