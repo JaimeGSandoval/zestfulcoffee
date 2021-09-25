@@ -1,5 +1,6 @@
-import React from 'react';
-import OptionBox from './OptionBox';
+import React, { useState } from 'react';
+import OrderSummary from '../order-summary/OrderSummary';
+import OptionContainer from './OptionContainer';
 import {
   drinkTypes,
   coffeeTypes,
@@ -11,6 +12,14 @@ import arrowIcon from '../../../assets/icons/icon-arrow.svg';
 import './_options.scss';
 
 const Options = () => {
+  const [orderData, setOrderData] = useState({
+    drinkType: '',
+    coffeeType: '',
+    coffeeAmount: '',
+    grindType: '',
+    deliveryType: '',
+  });
+
   return (
     <>
       <section className="options-section">
@@ -19,52 +28,32 @@ const Options = () => {
             How do you drink your coffee?
           </h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <div className="options-container">
-            {drinkTypes.map((drinkType) => {
-              return (
-                <OptionBox option={drinkType} key={drinkType.optionTitle} />
-              );
-            })}
-          </div>
+          <OptionContainer options={drinkTypes} setOrderData={setOrderData} />
         </div>
 
         <div className="option-container">
           <h1 className="option-title-question">What type of coffee?</h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <div className="options-container">
-            {coffeeTypes.map((coffeeType) => {
-              return (
-                <OptionBox option={coffeeType} key={coffeeType.optionTitle} />
-              );
-            })}
-          </div>
+          <OptionContainer options={coffeeTypes} setOrderData={setOrderData} />
         </div>
 
         <div className="option-container">
           <h1 className="option-title-question">How much would you like?</h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <div className="options-container">
-            {coffeeAmounts.map((coffeeAmount) => {
-              return (
-                <OptionBox
-                  option={coffeeAmount}
-                  key={coffeeAmount.optionTitle}
-                />
-              );
-            })}
-          </div>
+          <OptionContainer
+            options={coffeeAmounts}
+            setOrderData={setOrderData}
+          />
         </div>
 
         <div className="option-container">
           <h1 className="option-title-question">Want us to grind them?</h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <div className="options-container">
-            {grindTypes.map((grindType) => {
-              return (
-                <OptionBox option={grindType} key={grindType.optionTitle} />
-              );
-            })}
-          </div>
+          <OptionContainer
+            options={grindTypes}
+            setOrderData={setOrderData}
+            orderData={orderData}
+          />
         </div>
 
         <div className="option-container">
@@ -72,19 +61,13 @@ const Options = () => {
             How often should we deliver?
           </h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <div className="options-container">
-            {deliveryTypes.map((deliveryType) => {
-              return (
-                <OptionBox
-                  option={deliveryType}
-                  key={deliveryType.optionTitle}
-                />
-              );
-            })}
-          </div>
+          <OptionContainer
+            options={deliveryTypes}
+            setOrderData={setOrderData}
+          />
         </div>
       </section>
-
+      <OrderSummary orderData={orderData} />
       <div className="create-plan-order-container">
         <button className="create-plan-order" data-plan>
           create my plan

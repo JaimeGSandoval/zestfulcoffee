@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './_hero-styles.scss';
+import CreatePlanBtn from '../../utilities/CreatePlanBtn';
 import heroWebp from '../../../assets/images/home/mobile/hero-coffeepress.webp';
 import heroPng from '../../../assets/images/home/mobile/hero-coffeepress.jpg';
+import './_hero-styles.scss';
 
 const Hero = () => {
   return (
@@ -19,9 +19,7 @@ const Hero = () => {
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.
         </span>
-        <button className="create-plan-btn" data-plan>
-          <Link to="/plan">create a plan</Link>
-        </button>
+        <CreatePlanBtn text={'create a plan'} className="create-plan-btn" />
       </section>
     </>
   );
