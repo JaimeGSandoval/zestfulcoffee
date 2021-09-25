@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import OrderSummary from '../order-summary/OrderSummary';
 import OptionContainer from './OptionContainer';
 import {
   drinkTypes,
@@ -11,6 +12,14 @@ import arrowIcon from '../../../assets/icons/icon-arrow.svg';
 import './_options.scss';
 
 const Options = () => {
+  const [orderData, setOrderData] = useState({
+    drinkType: '',
+    coffeeType: '',
+    coffeeAmount: '',
+    grindType: '',
+    deliveryType: '',
+  });
+
   return (
     <>
       <section className="options-section">
@@ -19,25 +28,32 @@ const Options = () => {
             How do you drink your coffee?
           </h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <OptionContainer items={drinkTypes} />
+          <OptionContainer options={drinkTypes} setOrderData={setOrderData} />
         </div>
 
         <div className="option-container">
           <h1 className="option-title-question">What type of coffee?</h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <OptionContainer items={coffeeTypes} />
+          <OptionContainer options={coffeeTypes} setOrderData={setOrderData} />
         </div>
 
         <div className="option-container">
           <h1 className="option-title-question">How much would you like?</h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <OptionContainer items={coffeeAmounts} />
+          <OptionContainer
+            options={coffeeAmounts}
+            setOrderData={setOrderData}
+          />
         </div>
 
         <div className="option-container">
           <h1 className="option-title-question">Want us to grind them?</h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <OptionContainer items={grindTypes} />
+          <OptionContainer
+            options={grindTypes}
+            setOrderData={setOrderData}
+            orderData={orderData}
+          />
         </div>
 
         <div className="option-container">
@@ -45,10 +61,13 @@ const Options = () => {
             How often should we deliver?
           </h1>
           <img src={arrowIcon} alt="Arrow icon" className="arrow" data-arrow />
-          <OptionContainer items={deliveryTypes} />
+          <OptionContainer
+            options={deliveryTypes}
+            setOrderData={setOrderData}
+          />
         </div>
       </section>
-
+      <OrderSummary orderData={orderData} />
       <div className="create-plan-order-container">
         <button className="create-plan-order" data-plan>
           create my plan
