@@ -49,7 +49,7 @@ const OrderModal = () => {
         </div>
 
         <button className="submit-order-btn">
-          Checkout - $
+          Checkout -
           <span className="total">
             {calculateTotal(orderData.coffeeAmount, orderData.deliveryType)}
           </span>{' '}

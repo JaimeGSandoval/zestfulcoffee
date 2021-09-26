@@ -1,44 +1,57 @@
-/* eslint-disable no-duplicate-case */
+const currencyFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+});
+
 const calculateTotal = (amount, delivery) => {
-  switch ((amount, delivery)) {
-    case '250g':
-    case 'Every week':
-      return '7.20';
+  let total = null;
+  const weeklyCost = 14;
+  const biWeeklyCost = 17.25;
+  const monthlyCost = 22.5;
 
-    case '250g':
-    case 'Every 2 weeks':
-      return '9.60';
+  if (delivery === 'Every week' && amount === '250g') {
+    total = 7.2 * 4 + weeklyCost;
+    return currencyFormatter.format(total).toString();
+  }
 
-    case '250g':
-    case 'Every month':
-      return '12.60';
+  if (delivery === 'Every 2 weeks' && amount === '250g') {
+    total = 9.6 * 2 + biWeeklyCost;
+    return currencyFormatter.format(total).toString();
+  }
 
-    case '500g':
-    case 'Every week':
-      return '13.00';
+  if (delivery === 'Every month' && amount === '250g') {
+    total = 12.0 + monthlyCost;
+    return currencyFormatter.format(total).toString();
+  }
 
-    case '500g':
-    case 'Every 2 weeks':
-      return '17.50';
+  if (delivery === 'Every week' && amount === '500g') {
+    total = 13 * 4 + weeklyCost;
+    return currencyFormatter.format(total).toString();
+  }
 
-    case '500g':
-    case 'Every month':
-      return '22.00';
+  if (delivery === 'Every 2 weeks' && amount === '500g') {
+    total = 17.5 * 2 + biWeeklyCost;
+    return currencyFormatter.format(total).toString();
+  }
 
-    case '1000g':
-    case 'Every week':
-      return '22.50';
+  if (delivery === 'Every month' && amount === '500g') {
+    total = 22.0 + monthlyCost;
+    return currencyFormatter.format(total).toString();
+  }
 
-    case '1000g':
-    case 'Every 2 weeks':
-      return '32.00';
+  if (delivery === 'Every week' && amount === '1000g') {
+    total = 22.0 * 4 + weeklyCost;
+    return currencyFormatter.format(total).toString();
+  }
 
-    case '1000g':
-    case 'Every month':
-      return '42.00';
+  if (delivery === 'Every 2 weeks' && amount === '1000g') {
+    total = 32 * 2 + biWeeklyCost;
+    return currencyFormatter.format(total).toString();
+  }
 
-    default:
-      return '';
+  if (delivery === 'Every month' && amount === '1000g') {
+    total = 42.0 + monthlyCost;
+    return currencyFormatter.format(total).toString();
   }
 };
 
