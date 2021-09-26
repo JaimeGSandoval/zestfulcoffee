@@ -9,6 +9,18 @@ const OrderModal = () => {
   const { showOrderModal } = useContext(OrderModalContext);
   const show = showOrderModal ? 'show-order-modal' : '';
 
+  const drinkType =
+    orderData.drinkType === 'Capsule'
+      ? `${orderData.drinkType}s`
+      : orderData.drinkType;
+
+  const specialText =
+    orderData.drinkType === 'Capsule' ? (
+      <span style={{ color: '#83888f' }}>using</span>
+    ) : (
+      <span style={{ color: '#83888f' }}>as</span>
+    );
+
   return ReactDOM.createPortal(
     <div className={`order-summary-modal-container ${show}`} aria-modal="true">
       <div className="order-summary-modal-box">
@@ -23,7 +35,7 @@ const OrderModal = () => {
             “I drink my coffee{' '}
             <span className="drinkType order-text">
               {' '}
-              as {orderData.drinkType}
+              {specialText} {drinkType}
             </span>
             , with a{' '}
             <span className="coffee order-text"> {orderData.coffeeType}</span>{' '}
