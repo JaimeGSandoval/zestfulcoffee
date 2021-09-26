@@ -1,12 +1,79 @@
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import { StoreContext } from '../../../Context';
+import { OrderModalContext } from '../../../OrderModalContext';
 
 const OrderModal = () => {
   const { orderData } = useContext(StoreContext);
+  const { showOrderModal } = useContext(OrderModalContext);
+  const show = showOrderModal ? 'show-order-modal' : '';
+  let priceTotal = '';
+
+  if (
+    orderData.deliveryType === 'Every week' &&
+    orderData.coffeeAmount === '250g'
+  ) {
+    priceTotal = '7.20';
+  }
+
+  if (
+    orderData.deliveryType === 'Every 2 weeks' &&
+    orderData.coffeeAmount === '250g'
+  ) {
+    priceTotal = '9.60';
+  }
+
+  if (
+    orderData.deliveryType === 'Every month' &&
+    orderData.coffeeAmount === '250g'
+  ) {
+    priceTotal = '12.00';
+  }
+
+  if (
+    orderData.deliveryType === 'Every week' &&
+    orderData.coffeeAmount === '500g'
+  ) {
+    priceTotal = '13.00';
+  }
+
+  if (
+    orderData.deliveryType === 'Every 2 weeks' &&
+    orderData.coffeeAmount === '500g'
+  ) {
+    priceTotal = '17.50';
+  }
+
+  if (
+    orderData.deliveryType === 'Every month' &&
+    orderData.coffeeAmount === '500g'
+  ) {
+    priceTotal = '22.00';
+  }
+
+  if (
+    orderData.deliveryType === 'Every week' &&
+    orderData.coffeeAmount === '1000g'
+  ) {
+    priceTotal = '22.00';
+  }
+
+  if (
+    orderData.deliveryType === 'Every 2 weeks' &&
+    orderData.coffeeAmount === '1000g'
+  ) {
+    priceTotal = '32.00';
+  }
+
+  if (
+    orderData.deliveryType === 'Every month' &&
+    orderData.coffeeAmount === '1000g'
+  ) {
+    priceTotal = '42.00';
+  }
 
   return ReactDOM.createPortal(
-    <div className="order-summary-modal-container" aria-modal="true">
+    <div className={`order-summary-modal-container ${show}`} aria-modal="true">
       <div className="order-summary-modal-box">
         <div className="order-modal-title-container">
           <div className="order-modal-title-box">
@@ -45,7 +112,7 @@ const OrderModal = () => {
         </div>
 
         <button className="submit-order-btn">
-          Checkout - <span className="total"></span> / mo
+          Checkout - $<span className="total">{priceTotal}</span> / mo
         </button>
       </div>
     </div>,

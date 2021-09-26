@@ -8,19 +8,12 @@ import Plan from './components/plan-page/Plan';
 import Footer from './components/footer/Footer';
 import './sass/main.scss';
 
-import StoreProvider from './Context';
-import OrderModalContext from './OrderModalContext';
-
 function App() {
   const modalRef = useRef();
 
   const openModal = () => {
     modalRef.current.open();
   };
-
-  // const closeModal = () => {
-  //   modalRef.current.close();
-  // };
 
   useEffect(() => {
     document.body.addEventListener('click', (e) => {
@@ -34,26 +27,20 @@ function App() {
   }, []);
 
   return (
-    <OrderModalContext>
-      <StoreProvider>
-        <div className="App">
-          <MobileNavModal ref={modalRef} />
-          <MobileHeader openModal={openModal} />
+    <div className="App">
+      <MobileNavModal ref={modalRef} />
+      <MobileHeader openModal={openModal} />
 
-          <main className="container">
-            <Switch>
-              <Route exact path="/" render={() => <Home />} />
-              <Route exact path="/about" render={() => <About />} />
-              <Route exact path="/plan" render={() => <Plan />} />
-            </Switch>
-          </main>
-          <Footer />
-        </div>
-      </StoreProvider>
-    </OrderModalContext>
+      <main className="container">
+        <Switch>
+          <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/about" render={() => <About />} />
+          <Route exact path="/plan" render={() => <Plan />} />
+        </Switch>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
-{
-}
 export default App;
