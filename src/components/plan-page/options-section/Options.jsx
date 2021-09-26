@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import OrderSummary from '../order-summary/OrderSummary';
+import { OrderModalContext } from '../../../OrderModalContext';
 import OptionContainer from './OptionContainer';
 import {
   drinkTypes,
@@ -12,6 +13,8 @@ import arrowIcon from '../../../assets/icons/icon-arrow.svg';
 import './_options.scss';
 
 const Options = () => {
+  console.log(OrderModalContext);
+  const { setShowOrderModal } = useContext(OrderModalContext);
   return (
     <>
       <section className="options-section">
@@ -51,7 +54,11 @@ const Options = () => {
       </section>
       <OrderSummary />
       <div className="create-plan-order-container">
-        <button className="create-plan-order" data-plan>
+        <button
+          className="create-plan-order"
+          data-plan
+          onClick={() => setShowOrderModal(true)}
+        >
           create my plan
         </button>
       </div>

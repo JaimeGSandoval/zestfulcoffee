@@ -9,6 +9,7 @@ import Footer from './components/footer/Footer';
 import './sass/main.scss';
 
 import StoreProvider from './Context';
+import OrderModalContext from './OrderModalContext';
 
 function App() {
   const modalRef = useRef();
@@ -33,22 +34,26 @@ function App() {
   }, []);
 
   return (
-    <StoreProvider>
-      <div className="App">
-        <MobileNavModal ref={modalRef} />
-        <MobileHeader openModal={openModal} />
+    <OrderModalContext>
+      <StoreProvider>
+        <div className="App">
+          <MobileNavModal ref={modalRef} />
+          <MobileHeader openModal={openModal} />
 
-        <main className="container">
-          <Switch>
-            <Route exact path="/" render={() => <Home />} />
-            <Route exact path="/about" render={() => <About />} />
-            <Route exact path="/plan" render={() => <Plan />} />
-          </Switch>
-        </main>
-        <Footer />
-      </div>
-    </StoreProvider>
+          <main className="container">
+            <Switch>
+              <Route exact path="/" render={() => <Home />} />
+              <Route exact path="/about" render={() => <About />} />
+              <Route exact path="/plan" render={() => <Plan />} />
+            </Switch>
+          </main>
+          <Footer />
+        </div>
+      </StoreProvider>
+    </OrderModalContext>
   );
 }
 
+{
+}
 export default App;
