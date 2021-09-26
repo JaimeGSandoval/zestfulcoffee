@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { StoreContext } from '../../../Context';
 
-const OrderSummary = ({ orderData }) => {
+const OrderSummary = () => {
+  const { orderData } = useContext(StoreContext);
   return (
     <>
       <section className="order-container">
