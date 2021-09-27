@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { StoreContext } from '../../../Context';
+import { StoreContext } from '../../../context/Context';
 import './_options.scss';
 
 const OptionContainer = ({ options }) => {

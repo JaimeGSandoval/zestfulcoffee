@@ -1,12 +1,34 @@
 import React, { useContext } from 'react';
+import { withRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import { StoreContext } from '../../../Context';
+import { StoreContext } from '../../../context/Context';
+import { OrderModalContext } from '../../../context/OrderModalContext';
+import calculateTotal from './priceTotal';
 
-const OrderModal = () => {
+const OrderModal = ({ history }) => {
   const { orderData } = useContext(StoreContext);
+  const { showOrderModal, setShowOrderModal } = useContext(OrderModalContext);
+  const show = showOrderModal ? 'show-order-modal' : '';
+
+  const drinkType =
+    orderData.drinkType === 'Capsule'
+      ? `${orderData.drinkType}s`
+      : orderData.drinkType;
+
+  const specialText =
+    orderData.drinkType === 'Capsule' ? (
+      <span style={{ color: '#83888f' }}>using</span>
+    ) : (
+      <span style={{ color: '#83888f' }}>as</span>
+    );
+
+  const handleClick = () => {
+    history.push('/');
+    setShowOrderModal(false);
+  };
 
   return ReactDOM.createPortal(
-    <div className="order-summary-modal-container" aria-modal="true">
+    <div className={`order-summary-modal-container ${show}`} aria-modal="true">
       <div className="order-summary-modal-box">
         <div className="order-modal-title-container">
           <div className="order-modal-title-box">
@@ -19,7 +41,7 @@ const OrderModal = () => {
             “I drink my coffee{' '}
             <span className="drinkType order-text">
               {' '}
-              as {orderData.drinkType}
+              {specialText} {drinkType}
             </span>
             , with a{' '}
             <span className="coffee order-text"> {orderData.coffeeType}</span>{' '}
@@ -44,8 +66,12 @@ const OrderModal = () => {
           </p>
         </div>
 
-        <button className="submit-order-btn">
-          Checkout - <span className="total"></span> / mo
+        <button className="submit-order-btn" onClick={() => handleClick()}>
+          Checkout -
+          <span className="total">
+            {calculateTotal(orderData.coffeeAmount, orderData.deliveryType)}
+          </span>{' '}
+          / mo
         </button>
       </div>
     </div>,
@@ -53,4 +79,4 @@ const OrderModal = () => {
   );
 };
 
-export default OrderModal;
+export default withRouter(OrderModal);
