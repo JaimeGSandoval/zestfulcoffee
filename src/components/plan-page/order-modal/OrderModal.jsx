@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
+import { withRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { StoreContext } from '../../../Context';
 import { OrderModalContext } from '../../../OrderModalContext';
 import calculateTotal from './priceTotal';
 
-const OrderModal = () => {
+const OrderModal = ({ history }) => {
   const { orderData } = useContext(StoreContext);
-  const { showOrderModal } = useContext(OrderModalContext);
+  const { showOrderModal, setShowOrderModal } = useContext(OrderModalContext);
   const show = showOrderModal ? 'show-order-modal' : '';
 
   const drinkType =
@@ -20,6 +21,11 @@ const OrderModal = () => {
     ) : (
       <span style={{ color: '#83888f' }}>as</span>
     );
+
+  const historyPush = () => {
+    history.push('/');
+    setShowOrderModal(false);
+  };
 
   return ReactDOM.createPortal(
     <div className={`order-summary-modal-container ${show}`} aria-modal="true">
@@ -60,7 +66,7 @@ const OrderModal = () => {
           </p>
         </div>
 
-        <button className="submit-order-btn">
+        <button className="submit-order-btn" onClick={() => historyPush()}>
           Checkout -
           <span className="total">
             {calculateTotal(orderData.coffeeAmount, orderData.deliveryType)}
@@ -73,4 +79,4 @@ const OrderModal = () => {
   );
 };
 
-export default OrderModal;
+export default withRouter(OrderModal);
