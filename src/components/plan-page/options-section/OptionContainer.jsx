@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { StoreContext } from '../../../context/Context';
 import './_options.scss';
 
-const OptionContainer = ({ options, setOrderData, orderData }) => {
+const OptionContainer = ({ options }) => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const { setOrderData } = useContext(StoreContext);
 
   const onOptionClick = (index, e) => {
     setOrderData((prev) => ({
