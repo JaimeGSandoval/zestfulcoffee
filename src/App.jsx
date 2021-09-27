@@ -15,10 +15,6 @@ function App() {
     modalRef.current.open();
   };
 
-  const closeModal = () => {
-    modalRef.current.close();
-  };
-
   useEffect(() => {
     document.body.addEventListener('click', (e) => {
       e.preventDefault();
