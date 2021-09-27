@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { withRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import { StoreContext } from '../../../Context';
-import { OrderModalContext } from '../../../OrderModalContext';
+import { StoreContext } from '../../../context/Context';
+import { OrderModalContext } from '../../../context/OrderModalContext';
 import calculateTotal from './priceTotal';
 
 const OrderModal = ({ history }) => {
@@ -22,7 +22,7 @@ const OrderModal = ({ history }) => {
       <span style={{ color: '#83888f' }}>as</span>
     );
 
-  const historyPush = () => {
+  const handleClick = () => {
     history.push('/');
     setShowOrderModal(false);
   };
@@ -66,7 +66,7 @@ const OrderModal = ({ history }) => {
           </p>
         </div>
 
-        <button className="submit-order-btn" onClick={() => historyPush()}>
+        <button className="submit-order-btn" onClick={() => handleClick()}>
           Checkout -
           <span className="total">
             {calculateTotal(orderData.coffeeAmount, orderData.deliveryType)}

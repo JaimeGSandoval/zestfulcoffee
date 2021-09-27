@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import OrderSummary from '../order-summary/OrderSummary';
-import { OrderModalContext } from '../../../OrderModalContext';
+import { OrderModalContext } from '../../../context/OrderModalContext';
 import OptionContainer from './OptionContainer';
 import {
   drinkTypes,
@@ -13,7 +13,6 @@ import arrowIcon from '../../../assets/icons/icon-arrow.svg';
 import './_options.scss';
 
 const Options = () => {
-  console.log(OrderModalContext);
   const { setShowOrderModal } = useContext(OrderModalContext);
   return (
     <>
