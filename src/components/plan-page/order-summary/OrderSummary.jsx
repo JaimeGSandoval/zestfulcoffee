@@ -1,8 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { StoreContext } from '../../../context/Context';
 
 const OrderSummary = () => {
+  const textRef = useRef();
   const { orderData } = useContext(StoreContext);
+
+  useEffect(() => {
+    if (orderData.drinkType === 'Capsule') {
+      textRef.current.style.display = 'none';
+    } else {
+      textRef.current.style.display = 'initial';
+    }
+  }, [orderData.drinkType]);
+
   const drinkType =
     orderData.drinkType === 'Capsule'
       ? `${orderData.drinkType}s`
@@ -33,8 +43,13 @@ const OrderSummary = () => {
               {' '}
               {orderData.coffeeAmount}
             </span>{' '}
-            ground ala
-            <span className="grind order-text"> {orderData.grindType}</span>,
+            <span ref={textRef}>
+              ground ala
+              <span className="grind order-text">
+                {' '}
+                {orderData.grindType}
+              </span>,{' '}
+            </span>
             sent to me
             <span className="deliver order-text">
               {' '}
