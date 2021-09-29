@@ -1,7 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 /* eslint-disable no-unreachable */
 import React, { useState, createContext } from 'react';
-
 export const StoreContext = createContext(null);
 
 export default ({ children }) => {
