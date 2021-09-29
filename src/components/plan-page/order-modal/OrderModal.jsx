@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import { withRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
+import { withRouter } from 'react-router-dom';
 import { StoreContext } from '../../../context/Context';
 import { OrderModalContext } from '../../../context/OrderModalContext';
 import calculateTotal from './priceTotal';

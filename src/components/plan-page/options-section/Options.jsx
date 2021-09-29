@@ -69,8 +69,13 @@ const Options = () => {
   useEffect(() => {
     const panel = grindRef.current.nextElementSibling;
 
-    if (orderData.drinkType === 'Capsule') {
-      return grindRef.current.removeEventListener('click', setShowGrindTypes);
+    if (orderData.drinkType === 'Capsule' && showGrindTypes) {
+      grindRef.current.removeEventListener('click', setShowGrindTypes);
+      grindRef.current.nextElementSibling.classList.add('hide');
+      grindRef.current.classList.remove('toggle-arrow');
+      return;
+    } else {
+      grindRef.current.nextElementSibling.classList.remove('hide');
     }
 
     if (showGrindTypes) {
