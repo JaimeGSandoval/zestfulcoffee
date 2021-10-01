@@ -56,9 +56,13 @@
   top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: justify;
+  text-align: center;
   width: 88%;
   line-height: 1.9rem;
   font-weight: bold;
-  hyphens: auto;
+  // hyphens: auto;
+
+  @include mobileLg {
+    width: 80%;
+  }
 }

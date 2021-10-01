@@ -19,10 +19,9 @@
 .choose-description {
   font-family: $description_font, sans-serif;
   color: $grey;
-  text-align: justify;
+  text-align: center;
   line-height: 1.8rem;
-  width: 88%;
-  hyphens: auto;
+  width: 100%;
   margin: auto;
 }
 
@@ -71,9 +70,12 @@
   padding: 2rem 0 2.5rem 0;
   line-height: 1.8rem;
   margin: auto;
-  text-align: justify;
   hyphens: auto;
-  width: 84%;
+  width: 86%;
+
+  @include mobileLg {
+    width: 76%;
+  }
 }
 
 .exclusive-padding {
