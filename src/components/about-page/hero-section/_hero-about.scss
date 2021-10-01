@@ -34,7 +34,7 @@
 
 .about-us-description {
   position: absolute;
-  top: 59%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 92%;
@@ -50,5 +50,9 @@
   @include mobileLg {
     width: 88%;
     font-size: 1.1rem;
+  }
+
+  @include mobileI12Pro {
+    top: 54%;
   }
 }
