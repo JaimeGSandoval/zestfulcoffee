@@ -14,7 +14,7 @@ const Hero = () => {
         </picture>
         <span className="centered-text-top">great coffee</span>
         <span className="centered-text-bottom">made simple.</span>
-        <span className="hero-description">
+        <span className="hero-description" lang="en">
           Start your mornings with the world’s best coffees. Try our expertly
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.

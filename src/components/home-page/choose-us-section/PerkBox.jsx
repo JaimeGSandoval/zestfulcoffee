@@ -5,7 +5,9 @@ const PerkBox = ({ perk }) => {
     <div className="perk-box">
       <img src={perk.icon} alt="Coffee bean icon" className="perk-icon" />
       <h3 className="perk-title">{perk.perkTitle}</h3>
-      <p className="perk-description">{perk.perkDescription}</p>
+      <p className="perk-description" lang="en">
+        {perk.perkDescription}
+      </p>
     </div>
   );
 };

@@ -32,7 +32,7 @@ const ChooseUs = () => {
       <section className="choose-us-section">
         <div className="choose-description-container">
           <h2 className="choose-title">Why choose us?</h2>
-          <p className="choose-description">
+          <p className="choose-description" lang="en">
             A large part of our role is choosing which particular coffees will
             be featured in our range. This means working closely with the best
             coffee growers to give you a more impactful experience on every

@@ -14,7 +14,9 @@ const CoffeeBox = ({ coffeeType }) => {
         </picture>
       </div>
       <h2 className="coffee-title">{coffeeType.type}</h2>
-      <p className="coffee-description">{coffeeType.description}</p>
+      <p className="coffee-description" lang="en">
+        {coffeeType.description}
+      </p>
     </div>
   );
 };
