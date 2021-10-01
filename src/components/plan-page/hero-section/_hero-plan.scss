@@ -1,4 +1,5 @@
 @import '../../../sass/abstract/vars';
+@import '../../../sass/abstract/media-queries';
 
 .hero-plan-section {
   width: 100%;
@@ -9,7 +10,8 @@
 .hero-plan {
   width: 100%;
   height: 100%;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
+  object-fit: cover;
 }
 
 .plan-title {
@@ -20,14 +22,30 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: $title_font, serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: $bg_light_cream;
   text-transform: capitalize;
+
+  @include mobileSm {
+    font-size: 2.4rem;
+  }
+
+  @include mobileX {
+    top: 27%;
+  }
+
+  @include mobileI11Max {
+    top: 26%;
+  }
+
+  @include mobileI12Pro {
+    top: 26%;
+  }
 }
 
 .plan-description {
   position: absolute;
-  top: 46%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 85%;
@@ -35,4 +53,26 @@
   color: #bdbdbd;
   line-height: 1.7rem;
   text-align: center;
+
+  @include mobileSm {
+    top: 44%;
+    width: 78%;
+    font-size: 1.1rem;
+  }
+
+  @include mobileX {
+    top: 38%;
+  }
+
+  @include mobileI11Max {
+    top: 37%;
+  }
+
+  @include mobileI12Pro {
+    top: 37%;
+  }
+
+  @include mobileI12Max {
+    top: 35%;
+  }
 }
