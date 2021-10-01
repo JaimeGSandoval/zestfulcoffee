@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin mobileI12 {
+  @media (min-width: 390px) and (max-height: 844px) {
+    @content;
+  }
+}
