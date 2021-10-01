@@ -1,25 +1,29 @@
 @import '../../../sass/abstract/vars';
+@import '../../../sass/abstract/media-queries';
 
 .choose-us-section {
   margin-top: 7rem;
   padding: 1rem;
   background-color: $dark_grey_blue;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
 }
 
 .choose-title {
   text-align: center;
   color: $bg_light_cream;
   font-family: $title_font, serif;
-  padding: 4rem 0 2rem 0;;
+  padding: 4rem 0 2rem 0;
   font-size: 1.7rem;
 }
 
 .choose-description {
   font-family: $description_font, sans-serif;
   color: $grey;
-  text-align: center;
+  text-align: justify;
   line-height: 1.8rem;
+  width: 88%;
+  hyphens: auto;
+  margin: auto;
 }
 
 .perks-bg {
@@ -33,10 +37,14 @@
 }
 
 .perk-box {
-  width: 88%;
+  width: 95%;
   margin: 1.5rem auto 0 auto;
   background-color: $dark_cyan;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
+
+  @include mobileSm {
+    width: 88%;
+  }
 }
 
 .perk-icon {
@@ -49,16 +57,23 @@
   text-align: center;
   color: $bg_light_cream;
   font-family: $title_font, serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+
+  @include mobileSm {
+    font-size: 1.5rem;
+  }
 }
 
 .perk-description {
   text-align: center;
   color: $bg_light_cream;
   font-family: $description_font, sans-serif;
-  padding: 2rem;
-  padding-bottom: 2.5rem;
+  padding: 2rem 0 2.5rem 0;
   line-height: 1.8rem;
+  margin: auto;
+  text-align: justify;
+  hyphens: auto;
+  width: 84%;
 }
 
 .exclusive-padding {

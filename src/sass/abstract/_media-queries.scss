@@ -1,0 +1,5 @@
+@mixin mobileSm {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
