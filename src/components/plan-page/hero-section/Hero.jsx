@@ -5,10 +5,10 @@ import './_hero-plan.scss';
 
 const Hero = () => {
   return (
-    <section className="plan-about-section">
+    <section className="hero-plan-section">
       <picture>
         <source srcSet={blackcupWebp} />
-        <img src={blackcupJpg} alt="White cupcake" className="hero-about" />
+        <img src={blackcupJpg} alt="White cupcake" className="hero-plan" />
       </picture>
       <span className="plan-title">Create a plan</span>
       <p className="plan-description">
