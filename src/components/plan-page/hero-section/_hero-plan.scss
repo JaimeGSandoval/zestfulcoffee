@@ -13,6 +13,7 @@
   height: 100%;
   border-radius: 0.8rem;
   object-fit: cover;
+  position: relative;
 }
 
 .plan-title {
@@ -30,51 +31,21 @@
   @include mobileSm {
     font-size: 2.4rem;
   }
-
-  @include mobileX {
-    top: 27%;
-  }
-
-  @include mobileI11Max {
-    top: 26%;
-  }
-
-  @include mobileI12Pro {
-    top: 26%;
-  }
 }
 
 .plan-description {
   position: absolute;
   top: 52%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
-  width: 85%;
   font-family: $description_font, sans-serif;
   color: #bdbdbd;
   line-height: 1.7rem;
-  text-align: center;
   width: 93%;
 
   @include mobileSm {
-    // top: 52%;
-    // width: 78%;
+    top: 51%;
     font-size: 1.1rem;
-  }
-
-  @include mobileX {
-    top: 48%;
-  }
-
-  @include mobileI11Max {
-    top: 48%;
-  }
-
-  @include mobileI12Pro {
-    top: 48%;
-  }
-
-  @include mobileI12Max {
-    top: 48%;
   }
 }

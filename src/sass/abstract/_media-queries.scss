@@ -10,14 +10,14 @@
   }
 }
 
-@mixin mobileI12 {
-  @media (min-width: 390px) and (max-height: 844px) {
+@mixin mobileX {
+  @media (min-width: 375px) and (min-height: 812px) {
     @content;
   }
 }
 
-@mixin mobileX {
-  @media (min-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+@mixin mobileI12 {
+  @media (min-width: 390px) and (min-height: 844px) {
     @content;
   }
 }
