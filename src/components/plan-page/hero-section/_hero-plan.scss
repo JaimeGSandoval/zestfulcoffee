@@ -3,6 +3,7 @@
 
 .hero-plan-section {
   width: 100%;
+  height: 29.1rem;
   margin: auto;
   position: relative;
 }
@@ -12,13 +13,14 @@
   height: 100%;
   border-radius: 0.8rem;
   object-fit: cover;
+  position: relative;
 }
 
 .plan-title {
   width: 100%;
   text-align: center;
   position: absolute;
-  top: 31%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: $title_font, serif;
@@ -29,50 +31,21 @@
   @include mobileSm {
     font-size: 2.4rem;
   }
-
-  @include mobileX {
-    top: 27%;
-  }
-
-  @include mobileI11Max {
-    top: 26%;
-  }
-
-  @include mobileI12Pro {
-    top: 26%;
-  }
 }
 
 .plan-description {
   position: absolute;
-  top: 48%;
+  top: 52%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
-  width: 85%;
   font-family: $description_font, sans-serif;
   color: #bdbdbd;
   line-height: 1.7rem;
-  text-align: center;
+  width: 93%;
 
   @include mobileSm {
-    top: 44%;
-    width: 78%;
+    top: 51%;
     font-size: 1.1rem;
-  }
-
-  @include mobileX {
-    top: 38%;
-  }
-
-  @include mobileI11Max {
-    top: 37%;
-  }
-
-  @include mobileI12Pro {
-    top: 37%;
-  }
-
-  @include mobileI12Max {
-    top: 35%;
   }
 }
