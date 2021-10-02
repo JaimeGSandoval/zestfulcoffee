@@ -42,11 +42,16 @@
   margin: auto;
 
   @include mobileSm {
+    width: 90%;
     font-size: 1.1rem;
   }
 
-  @include mobileI12 {
-    width: 93%;
+  @include mobileI12Pro {
+    width: 89%;
+  }
+
+  @include mobileXL {
+    width: 89%;
   }
 }
 
