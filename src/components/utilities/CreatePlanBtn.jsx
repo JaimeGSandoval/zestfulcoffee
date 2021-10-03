@@ -4,9 +4,11 @@ import './_create-plan-btn.scss';
 
 const CreatePlanBtn = ({ text, className }) => {
   return (
-    <button className={className} data-plan>
-      <Link to="/plan">{text}</Link>
-    </button>
+    <Link to="/plan">
+      <button className={className} data-plan>
+        {text}
+      </button>
+    </Link>
   );
 };
 

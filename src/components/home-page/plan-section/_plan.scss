@@ -1,7 +1,12 @@
 @import '../../../sass/abstract/vars';
+@import '../../../sass/abstract/media-queries';
 
 .plan-how-to-home {
-  margin-top: 8rem;
+  margin-top: 10rem;
+
+  @include mobileSm {
+    margin-top: 8rem;
+  }
 }
 
 .how-to-title {
@@ -28,12 +33,13 @@
 }
 
 .step-description {
-  margin-top: 1.8rem;
-  text-align: center;
   font-family: $description_font;
   color: $grey;
   line-height: 1.5rem;
-  padding: 0 1.5rem;
+  hyphens: auto;
+  text-align: center;
+  // width: 88%;
+  margin: 1.8rem auto 0 auto;
 }
 
 .custom-step-padding-1 {

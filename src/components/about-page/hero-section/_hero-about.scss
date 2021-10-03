@@ -1,7 +1,9 @@
 @import '../../../sass/abstract/vars';
+@import '../../../sass/abstract/media-queries';
 
 .hero-about-section {
   width: 100%;
+  height: 29.1rem;
   margin: auto;
   position: relative;
 }
@@ -9,7 +11,8 @@
 .hero-about {
   width: 100%;
   height: 100%;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
+  object-fit: cover;
 }
 
 .about-us-title {
@@ -18,19 +21,39 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: $title_font, serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: $bg_light_cream;
   text-transform: capitalize;
+  width: 100%;
+  text-align: center;
+
+  @include mobileSm {
+    font-size: 2.5rem;
+  }
 }
 
 .about-us-description {
   position: absolute;
-  top: 59%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 88%;
+  width: 92%;
   font-family: $description_font, sans-serif;
   color: #bdbdbd;
   line-height: 1.7rem;
   text-align: center;
+
+  @include mobileSm {
+    top: 57%;
+    width: 90%;
+  }
+
+  @include mobileLg {
+    width: 88%;
+    font-size: 1.1rem;
+  }
+
+  @include mobileI12Pro {
+    top: 54%;
+  }
 }
