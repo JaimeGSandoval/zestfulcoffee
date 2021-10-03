@@ -1,3 +1,5 @@
+@import '../../../sass/abstract/media-queries';
+
 .order-summary-modal-container {
   position: fixed;
   width: 100%;
@@ -5,25 +7,32 @@
   top: 0;
   left: 0;
   z-index: 10;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
 }
 
-.order-summary-modal-box{
+.order-summary-modal-box {
   width: 88%;
-  margin:  2rem auto;
+  margin: 2rem auto;
   background-color: $bg_light_cream;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   padding-bottom: 1px;
+
+  @include mobileSm {
+    padding-bottom: 1.1rem;
+  }
 }
 
 .order-modal-title-container {
   background-color: $dark_grey_blue;
   width: 100%;
-  padding: 2rem 0;
-  border-top-left-radius: .8rem;
-  border-top-right-radius: .8rem;
+  padding: 1.2rem 0;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
 
+  @include mobileSm {
+    padding: 2rem 0;
+  }
 }
 
 .order-modal-title-box {
@@ -36,7 +45,11 @@
 }
 
 .order-modal-title {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
+
+  @include mobileSm {
+    font-size: 1.7rem;
+  }
 }
 
 .order-modal-text-box {
@@ -44,10 +57,20 @@
   margin: auto;
   font-family: $title_font, serif;
   color: $grey;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
-  line-height: 2.5rem;
-  padding: 2rem 0 1rem 0;
+  line-height: 2rem;
+  padding: 1.2rem 0 1rem 0;
+
+  @include mobileSm {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    padding: 2rem 0 1rem 0;
+  }
+
+  @include mobileLg {
+    line-height: 2.5rem;
+  }
 }
 
 .confirm-text-box {
@@ -70,12 +93,16 @@
   outline: 0;
   background-color: $dark_cyan;
   color: $bg_light_cream;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: $title_font, serif;
   padding: 1.4rem 1rem;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   letter-spacing: 1px;
   margin: 1.2rem auto 1.2rem auto;
+
+  @include mobileSm {
+    font-size: 1.2rem;
+  }
 }
 
 .order-text {
@@ -83,5 +110,6 @@
 }
 
 .show-order-modal {
-  display: block;
+  display: flex;
+  align-items: center;
 }
