@@ -22,3 +22,9 @@
     @content;
   }
 }
+
+@mixin mobileIX {
+  @media (min-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+    @content;
+  }
+}
