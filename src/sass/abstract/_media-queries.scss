@@ -28,3 +28,16 @@
     @content;
   }
 }
+
+// orientation: landscape media queries
+@mixin mobileLandscapeSm {
+  @media (min-width: 568px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin mobileLandscapeLg {
+  @media (min-width: 667px) and (orientation: landscape) {
+    @content;
+  }
+}
