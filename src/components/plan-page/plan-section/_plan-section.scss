@@ -1,4 +1,5 @@
 @import '../../../sass/abstract/vars';
+@import '../../../sass/abstract/media-queries';
 
 .plan-how-to-section {
   margin-top: 7rem;
@@ -6,14 +7,26 @@
   border-radius: 0.8rem;
   width: 100vw;
   margin-left: -7%;
+
+  @include tabletMd {
+    padding: 3rem 0;
+  }
 }
 
 .plan-how-to-section div:nth-of-type(1) {
   padding-top: 0.8rem;
+
+  @include tabletMd {
+    padding: 0;
+  }
 }
 
 .plan-how-to-section div:last-of-type {
   padding-bottom: 5.8rem;
+
+  @include tabletMd {
+    padding: 0;
+  }
 }
 
 .plan-step-number {
@@ -23,6 +36,17 @@
   font-size: 4rem;
   display: block;
   margin-top: 5rem;
+
+  @include tabletMd {
+    text-align: left;
+    margin-top: 3rem;
+  }
+}
+
+.plan-step-description:nth-of-type(1) p {
+  @include tabletMd {
+    margin-top: 1.8rem;
+  }
 }
 
 .plan-step-title {
@@ -31,6 +55,11 @@
   color: $bg_light_cream;
   font-size: 1.7rem;
   margin-top: 1.4rem;
+
+  @include tabletMd {
+    text-align: left;
+    max-width: 228px;
+  }
 }
 
 .plan-step-description {
@@ -41,6 +70,11 @@
   text-align: center;
   width: 90%;
   margin: 1.8rem auto 0 auto;
+
+  @include tabletMd {
+    text-align: left;
+    margin: 1.8rem 0 0;
+  }
 }
 
 .custom-step-padding-1 {
@@ -61,4 +95,71 @@
   border-radius: 10px;
   margin: 5rem auto;
   display: block;
+}
+
+.plan-boxes-container {
+  @include tabletMd {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5rem;
+  }
+}
+
+.plan-circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid $dark_cyan;
+  border-radius: 50%;
+}
+
+.plan-inner-circle {
+  width: 100%;
+  height: 100%;
+  background: $dark_grey_blue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.plan-line {
+  width: 30%;
+  height: 2px;
+  background: $pale_orange;
+  display: inline-block;
+}
+
+.inner-line-front {
+  width: 50%;
+  height: 2px;
+  background: $pale_orange;
+  position: relative;
+  left: 50%;
+}
+
+.inner-line-middle {
+  height: 2px;
+  background: $pale_orange;
+  width: 100%;
+}
+
+.inner-line-end {
+  width: 50%;
+  height: 2px;
+  background: $pale_orange;
+}
+
+.plan-circles-container {
+  align-items: center;
+  display: none;
+
+  @include tabletMd {
+    display: flex;
+  }
+}
+
+.plan-how-to-inner-container {
+  @include tabletMd {
+    width: 90%;
+    margin: auto;
+  }
 }
