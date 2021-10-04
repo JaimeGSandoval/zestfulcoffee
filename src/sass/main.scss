@@ -2,7 +2,7 @@
 @import './base/typography';
 @import './abstract/vars';
 @import '../components/mobile-nav-modal/mobile-nav-modal';
-@import '../components/mobile-header/mobile-header';
+@import '../components/header/header';
 @import '../components/home-page/hero-section/_hero-styles';
 @import '../components/home-page/collection-section/collection';
 @import '../components/home-page/plan-section/plan';
@@ -18,7 +18,6 @@
 @import '../components/plan-page/order-modal/order-modal';
 @import '../components/utilities/create-plan-btn';
 @import '../sass/abstract/media-queries';
-
 
 html {
   height: 100%;

@@ -1,11 +1,11 @@
-  @import '../../sass/abstract/vars';
+@import '../../sass/abstract/vars';
+@import '../../sass/abstract/media-queries';
 
 .footer {
   margin: 0 auto 4rem auto;
   width: 100%;
   background-color: $dark_grey_blue;
 }
-
 
 .footer-nav {
   list-style: none;
@@ -16,6 +16,12 @@
   margin: auto;
   text-align: center;
   font-family: $description_font, sans-serif;
+
+  @include tabletMd {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.9rem;
+  }
 }
 
 .footer-nav-link {
@@ -31,8 +37,12 @@
   margin: auto;
   padding: 2.5rem 0;
   display: block;
-}
 
+  @include tabletMd {
+    width: 34%;
+    padding-bottom: 1rem;
+  }
+}
 
 .social-icons-box {
   width: 40%;
@@ -40,4 +50,9 @@
   justify-content: space-between;
   margin: auto;
   padding: 2.1rem 0;
+
+  @include tabletMd {
+    justify-content: space-evenly;
+    width: 28%;
+  }
 }

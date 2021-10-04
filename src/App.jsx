@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import MobileNavModal from './components/mobile-nav-modal/mobile-nav-modal';
-import MobileHeader from './components/mobile-header/mobile-header';
+import Header from './components/header/header';
 import Home from './components/home-page/Home';
 import About from './components/about-page/About';
 import Plan from './components/plan-page/Plan';
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <MobileNavModal ref={modalRef} />
-      <MobileHeader openModal={openModal} />
+      <Header openModal={openModal} />
 
       <main className="container">
         <Switch>
