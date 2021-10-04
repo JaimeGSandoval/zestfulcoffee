@@ -36,9 +36,11 @@ const Headquarters = () => {
   return (
     <section className="headquarters-section">
       <h1 className="headquarters-title">Our headquarters</h1>
-      {addresses.map((address) => {
-        return <AddressBox address={address} key={address.city} />;
-      })}
+      <div className="address-box-container">
+        {addresses.map((address) => {
+          return <AddressBox address={address} key={address.city} />;
+        })}
+      </div>
     </section>
   );
 };
