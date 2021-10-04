@@ -13,10 +13,12 @@ const CoffeeBox = ({ coffeeType }) => {
           />
         </picture>
       </div>
-      <h2 className="coffee-title">{coffeeType.type}</h2>
-      <p className="coffee-description" lang="en">
-        {coffeeType.description}
-      </p>
+      <div className="coffee-type-text-box">
+        <h2 className="coffee-title">{coffeeType.type}</h2>
+        <p className="coffee-description" lang="en">
+          {coffeeType.description}
+        </p>
+      </div>
     </div>
   );
 };

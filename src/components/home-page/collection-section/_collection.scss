@@ -12,11 +12,19 @@
   background: linear-gradient(to bottom, #333d4b 0%, #ffffff 88%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @include tabletMd {
+    font-size: 5.6rem;
+  }
 }
 
 .coffee-box {
   margin-top: 4.5rem;
   width: 100%;
+
+  @include tabletMd {
+    display: flex;
+  }
 }
 
 .coffee-img-container {
@@ -36,6 +44,11 @@
   color: $dark_grey_blue;
   text-transform: capitalize;
   font-size: 1.7rem;
+
+  @include tabletMd {
+    text-align: left;
+    margin-top: 1.2rem;
+  }
 }
 
 .coffee-description {
@@ -50,5 +63,16 @@
   @include mobileSm {
     width: initial;
     font-size: 1.1rem;
+  }
+
+  @include tabletMd {
+    text-align: left;
+  }
+}
+
+.coffee-types-container {
+  @include tabletMd {
+    position: relative;
+    top: -6.5rem;
   }
 }

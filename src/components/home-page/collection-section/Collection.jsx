@@ -50,9 +50,11 @@ const Collection = () => {
     <>
       <section className="collection-section">
         <h1 className="collection-header-text">our collection</h1>
-        {coffeeTypes.map((coffee) => {
-          return <CoffeeBox coffeeType={coffee} key={coffee.type} />;
-        })}
+        <div className="coffee-types-container">
+          {coffeeTypes.map((coffee) => {
+            return <CoffeeBox coffeeType={coffee} key={coffee.type} />;
+          })}
+        </div>
       </section>
     </>
   );
