@@ -25,19 +25,19 @@ const Plan = () => {
   return (
     <section className="plan-how-to-home">
       <h2 className="how-to-title">How it works</h2>
-      <div class="circles-container">
-        <div class="circle">
-          <div class="inner-circle"></div>
+      <div className="circles-container">
+        <div className="circle">
+          <div className="inner-circle"></div>
         </div>
-        <div class="line"></div>
+        <div className="line"></div>
 
-        <div class="circle">
-          <div class="inner-circle"></div>
+        <div className="circle">
+          <div className="inner-circle"></div>
         </div>
-        <div class="line"></div>
+        <div className="line"></div>
 
-        <div class="circle">
-          <div class="inner-circle"></div>
+        <div className="circle">
+          <div className="inner-circle"></div>
         </div>
       </div>
 
