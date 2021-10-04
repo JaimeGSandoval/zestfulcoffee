@@ -1,21 +1,29 @@
 import React from 'react';
-import blackcupWebp from '../../../assets/images/plan/mobile/hero-blackcup.webp';
-import blackcupJpg from '../../../assets/images/plan/mobile/hero-blackcup.jpg';
+import blackcupWebpSm from '../../../assets/images/plan/mobile/hero-blackcup.webp';
+import blackcupJpgSm from '../../../assets/images/plan/mobile/hero-blackcup.jpg';
+import blackcupWebpMd from '../../../assets/images/plan/tablet/hero-blackcup.webp';
+import blackcupJpgMd from '../../../assets/images/plan/tablet/hero-blackcup.jpg';
 import './_hero-plan.scss';
 
 const Hero = () => {
   return (
     <section className="hero-plan-section">
       <picture>
-        <source srcSet={blackcupWebp} />
-        <img src={blackcupJpg} alt="White cupcake" className="hero-plan" />
+        <source
+          srcSet={`${blackcupWebpMd} 768w, ${blackcupJpgMd}, 768w`}
+          type="image/webp"
+        />
+        <source srcSet={`${blackcupWebpSm}`} type="image/webp" />
+        <img src={blackcupJpgSm} alt="White cupcake" className="hero-plan" />
       </picture>
-      <span className="plan-title">Create a plan</span>
-      <p className="plan-description">
-        Build a subscription plan that best fits your needs. We offer an
-        assortment of the best artisan coffees from around the globe delivered
-        fresh to your door.
-      </p>
+      <div className="plan-hero-text-box">
+        <span className="plan-title">Create a plan</span>
+        <p className="plan-description">
+          Build a subscription plan that best fits your needs. We offer an
+          assortment of the best artisan coffees from around the globe delivered
+          fresh to your door.
+        </p>
+      </div>
     </section>
   );
 };

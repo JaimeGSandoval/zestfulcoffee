@@ -19,10 +19,6 @@
 .plan-title {
   width: 100%;
   text-align: center;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-family: $title_font, serif;
   font-size: 2rem;
   color: $bg_light_cream;
@@ -31,14 +27,15 @@
   @include mobileSm {
     font-size: 2.4rem;
   }
+
+  @include tabletMd {
+    text-align: left;
+    padding-bottom: 1rem;
+  }
 }
 
 .plan-description {
-  position: absolute;
-  top: 52%;
-  left: 50%;
   text-align: center;
-  transform: translate(-50%, -50%);
   font-family: $description_font, sans-serif;
   color: #bdbdbd;
   line-height: 1.7rem;
@@ -47,5 +44,27 @@
   @include mobileSm {
     top: 51%;
     font-size: 1.1rem;
+  }
+
+  @include tabletMd {
+    text-align: left;
+    width: 87%;
+  }
+}
+
+.plan-hero-text-box {
+  position: absolute;
+  top: 18%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include tabletMd {
+    text-align: left;
+    top: 30%;
+    left: 5%;
+    width: 75%;
   }
 }
