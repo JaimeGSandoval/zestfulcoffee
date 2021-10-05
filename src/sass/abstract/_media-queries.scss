@@ -28,6 +28,12 @@
   }
 }
 
+@mixin laptop {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
 // custom media queries for popular mobile phones
 @mixin mobileI12Pro {
   @media (min-width: 390px) and (min-height: 844px) and (max-height: 844px) {

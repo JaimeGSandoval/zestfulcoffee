@@ -31,6 +31,10 @@
     text-align: left;
     margin-top: 0;
   }
+
+  @include laptop {
+    font-size: 3rem;
+  }
 }
 
 .step-title {
@@ -42,6 +46,12 @@
 
   @include tabletMd {
     text-align: left;
+    max-width: 227px;
+  }
+
+  @include laptop {
+    font-size: 1.5rem;
+    max-width: 200px;
   }
 }
 
@@ -56,6 +66,10 @@
 
   @include tabletMd {
     text-align: left;
+  }
+
+  @include laptop {
+    font-size: 0.9rem;
   }
 }
 
@@ -82,6 +96,10 @@
   height: 2px;
   background: $pale_orange;
   display: inline-block;
+
+  @include laptop {
+    width: 30%;
+  }
 }
 
 .circles-container {
@@ -98,6 +116,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 0.5rem;
+  }
+
+  @include laptop {
+    column-gap: 2.5rem;
   }
 }
 
@@ -123,5 +145,10 @@
   @include tabletMd {
     margin: 5rem 0;
     width: 30%;
+  }
+
+  @include laptop {
+    width: 21%;
+    font-size: 1rem;
   }
 }

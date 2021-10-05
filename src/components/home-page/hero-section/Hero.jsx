@@ -4,6 +4,8 @@ import heroWebpSm from '../../../assets/images/home/mobile/hero-coffeepress.webp
 import heroJpgSm from '../../../assets/images/home/mobile/hero-coffeepress.jpg';
 import heroWebpMd from '../../../assets/images/home/tablet/hero-coffeepress.webp';
 import heroJpgMd from '../../../assets/images/home/tablet/hero-coffeepress.jpg';
+import heroWebpLg from '../../../assets/images/home/desktop/hero-coffeepress-lg.webp';
+import heroJpgLg from '../../../assets/images/home/desktop/hero-coffeepress-lg.jpg';
 
 import './_hero-styles.scss';
 
@@ -12,6 +14,11 @@ const Hero = () => {
     <>
       <section className="hero-section">
         <picture>
+          <source
+            srcSet={`${heroWebpLg}, 1024w, ${heroJpgLg} 1024w`}
+            media="(min-width: 1024px)"
+            type="image/webp"
+          />
           <source
             srcSet={`${heroWebpMd}, 768w, ${heroJpgMd} 768w`}
             media="(min-width: 768px)"
