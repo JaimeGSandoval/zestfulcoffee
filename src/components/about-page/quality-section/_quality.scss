@@ -10,6 +10,12 @@
   @include tabletMd {
     margin-top: 22rem;
   }
+
+  @include laptop {
+    display: flex;
+    align-items: center;
+    margin-top: 13rem;
+  }
 }
 
 .quality-img {
@@ -20,6 +26,11 @@
   border-radius: 0.8rem;
   display: block;
   transform: translateY(-50%);
+
+  @include laptop {
+    width: 100%;
+    transform: translateY(-32%);
+  }
 }
 
 .quality-title {
@@ -27,7 +38,8 @@
   font-family: $title_font, serif;
   color: $bg_light_cream;
   font-size: 1.7rem;
-  margin: 5rem 0 3rem 0;
+  // margin: 5rem 0 3rem 0;
+  margin: 5rem 0 2rem 0;
 
   @include mobileSm {
     font-size: 2rem;
@@ -35,6 +47,11 @@
 
   @include tabletMd {
     margin-bottom: 2rem;
+  }
+
+  @include laptop {
+    font-size: 1.5rem;
+    text-align: left;
   }
 }
 
@@ -65,6 +82,13 @@
   @include tabletMd {
     padding-bottom: 2rem;
   }
+
+  @include laptop {
+    text-align: left;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.6rem;
+  }
 }
 
 .quality-text-box {
@@ -72,5 +96,22 @@
 
   @include tabletMd {
     margin-top: -20%;
+  }
+
+  @include laptop {
+    width: 81%;
+    margin-top: 0;
+  }
+}
+
+.quality-container {
+  @include laptop {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 17rem;
+    padding-top: 6rem;
   }
 }
