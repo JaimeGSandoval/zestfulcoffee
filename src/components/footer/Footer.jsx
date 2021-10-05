@@ -10,24 +10,28 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <img src={footerLogo} className="footer-logo" alt="logo" />
-        <ul className="footer-nav">
-          <li>
-            <Link to="/" className="footer-nav-link" data-footer-link>
-              home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="footer-nav-link" data-footer-link>
-              about us
-            </Link>
-          </li>
-          <li>
-            <Link to="/plan" className="footer-nav-link" data-footer-link>
-              create a plan
-            </Link>
-          </li>
-        </ul>
+        <div className="logo-links-box">
+          <img src={footerLogo} className="footer-logo" alt="logo" />
+
+          <ul className="footer-nav">
+            <li>
+              <Link to="/" className="footer-nav-link" data-footer-link>
+                home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="footer-nav-link" data-footer-link>
+                about us
+              </Link>
+            </li>
+            <li>
+              <Link to="/plan" className="footer-nav-link" data-footer-link>
+                create a plan
+              </Link>
+            </li>
+          </ul>
+        </div>
+
         <div className="social-icons-box">
           <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
             <img

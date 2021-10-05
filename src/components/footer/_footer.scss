@@ -30,6 +30,10 @@
   padding: 1rem 0;
   text-decoration: none;
   display: block;
+
+  @include laptop {
+    font-size: 0.7rem;
+  }
 }
 
 .footer-logo {
@@ -41,6 +45,11 @@
   @include tabletMd {
     width: 34%;
     padding-bottom: 1rem;
+  }
+
+  @include laptop {
+    padding: 0;
+    width: 40%;
   }
 }
 
@@ -54,5 +63,29 @@
   @include tabletMd {
     justify-content: space-evenly;
     width: 28%;
+  }
+}
+
+.footer-container {
+  @include laptop {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.logo-links-box {
+  @include laptop {
+    width: 55%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+  }
+}
+
+.mobile-footer-logo {
+  @include laptop {
+    width: 1.3rem;
   }
 }
