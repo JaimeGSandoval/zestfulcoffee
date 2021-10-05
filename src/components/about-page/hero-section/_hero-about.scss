@@ -16,32 +16,31 @@
 }
 
 .about-us-title {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-family: $title_font, serif;
   font-size: 2.2rem;
   color: $bg_light_cream;
   text-transform: capitalize;
   width: 100%;
   text-align: center;
+  margin-bottom: 1rem;
 
   @include mobileSm {
     font-size: 2.5rem;
   }
+
+  @include tabletMd {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
 }
 
 .about-us-description {
-  position: absolute;
-  top: 54%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 92%;
   font-family: $description_font, sans-serif;
   color: #bdbdbd;
   line-height: 1.7rem;
   text-align: center;
+  margin: auto;
 
   @include mobileSm {
     top: 57%;
@@ -55,5 +54,27 @@
 
   @include mobileI12Pro {
     top: 54%;
+  }
+
+  @include tabletMd {
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.about-hero-text-box {
+  position: absolute;
+  top: 18%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include tabletMd {
+    text-align: left;
+    top: 30%;
+    left: 5%;
+    width: 75%;
   }
 }
