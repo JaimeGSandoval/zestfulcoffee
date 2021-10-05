@@ -52,11 +52,6 @@
   @include mobileSm {
     width: 88%;
   }
-
-  // @include tabletMd {
-  //   display: flex;
-  //   align-items: end;
-  // }
 }
 
 .perk-icon {
@@ -119,7 +114,7 @@
 .perk-inner-box {
   @include tabletMd {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     width: 80%;
     margin: auto;
     justify-content: center;

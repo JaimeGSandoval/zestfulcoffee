@@ -23,9 +23,35 @@ const steps = [
 const PlanSteps = () => {
   return (
     <section className="plan-how-to-section">
-      {steps.map((step, i) => (
-        <StepBox step={step} stepNumber={i + 1} key={step.title} />
-      ))}
+      <div className="plan-how-to-inner-container">
+        <div className="plan-circles-container">
+          <div className="plan-circle">
+            <div className="plan-inner-circle">
+              <div className="inner-line-front"></div>
+            </div>
+          </div>
+          <div className="plan-line"></div>
+
+          <div className="plan-circle">
+            <div className="plan-inner-circle">
+              <div className="inner-line-middle"></div>
+            </div>
+          </div>
+          <div className="plan-line"></div>
+
+          <div className="plan-circle">
+            <div className="plan-inner-circle">
+              <div className="inner-line-end"></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="plan-boxes-container">
+          {steps.map((step, i) => (
+            <StepBox step={step} stepNumber={i + 1} key={step.title} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
