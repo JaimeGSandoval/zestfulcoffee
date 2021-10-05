@@ -6,6 +6,10 @@
   margin: 13rem auto 0 auto;
   background-color: $dark_grey_blue;
   border-radius: 0.8rem;
+
+  @include tabletMd {
+    margin-top: 22rem;
+  }
 }
 
 .quality-img {
@@ -27,6 +31,10 @@
 
   @include mobileSm {
     font-size: 2rem;
+  }
+
+  @include tabletMd {
+    margin-bottom: 2rem;
   }
 }
 
@@ -53,8 +61,16 @@
   @include mobileXL {
     width: 89%;
   }
+
+  @include tabletMd {
+    padding-bottom: 2rem;
+  }
 }
 
 .quality-text-box {
   transform: translateY(-20%);
+
+  @include tabletMd {
+    margin-top: -20%;
+  }
 }

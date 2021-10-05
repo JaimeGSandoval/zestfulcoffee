@@ -25,12 +25,32 @@ const Plan = () => {
   return (
     <section className="plan-how-to-home">
       <h2 className="how-to-title">How it works</h2>
+      <div className="circles-container">
+        <div className="circle">
+          <div className="inner-circle"></div>
+        </div>
+        <div className="line"></div>
 
-      {steps.map((step, i) => (
-        <StepBox step={step} stepNumber={i + 1} key={step.title} />
-      ))}
+        <div className="circle">
+          <div className="inner-circle"></div>
+        </div>
+        <div className="line"></div>
 
-      <CreatePlanBtn text={'create a plan'} className="create-plan-btn-steps" />
+        <div className="circle">
+          <div className="inner-circle"></div>
+        </div>
+      </div>
+
+      <div className="steps-container">
+        {steps.map((step, i) => (
+          <StepBox step={step} stepNumber={i + 1} key={step.title} />
+        ))}
+      </div>
+
+      <CreatePlanBtn
+        text={'create a plan'}
+        className="create-plan-steps-home-bottom"
+      />
     </section>
   );
 };
