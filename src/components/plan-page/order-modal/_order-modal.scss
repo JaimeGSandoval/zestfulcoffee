@@ -25,6 +25,10 @@
   @include mobileLandscapeSm {
     padding-bottom: 0.8rem;
   }
+
+  @include tabletMd {
+    width: 60%;
+  }
 }
 
 .order-modal-title-container {
@@ -44,6 +48,10 @@
 
   @include mobileLandscapeLg {
     padding: 1rem 0;
+  }
+
+  @include tabletMd {
+    padding: 2rem 0;
   }
 }
 
@@ -95,6 +103,11 @@
     padding: 1rem 0;
     font-size: 1.3rem;
   }
+
+  @include tabletMd {
+    font-size: 1.1rem;
+    padding-top: 2rem;
+  }
 }
 
 .confirm-text-box {
@@ -105,8 +118,14 @@
 .confirm-text {
   font-family: $description_font, sans-serif;
   color: $grey;
-  font-size: 1.1;
+  font-size: 1rem;
   line-height: 1.5rem;
+
+  @include tabletMd {
+    width: 91%;
+    margin: auto;
+    font-size: 0.8rem;
+  }
 }
 
 .submit-order-btn {
@@ -133,6 +152,36 @@
     padding: 1rem;
     width: 70%;
   }
+
+  @include tabletMd {
+    display: none;
+  }
+}
+
+.submit-order-btn-lg {
+  width: 90%;
+  margin: auto;
+  display: block;
+  border: 0;
+  outline: 0;
+  background-color: $dark_cyan;
+  color: $bg_light_cream;
+  font-size: 1rem;
+  font-family: $title_font, serif;
+  padding: 1.4rem 1rem;
+  border-radius: 0.8rem;
+  letter-spacing: 1px;
+  margin: 1.2rem auto 1.2rem auto;
+
+  @include tabletMd {
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+  }
 }
 
 .order-text {
@@ -142,4 +191,32 @@
 .show-order-modal {
   display: flex;
   align-items: center;
+}
+
+.order-modal-text {
+  @include tabletMd {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.total {
+  @include tabletMd {
+    color: $dark_grey_blue;
+    font-family: $title_font, serif;
+    font-size: 1.5rem;
+  }
+}
+
+.checkout-total-container-lg {
+  display: none;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  padding: 2rem 0;
+
+  @include tabletMd {
+    display: flex;
+  }
 }

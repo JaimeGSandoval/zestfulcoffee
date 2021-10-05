@@ -84,6 +84,16 @@ const OrderModal = ({ history }) => {
           </span>{' '}
           / mo
         </button>
+
+        <div className="checkout-total-container-lg">
+          <span className="total">
+            {calculateTotal(orderData.coffeeAmount, orderData.deliveryType)} /
+            mo
+          </span>{' '}
+          <button className="submit-order-btn-lg" onClick={() => handleClick()}>
+            Checkout
+          </button>
+        </div>
       </div>
     </div>,
     document.getElementById('order-modal')

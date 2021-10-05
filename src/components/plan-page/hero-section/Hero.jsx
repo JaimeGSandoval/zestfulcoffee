@@ -12,6 +12,7 @@ const Hero = () => {
         <source
           srcSet={`${blackcupWebpMd} 768w, ${blackcupJpgMd}, 768w`}
           type="image/webp"
+          media="(min-width: 768px)"
         />
         <source srcSet={`${blackcupWebpSm}`} type="image/webp" />
         <img src={blackcupJpgSm} alt="White cupcake" className="hero-plan" />

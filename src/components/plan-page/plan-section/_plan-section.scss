@@ -9,7 +9,7 @@
   margin-left: -7%;
 
   @include tabletMd {
-    padding: 3rem 0;
+    padding: 4rem 0;
   }
 }
 
@@ -22,7 +22,7 @@
 }
 
 .plan-how-to-section div:last-of-type {
-  padding-bottom: 5.8rem;
+  padding-bottom: 2.5rem;
 
   @include tabletMd {
     padding: 0;
@@ -68,7 +68,7 @@
   line-height: 1.5rem;
   hyphens: auto;
   text-align: center;
-  width: 90%;
+  width: 94%;
   margin: 1.8rem auto 0 auto;
 
   @include tabletMd {
@@ -159,7 +159,7 @@
 
 .plan-how-to-inner-container {
   @include tabletMd {
-    width: 90%;
+    width: 94%;
     margin: auto;
   }
 }
