@@ -3,6 +3,19 @@
 
 .options-section {
   margin-top: 8rem;
+
+  @include laptop {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+    width: 100%;
+  }
+}
+
+.content-container {
+  @include laptop {
+    width: 71%;
+  }
 }
 
 .option-container {
@@ -29,11 +42,21 @@
   display: none;
 }
 
+.option-container:nth-of-type(1) {
+  @include laptop {
+    margin-top: 0;
+  }
+}
+
 .arrow {
   transform: translateX(4.8rem);
 
   @include tabletMd {
     transform: translateX(12rem);
+  }
+
+  @include laptop {
+    transform: translateX(10rem);
   }
 }
 
@@ -124,6 +147,10 @@
 
   @include tabletMd {
     transform: scaleY(-1) translateX(12rem);
+  }
+
+  @include laptop {
+    transform: scaleY(-1) translateX(10rem);
   }
 }
 

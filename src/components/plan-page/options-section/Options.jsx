@@ -3,6 +3,7 @@ import OrderSummary from '../order-summary/OrderSummary';
 import { OrderModalContext } from '../../../context/OrderModalContext';
 import { StoreContext } from '../../../context/Context';
 import OptionContainer from './OptionContainer';
+import AsideTitles from '../aside-titles/AsideTitles';
 import arrowIcon from '../../../assets/icons/icon-arrow.svg';
 import {
   drinkTypes,
@@ -105,73 +106,83 @@ const Options = () => {
   return (
     <>
       <section className="options-section">
-        <div className="option-container">
-          <h1 className="option-title-question">
-            How do you drink your coffee?
-          </h1>
-          <img
-            src={arrowIcon}
-            alt="Arrow icon"
-            className="arrow"
-            data-arrow
-            onClick={() => setShowDrinkTypes(!showDrinkTypes)}
-            ref={drinkRef}
-          />
-          <OptionContainer options={drinkTypes} />
-        </div>
+        <AsideTitles
+          preference={showDrinkTypes}
+          beanType={showCoffeeTypes}
+          amount={showCoffeeAmounts}
+          grindType={showGrindTypes}
+          deliveryType={showDeliveryTypes}
+        />
 
-        <div className="option-container">
-          <h1 className="option-title-question">What type of coffee?</h1>
-          <img
-            src={arrowIcon}
-            alt="Arrow icon"
-            className="arrow"
-            data-arrow
-            onClick={() => setShowCoffeeTypes(!showCoffeeTypes)}
-            ref={coffeeRef}
-          />
-          <OptionContainer options={coffeeTypes} />
-        </div>
+        <div className="content-container">
+          <div className="option-container">
+            <h1 className="option-title-question">
+              How do you drink your coffee?
+            </h1>
+            <img
+              src={arrowIcon}
+              alt="Arrow icon"
+              className="arrow"
+              data-arrow
+              onClick={() => setShowDrinkTypes(!showDrinkTypes)}
+              ref={drinkRef}
+            />
+            <OptionContainer options={drinkTypes} />
+          </div>
 
-        <div className="option-container">
-          <h1 className="option-title-question">How much would you like?</h1>
-          <img
-            src={arrowIcon}
-            alt="Arrow icon"
-            className="arrow"
-            data-arrow
-            onClick={() => setShowCoffeeAmounts(!showCoffeeAmounts)}
-            ref={amountRef}
-          />
-          <OptionContainer options={coffeeAmounts} />
-        </div>
+          <div className="option-container">
+            <h1 className="option-title-question">What type of coffee?</h1>
+            <img
+              src={arrowIcon}
+              alt="Arrow icon"
+              className="arrow"
+              data-arrow
+              onClick={() => setShowCoffeeTypes(!showCoffeeTypes)}
+              ref={coffeeRef}
+            />
+            <OptionContainer options={coffeeTypes} />
+          </div>
 
-        <div className="option-container">
-          <h1 className="option-title-question">Want us to grind them?</h1>
-          <img
-            src={arrowIcon}
-            alt="Arrow icon"
-            className="arrow"
-            data-arrow
-            onClick={() => setShowGrindTypes(!showGrindTypes)}
-            ref={grindRef}
-          />
-          <OptionContainer options={grindTypes} />
-        </div>
+          <div className="option-container">
+            <h1 className="option-title-question">How much would you like?</h1>
+            <img
+              src={arrowIcon}
+              alt="Arrow icon"
+              className="arrow"
+              data-arrow
+              onClick={() => setShowCoffeeAmounts(!showCoffeeAmounts)}
+              ref={amountRef}
+            />
+            <OptionContainer options={coffeeAmounts} />
+          </div>
 
-        <div className="option-container">
-          <h1 className="option-title-question">
-            How often should we deliver?
-          </h1>
-          <img
-            src={arrowIcon}
-            alt="Arrow icon"
-            className="arrow"
-            data-arrow
-            onClick={() => setShowDeliveryTypes(!showDeliveryTypes)}
-            ref={deliveryRef}
-          />
-          <OptionContainer options={deliveryTypes} />
+          <div className="option-container">
+            <h1 className="option-title-question">Want us to grind them?</h1>
+            <img
+              src={arrowIcon}
+              alt="Arrow icon"
+              className="arrow"
+              data-arrow
+              onClick={() => setShowGrindTypes(!showGrindTypes)}
+              ref={grindRef}
+            />
+            <OptionContainer options={grindTypes} />
+          </div>
+
+          <div className="option-container">
+            <h1 className="option-title-question">
+              How often should we deliver?
+            </h1>
+            <img
+              src={arrowIcon}
+              alt="Arrow icon"
+              className="arrow"
+              data-arrow
+              onClick={() => setShowDeliveryTypes(!showDeliveryTypes)}
+              ref={deliveryRef}
+            />
+            <OptionContainer options={deliveryTypes} />
+          </div>
         </div>
       </section>
       <OrderSummary />
