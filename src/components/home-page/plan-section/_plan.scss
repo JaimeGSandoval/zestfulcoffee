@@ -133,22 +133,30 @@
   padding: 1.2rem 1.3rem;
   font-family: $title_font, sans-serif;
   font-size: 1.2rem;
-  width: 63%;
+  width: 48%;
   border-radius: 10px;
   margin: 5rem auto;
   display: block;
 
   @include mobileSm {
-    width: 59%;
+    width: 41%;
+  }
+
+  @include mobileLg {
+    width: 37%;
+  }
+
+  @include tabletSm {
+    width: 29%;
   }
 
   @include tabletMd {
     margin: 5rem 0;
-    width: 30%;
+    width: 22%;
   }
 
   @include laptop {
-    width: 21%;
+    width: 16%;
     font-size: 1rem;
   }
 }

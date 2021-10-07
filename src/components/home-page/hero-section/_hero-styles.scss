@@ -85,16 +85,31 @@
   padding: 1.2rem 1.3rem;
   font-family: $title_font, sans-serif;
   font-size: 1.2rem;
-  width: 63%;
+  width: 48%;
+  margin: auto;
   border-radius: 10px;
+  cursor: pointer;
 
   @include mobileSm {
-    width: 59%;
+    width: 44%;
+  }
+
+  @include mobileLg {
+    width: 37%;
+  }
+
+  @include tabletSm {
+    width: 29%;
   }
 
   @include tabletMd {
-    width: 45%;
+    width: 36%;
+    margin: 0;
   }
+}
+
+.create-plan-btn-hero-home a {
+  width: 282px;
 }
 
 .hero-home-text-box {

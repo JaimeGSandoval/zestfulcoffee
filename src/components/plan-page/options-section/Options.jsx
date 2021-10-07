@@ -51,8 +51,6 @@ const Options = () => {
       (orderData.drinkType === 'Capsule' && showGrindTypes) ||
       orderData.drinkType === 'Capsule'
     ) {
-      console.log('bankai');
-      // grindRef.current.removeEventListener('click', setShowGrindTypes);
       grindRef.current.style.pointerEvents = 'none';
       grindRef.current.nextElementSibling.classList.add('hide');
       grindRef.current.classList.remove('toggle-arrow');
