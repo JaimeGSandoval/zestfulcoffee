@@ -1,0 +1,43 @@
+@import '../../../sass/abstract/vars';
+@import '../../../sass/abstract/media-queries';
+
+.selectedNumber {
+  color: $dark_cyan;
+}
+
+.selectedText {
+  color: #333d4b;
+}
+
+.unselected {
+  color: #bbbbbb;
+}
+
+.aside {
+  display: none;
+
+  @include laptop {
+    display: inline-block;
+    width: 19%;
+  }
+}
+
+.section-title-box {
+  padding: 1rem 0;
+  border-bottom: 1px solid #dadada;
+}
+
+.section-number {
+  font-family: $title_font, serif;
+}
+
+.section-title {
+  font-family: $title_font, serif;
+  padding-left: 10px;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.section-title-box:nth-of-type(1) {
+  padding-top: 0;
+}

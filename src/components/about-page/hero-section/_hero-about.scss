@@ -60,6 +60,10 @@
     text-align: left;
     margin: 0;
   }
+
+  @include laptop {
+    width: 74%;
+  }
 }
 
 .about-hero-text-box {

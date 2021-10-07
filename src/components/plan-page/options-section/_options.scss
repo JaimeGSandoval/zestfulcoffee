@@ -3,6 +3,19 @@
 
 .options-section {
   margin-top: 8rem;
+
+  @include laptop {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+    width: 100%;
+  }
+}
+
+.content-container {
+  @include laptop {
+    width: 74%;
+  }
 }
 
 .option-container {
@@ -29,12 +42,55 @@
   display: none;
 }
 
+.option-container:nth-of-type(1) {
+  @include laptop {
+    margin-top: 0;
+  }
+}
+
+.disabled-btn {
+  background: #bbbbbb;
+  color: $bg_light_cream;
+  text-align: center;
+  outline: 0;
+  border: 0;
+  text-transform: capitalize;
+  padding: 1.2rem 1.3rem;
+  font-family: $title_font, sans-serif;
+  font-size: 1.2rem;
+  width: 69%;
+  border-radius: 10px;
+  margin: 5rem auto 7rem auto;
+  display: block;
+
+  @include mobileSm {
+    width: 59%;
+  }
+
+  @include mobileLg {
+    width: 53%;
+  }
+
+  @include tabletMd {
+    width: 32%;
+  }
+}
+
 .arrow {
   transform: translateX(4.8rem);
 
   @include tabletMd {
     transform: translateX(12rem);
   }
+
+  @include laptop {
+    transform: translateX(10rem);
+  }
+}
+
+.change-svg {
+  filter: invert(68%) sepia(96%) saturate(0%) hue-rotate(163deg) brightness(90%)
+    contrast(98%);
 }
 
 .option-box {
@@ -46,7 +102,7 @@
   color: $dark_grey_blue;
 
   @include tabletMd {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 }
 
@@ -58,17 +114,25 @@
   @include tabletMd {
     padding-bottom: 1.3rem;
   }
+
+  @include laptop {
+    font-size: 1.2rem;
+  }
 }
 
 .option-description {
   font-size: 1rem;
   font-family: $description_font;
-  line-height: 1.7rem;
+  line-height: 1.4rem;
   padding-left: 1rem;
   padding-right: 1rem;
 
   @include tabletMd {
     font-size: 1rem;
+  }
+
+  @include laptop {
+    font-size: 0.9rem;
   }
 }
 
@@ -124,6 +188,10 @@
 
   @include tabletMd {
     transform: scaleY(-1) translateX(12rem);
+  }
+
+  @include laptop {
+    transform: scaleY(-1) translateX(10rem);
   }
 }
 

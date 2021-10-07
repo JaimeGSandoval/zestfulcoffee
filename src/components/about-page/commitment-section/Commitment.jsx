@@ -3,12 +3,19 @@ import commitmentWebpSm from '../../../assets/images/about/mobile/commitment.web
 import commitmentJpgSm from '../../../assets/images/about/mobile/commitment.jpg';
 import commitmentWebpMd from '../../../assets/images/about/tablet/commitment.webp';
 import commitmentJpgMd from '../../../assets/images/about/tablet/commitment.jpg';
+import commitmentWebpLg from '../../../assets/images/about/desktop/commitment-lg.webp';
+import commitmentJpgLg from '../../../assets/images/about/desktop/commitment-lg.jpg';
 import './_commitment.scss';
 
 const Commitment = () => {
   return (
     <section className="about-commitment-section">
       <picture>
+        <source
+          srcSet={`${commitmentWebpLg} 1024w, ${commitmentJpgLg}, 1024w`}
+          type="image/webp"
+          media="(min-width: 1024px)"
+        />
         <source
           srcSet={`${commitmentWebpMd} 768w, ${commitmentJpgMd}, 768w`}
           type="image/webp"
