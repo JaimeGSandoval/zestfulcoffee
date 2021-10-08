@@ -89,6 +89,11 @@
   margin: auto;
   border-radius: 10px;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: $cyan_hover;
+  }
 
   @include mobileSm {
     width: 44%;
@@ -103,14 +108,13 @@
   }
 
   @include tabletMd {
-    width: 36%;
     margin: 0;
   }
 }
 
-.create-plan-btn-hero-home a {
-  width: 282px;
-}
+// .create-plan-btn-hero-home a {
+//   width: 282px;
+// }
 
 .hero-home-text-box {
   position: absolute;

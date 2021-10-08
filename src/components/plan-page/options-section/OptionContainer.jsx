@@ -6,7 +6,7 @@ const OptionContainer = ({ options }) => {
   const [activeIndex, setActiveIndex] = useState(null);
   const { setOrderData } = useContext(StoreContext);
 
-  const onOptionClick = (index, e) => {
+  const handleClick = (index, e) => {
     setOrderData((prev) => ({
       ...prev,
       [e.target.dataset.type]: e.target.dataset.name,
@@ -15,20 +15,22 @@ const OptionContainer = ({ options }) => {
   };
 
   const renderedOptions = options.map((option, index) => {
-    const active = index === activeIndex ? 'active' : '';
+    const active = index === activeIndex ? 'active remove-pointer-events' : '';
 
     return (
       <React.Fragment key={option.id}>
         <div
           className={`option-box ${active}`}
-          onClick={(e) => onOptionClick(index, e)}
+          onClick={(e) => handleClick(index, e)}
           data-name={option.optionTitle}
           data-type={option.dataType}
+          data-parent
         >
           <h2
             className="option-title"
             data-name={option.optionTitle}
             data-type={option.dataType}
+            data-child
           >
             {option.optionTitle}
           </h2>
@@ -36,6 +38,7 @@ const OptionContainer = ({ options }) => {
             className="option-description"
             data-name={option.optionTitle}
             data-type={option.dataType}
+            data-child
           >
             {option.optionDescription}
           </p>

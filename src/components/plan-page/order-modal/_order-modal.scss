@@ -172,6 +172,7 @@
   border-radius: 0.8rem;
   letter-spacing: 1px;
   margin: 1.2rem auto 1.2rem auto;
+  cursor: pointer;
 
   @include tabletMd {
     display: inline-block;

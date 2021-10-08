@@ -74,10 +74,15 @@
   @include tabletMd {
     width: 32%;
   }
+
+  @include laptop {
+    width: 25%;
+  }
 }
 
 .arrow {
   transform: translateX(4.8rem);
+  cursor: pointer;
 
   @include tabletMd {
     transform: translateX(12rem);
@@ -100,6 +105,12 @@
   padding-bottom: 2rem;
   margin-bottom: 1rem;
   color: $dark_grey_blue;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: $pale_orange;
+  }
 
   @include tabletMd {
     padding: 3rem 0;
@@ -160,6 +171,11 @@
   margin: 5rem auto 7rem auto;
   display: block;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: #14b6b3;
+  }
 
   @include mobileSm {
     width: 59%;
@@ -171,6 +187,10 @@
 
   @include tabletMd {
     width: 32%;
+  }
+
+  @include laptop {
+    width: 25%;
   }
 }
 
@@ -198,4 +218,12 @@
 
 .hide {
   display: none;
+}
+
+.remove-pointer-events {
+  pointer-events: none;
+}
+
+.disabled-font {
+  color: $disabled_font;
 }

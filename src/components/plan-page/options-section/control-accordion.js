@@ -1,5 +1,6 @@
-const handleToggle = (dataRef, stateVal) => {
+const handleToggle = (dataRef, stateVal, e) => {
   const panel = dataRef.current.nextElementSibling;
+
   if (stateVal) {
     panel.classList.add('show-option');
     dataRef.current.classList.add('toggle-arrow');
