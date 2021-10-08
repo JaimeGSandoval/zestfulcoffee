@@ -137,6 +137,11 @@
   border-radius: 10px;
   margin: 5rem auto;
   display: block;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: $cyan_hover;
+  }
 
   @include mobileSm {
     width: 41%;

@@ -53,6 +53,10 @@
     width: 87%;
     margin: 0;
   }
+
+  @include laptop {
+    width: 75%;
+  }
 }
 
 .plan-hero-text-box {
