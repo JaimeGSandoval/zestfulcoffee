@@ -73,6 +73,10 @@
     text-align: left;
     margin: 0;
   }
+
+  @include laptopLg {
+    width: 72%;
+  }
 }
 
 .create-plan-btn-hero-home {
@@ -111,10 +115,6 @@
     margin: 0;
   }
 }
-
-// .create-plan-btn-hero-home a {
-//   width: 282px;
-// }
 
 .hero-home-text-box {
   position: absolute;

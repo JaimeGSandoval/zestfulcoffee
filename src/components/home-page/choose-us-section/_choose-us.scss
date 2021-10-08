@@ -31,6 +31,10 @@
   @include laptop {
     width: 64%;
   }
+
+  @include laptopLg {
+    width: 60%;
+  }
 }
 
 .perks-bg {
@@ -98,6 +102,10 @@
   @include laptop {
     text-align: center;
     font-size: 1rem;
+  }
+
+  @include laptopLg {
+    font-size: 1.2rem;
   }
 }
 
