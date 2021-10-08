@@ -64,6 +64,10 @@
   @include laptop {
     width: 74%;
   }
+
+  @include laptopLg {
+    width: 62%;
+  }
 }
 
 .about-hero-text-box {

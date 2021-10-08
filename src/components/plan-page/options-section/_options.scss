@@ -48,38 +48,6 @@
   }
 }
 
-.disabled-btn {
-  background: #bbbbbb;
-  color: $bg_light_cream;
-  text-align: center;
-  outline: 0;
-  border: 0;
-  text-transform: capitalize;
-  padding: 1.2rem 1.3rem;
-  font-family: $title_font, sans-serif;
-  font-size: 1.2rem;
-  width: 69%;
-  border-radius: 10px;
-  margin: 5rem auto 7rem auto;
-  display: block;
-
-  @include mobileSm {
-    width: 59%;
-  }
-
-  @include mobileLg {
-    width: 53%;
-  }
-
-  @include tabletMd {
-    width: 32%;
-  }
-
-  @include laptop {
-    width: 25%;
-  }
-}
-
 .arrow {
   transform: translateX(4.8rem);
   cursor: pointer;
@@ -154,6 +122,13 @@
 
 .create-plan-order-container {
   width: 100%;
+
+  @include laptop {
+    clear: right;
+    content: '';
+    // display: table;
+    display: flex;
+  }
 }
 
 .create-plan-order {
@@ -191,6 +166,50 @@
 
   @include laptop {
     width: 25%;
+    margin-left: 0;
+    // float: right;
+    margin: 5rem 0 7rem auto;
+  }
+
+  @include laptopLg {
+    width: 23%;
+  }
+}
+
+.disabled-btn {
+  background: #bbbbbb;
+  color: $bg_light_cream;
+  text-align: center;
+  outline: 0;
+  border: 0;
+  text-transform: capitalize;
+  padding: 1.2rem 1.3rem;
+  font-family: $title_font, sans-serif;
+  font-size: 1.2rem;
+  width: 69%;
+  border-radius: 10px;
+  margin: 5rem auto 7rem auto;
+  display: block;
+
+  @include mobileSm {
+    width: 59%;
+  }
+
+  @include mobileLg {
+    width: 53%;
+  }
+
+  @include tabletMd {
+    width: 32%;
+  }
+
+  @include laptop {
+    width: 25%;
+    margin: 5rem 0 7rem auto;
+  }
+
+  @include laptopLg {
+    width: 23%;
   }
 }
 

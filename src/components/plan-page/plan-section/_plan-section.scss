@@ -141,6 +141,10 @@
   height: 2px;
   background: $pale_orange;
   display: inline-block;
+
+  @include laptopLg {
+    width: 32%;
+  }
 }
 
 .inner-line-front {

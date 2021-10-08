@@ -51,12 +51,15 @@ const Options = () => {
       (orderData.drinkType === 'Capsule' && showGrindTypes) ||
       orderData.drinkType === 'Capsule'
     ) {
+      setShowGrindTypes(false);
+      grindRef.current.style.pointerEvents = 'none';
       grindRef.current.nextElementSibling.classList.add('hide');
       grindRef.current.classList.remove('toggle-arrow');
       grindRef.current.classList.add('change-svg');
       grindRef.current.previousElementSibling.classList.add('disabled-font');
       return;
     } else {
+      grindRef.current.style.pointerEvents = 'auto';
       grindRef.current.nextElementSibling.classList.remove('hide');
       grindRef.current.classList.remove('change-svg');
       grindRef.current.previousElementSibling.classList.remove('disabled-font');

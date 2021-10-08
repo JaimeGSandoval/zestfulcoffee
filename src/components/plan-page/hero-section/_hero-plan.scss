@@ -57,6 +57,10 @@
   @include laptop {
     width: 75%;
   }
+
+  @include laptopLg {
+    width: 65%;
+  }
 }
 
 .plan-hero-text-box {

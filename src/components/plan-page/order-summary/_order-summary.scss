@@ -5,6 +5,11 @@
   padding: 4rem 1.4rem;
   border-radius: 0.8rem;
   margin-top: 7rem;
+
+  @include laptop {
+    width: 74%;
+    margin-left: auto;
+  }
 }
 
 .order-summary-title {
@@ -28,6 +33,10 @@
 
 .create-plan-order-container {
   margin: 4rem 0 7rem 0;
+
+  @include laptop {
+    margin: 0;
+  }
 }
 
 .order-text {

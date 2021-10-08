@@ -29,6 +29,10 @@
   @include tabletMd {
     width: 60%;
   }
+
+  @include laptopLg {
+    width: 46%;
+  }
 }
 
 .order-modal-title-container {
