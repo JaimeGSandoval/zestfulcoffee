@@ -31,6 +31,10 @@
     font-size: 2.9rem;
     text-align: left;
   }
+
+  @include desktopXL {
+    font-size: 3.2rem;
+  }
 }
 
 .centered-text-bottom {
@@ -49,6 +53,10 @@
   @include tabletMd {
     font-size: 2.9rem;
     text-align: left;
+  }
+
+  @include desktopXL {
+    font-size: 3.2rem;
   }
 }
 
@@ -75,6 +83,10 @@
 
   @include laptopLg {
     width: 72%;
+  }
+
+  @include desktopXL {
+    font-size: 1.3rem;
   }
 }
 

@@ -17,6 +17,10 @@
   @include tabletMd {
     text-align: left;
   }
+
+  @include desktopXL {
+    font-size: 1.8rem;
+  }
 }
 
 .step-number {
@@ -34,6 +38,10 @@
 
   @include laptop {
     font-size: 3rem;
+  }
+
+  @include desktopXL {
+    font-size: 3.5rem;
   }
 }
 
@@ -53,6 +61,10 @@
     font-size: 1.5rem;
     max-width: 200px;
   }
+
+  @include desktopXL {
+    font-size: 1.8rem;
+  }
 }
 
 .step-description {
@@ -61,7 +73,6 @@
   line-height: 1.5rem;
   hyphens: auto;
   text-align: center;
-  // width: 88%;
   margin: 1.8rem auto 0 auto;
 
   @include tabletMd {
@@ -70,6 +81,11 @@
 
   @include laptop {
     font-size: 0.9rem;
+  }
+
+  @include desktopXL {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
   }
 }
 
@@ -175,5 +191,10 @@
 
   @include desktop {
     width: 12%;
+  }
+
+  @include desktopXL {
+    font-size: 1.3rem;
+    width: 15%;
   }
 }

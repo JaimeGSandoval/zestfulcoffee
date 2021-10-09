@@ -18,6 +18,11 @@
   font-family: $description_font, sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
+
+  @include desktopXL {
+    font-size: 1.3rem;
+    padding-bottom: 0.6rem;
+  }
 }
 
 .order-summary-text {
@@ -28,6 +33,11 @@
 
   @include tabletMd {
     font-size: 1.6rem;
+  }
+
+  @include desktopXL {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
   }
 }
 
@@ -55,5 +65,11 @@
 
   @include tabletSm {
     width: 10%;
+  }
+}
+
+.order-summary-text-box {
+  @include desktopXL {
+    padding: 0.5rem 2rem;
   }
 }

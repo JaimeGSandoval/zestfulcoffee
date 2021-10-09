@@ -34,6 +34,10 @@
   @include laptop {
     font-size: 0.7rem;
   }
+
+  @include desktopXL {
+    font-size: 0.9rem;
+  }
 }
 
 .footer-logo {
@@ -88,5 +92,9 @@
 .mobile-footer-logo {
   @include laptop {
     width: 1.3rem;
+  }
+
+  @include desktopXL {
+    width: 1.7rem;
   }
 }

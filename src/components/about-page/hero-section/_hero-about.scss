@@ -32,6 +32,10 @@
     text-align: left;
     margin-bottom: 1rem;
   }
+
+  @include desktopXL {
+    font-size: 3.2rem;
+  }
 }
 
 .about-us-description {
@@ -71,6 +75,12 @@
 
   @include desktop {
     width: 57%;
+  }
+
+  @include desktopXL {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    width: 59%;
   }
 }
 
