@@ -33,6 +33,10 @@
     text-align: left;
     padding-bottom: 1rem;
   }
+
+  @include desktopXL {
+    font-size: 3.2rem;
+  }
 }
 
 .plan-description {
@@ -56,6 +60,20 @@
 
   @include laptop {
     width: 75%;
+  }
+
+  @include laptopLg {
+    width: 65%;
+  }
+
+  @include desktop {
+    width: 56%;
+  }
+
+  @include desktopXL {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    width: 57%;
   }
 }
 

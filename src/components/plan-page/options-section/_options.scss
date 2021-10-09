@@ -34,6 +34,10 @@
   @include mobileSm {
     font-size: 1.5rem;
   }
+
+  @include desktopXL {
+    font-size: 1.7rem;
+  }
 }
 
 .options-container {
@@ -48,38 +52,6 @@
   }
 }
 
-.disabled-btn {
-  background: #bbbbbb;
-  color: $bg_light_cream;
-  text-align: center;
-  outline: 0;
-  border: 0;
-  text-transform: capitalize;
-  padding: 1.2rem 1.3rem;
-  font-family: $title_font, sans-serif;
-  font-size: 1.2rem;
-  width: 69%;
-  border-radius: 10px;
-  margin: 5rem auto 7rem auto;
-  display: block;
-
-  @include mobileSm {
-    width: 59%;
-  }
-
-  @include mobileLg {
-    width: 53%;
-  }
-
-  @include tabletMd {
-    width: 32%;
-  }
-
-  @include laptop {
-    width: 25%;
-  }
-}
-
 .arrow {
   transform: translateX(4.8rem);
   cursor: pointer;
@@ -90,6 +62,10 @@
 
   @include laptop {
     transform: translateX(10rem);
+  }
+
+  @include desktopXL {
+    width: 1.4rem;
   }
 }
 
@@ -108,13 +84,36 @@
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 
-  &:hover {
-    background: $pale_orange;
-  }
+  // &--disabled {
+  //   color: $bg_light_cream;
+
+  //   &:hover {
+  //     background-color: unset;
+  //     cursor: unset;
+  //   }
+  // }
+
+  // &:hover {
+  //   background: $pale_orange;
+  // }
 
   @include tabletMd {
     padding: 3rem 0;
   }
+
+  @include laptop {
+    &:hover {
+      background: $pale_orange;
+    }
+  }
+
+  @include desktopXL {
+    padding: 3.2rem 1rem;
+  }
+}
+
+.colorWhite {
+  color: white;
 }
 
 .option-title {
@@ -128,6 +127,10 @@
 
   @include laptop {
     font-size: 1.2rem;
+  }
+
+  @include desktopXL {
+    font-size: 1.5rem;
   }
 }
 
@@ -145,6 +148,11 @@
   @include laptop {
     font-size: 0.9rem;
   }
+
+  @include desktopXL {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
 }
 
 .active {
@@ -154,6 +162,12 @@
 
 .create-plan-order-container {
   width: 100%;
+
+  @include laptop {
+    clear: right;
+    content: '';
+    display: flex;
+  }
 }
 
 .create-plan-order {
@@ -191,6 +205,67 @@
 
   @include laptop {
     width: 25%;
+    margin-left: 0;
+    margin: 5rem 0 7rem auto;
+  }
+
+  @include laptopLg {
+    width: 22%;
+  }
+
+  @include desktop {
+    width: 19%;
+  }
+
+  @include desktopXL {
+    width: 22%;
+    font-size: 1.4rem;
+  }
+}
+
+.disabled-btn {
+  background: #bbbbbb;
+  color: $bg_light_cream;
+  text-align: center;
+  outline: 0;
+  border: 0;
+  text-transform: capitalize;
+  padding: 1.2rem 1.3rem;
+  font-family: $title_font, sans-serif;
+  font-size: 1.2rem;
+  width: 69%;
+  border-radius: 10px;
+  margin: 5rem auto 7rem auto;
+  display: block;
+
+  @include mobileSm {
+    width: 59%;
+  }
+
+  @include mobileLg {
+    width: 53%;
+  }
+
+  @include tabletMd {
+    width: 32%;
+  }
+
+  @include laptop {
+    width: 25%;
+    margin: 5rem 0 7rem auto;
+  }
+
+  @include laptopLg {
+    width: 22%;
+  }
+
+  @include desktop {
+    width: 19%;
+  }
+
+  @include desktopXL {
+    width: 22%;
+    font-size: 1.4rem;
   }
 }
 
@@ -220,8 +295,15 @@
   display: none;
 }
 
-.remove-pointer-events {
-  pointer-events: none;
+// .remove-pointer-events {
+//   pointer-events: none;
+// }
+
+.custom-hover {
+  &:hover {
+    background: $dark_cyan;
+    cursor: unset;
+  }
 }
 
 .disabled-font {

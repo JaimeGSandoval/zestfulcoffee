@@ -29,6 +29,10 @@
 
 .section-number {
   font-family: $title_font, serif;
+
+  @include desktopXL {
+    font-size: 1.4rem;
+  }
 }
 
 .section-title {
@@ -36,6 +40,10 @@
   padding-left: 10px;
   text-transform: capitalize;
   display: inline-block;
+
+  @include desktopXL {
+    font-size: 1.3rem;
+  }
 }
 
 .section-title-box:nth-of-type(1) {

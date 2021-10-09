@@ -66,11 +66,19 @@ const AsideTitles = ({
         </div>{' '}
         <div className="section-title-box">
           <span
-            className={`section-number ${numberClass(orderData.grindType)}`}
+            className={`section-number ${
+              orderData.drinkType === 'Capsule' && orderData.grindType
+                ? 'unselected'
+                : numberClass(orderData.grindType)
+            }`}
           >
             04
           </span>
-          <span className={`section-title ${titleClass(grindType)}`}>
+          <span
+            className={`section-title ${
+              grindType ? 'selectedText' : 'unselected'
+            }`}
+          >
             grind options
           </span>
         </div>{' '}

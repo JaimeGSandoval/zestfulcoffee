@@ -29,6 +29,14 @@
   @include tabletMd {
     width: 60%;
   }
+
+  @include laptopLg {
+    width: 46%;
+  }
+
+  @include desktopLg {
+    width: 36%;
+  }
 }
 
 .order-modal-title-container {
@@ -182,6 +190,10 @@
     border-radius: 0.4rem;
     font-size: 0.8rem;
     margin-left: 1rem;
+  }
+
+  @include desktopLg {
+    width: 37%;
   }
 }
 

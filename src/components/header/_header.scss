@@ -71,6 +71,10 @@
   @include laptop {
     font-size: 0.8rem;
   }
+
+  @include desktopXL {
+    font-size: 1rem;
+  }
 }
 
 .active-link {

@@ -14,6 +14,10 @@
   font-family: $title_font, serif;
   padding: 4rem 0 2rem 0;
   font-size: 1.7rem;
+
+  @include desktopXL {
+    font-size: 2.1rem;
+  }
 }
 
 .choose-description {
@@ -30,6 +34,19 @@
 
   @include laptop {
     width: 64%;
+  }
+
+  @include laptopLg {
+    width: 60%;
+  }
+
+  @include desktopLg {
+    width: 52%;
+  }
+
+  @include desktopXL {
+    font-size: 1.3rem;
+    line-height: 2.1rem;
   }
 }
 
@@ -99,6 +116,14 @@
     text-align: center;
     font-size: 1rem;
   }
+
+  @include laptopLg {
+    font-size: 1.2rem;
+  }
+
+  @include desktopXL {
+    font-size: 1.5rem;
+  }
 }
 
 .perk-description {
@@ -129,6 +154,12 @@
     font-size: 0.9rem;
     line-height: 1.4rem;
     padding-bottom: 2rem;
+  }
+
+  @include desktopXL {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    padding-top: 1.5rem;
   }
 }
 

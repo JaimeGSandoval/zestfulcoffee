@@ -16,6 +16,10 @@
     align-items: center;
     margin-top: 13rem;
   }
+
+  @include desktopMd {
+    margin-top: 17rem;
+  }
 }
 
 .quality-img {
@@ -31,6 +35,14 @@
     width: 100%;
     transform: translateY(-32%);
   }
+
+  @include desktopMd {
+    width: 86%;
+  }
+
+  @include desktopXL {
+    width: 81%;
+  }
 }
 
 .quality-title {
@@ -38,7 +50,6 @@
   font-family: $title_font, serif;
   color: $bg_light_cream;
   font-size: 1.7rem;
-  // margin: 5rem 0 3rem 0;
   margin: 5rem 0 2rem 0;
 
   @include mobileSm {
@@ -52,6 +63,13 @@
   @include laptop {
     font-size: 1.5rem;
     text-align: left;
+  }
+  @include laptopLg {
+    font-size: 1.9rem;
+  }
+
+  @include desktopXL {
+    font-size: 2rem;
   }
 }
 
@@ -89,6 +107,15 @@
     margin: 0;
     line-height: 1.6rem;
   }
+
+  @include laptopLg {
+    font-size: 1rem;
+  }
+
+  @include desktopXL {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
 }
 
 .quality-text-box {
@@ -113,5 +140,10 @@
     align-items: center;
     height: 17rem;
     padding-top: 6rem;
+  }
+
+  @include desktopXL {
+    height: 26rem;
+    padding-top: 7rem;
   }
 }

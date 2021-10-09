@@ -7,7 +7,7 @@ import calculateTotal from './priceTotal';
 
 const OrderModal = ({ history }) => {
   const textRef = useRef();
-  const { orderData } = useContext(StoreContext);
+  const { orderData, setOrderData } = useContext(StoreContext);
   const { showOrderModal, setShowOrderModal } = useContext(OrderModalContext);
   const show = showOrderModal ? 'show-order-modal' : '';
 
@@ -34,6 +34,13 @@ const OrderModal = ({ history }) => {
   const handleClick = () => {
     history.push('/');
     setShowOrderModal(false);
+    setOrderData({
+      drinkType: '',
+      coffeeType: '',
+      coffeeAmount: '',
+      grindType: '',
+      deliveryType: '',
+    });
   };
 
   return ReactDOM.createPortal(
