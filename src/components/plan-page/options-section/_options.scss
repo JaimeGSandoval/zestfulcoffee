@@ -76,13 +76,32 @@
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 
-  &:hover {
-    background: $pale_orange;
-  }
+  // &--disabled {
+  //   color: $bg_light_cream;
+
+  //   &:hover {
+  //     background-color: unset;
+  //     cursor: unset;
+  //   }
+  // }
+
+  // &:hover {
+  //   background: $pale_orange;
+  // }
 
   @include tabletMd {
     padding: 3rem 0;
   }
+
+  @include laptop {
+    &:hover {
+      background: $pale_orange;
+    }
+  }
+}
+
+.colorWhite {
+  color: white;
 }
 
 .option-title {
@@ -126,7 +145,6 @@
   @include laptop {
     clear: right;
     content: '';
-    // display: table;
     display: flex;
   }
 }
@@ -167,12 +185,15 @@
   @include laptop {
     width: 25%;
     margin-left: 0;
-    // float: right;
     margin: 5rem 0 7rem auto;
   }
 
   @include laptopLg {
-    width: 23%;
+    width: 22%;
+  }
+
+  @include desktop {
+    width: 19%;
   }
 }
 
@@ -209,7 +230,11 @@
   }
 
   @include laptopLg {
-    width: 23%;
+    width: 22%;
+  }
+
+  @include desktop {
+    width: 19%;
   }
 }
 
@@ -239,8 +264,15 @@
   display: none;
 }
 
-.remove-pointer-events {
-  pointer-events: none;
+// .remove-pointer-events {
+//   pointer-events: none;
+// }
+
+.custom-hover {
+  &:hover {
+    background: $dark_cyan;
+    cursor: unset;
+  }
 }
 
 .disabled-font {

@@ -16,6 +16,10 @@
     align-items: center;
     margin-top: 13rem;
   }
+
+  @include desktopMd {
+    margin-top: 17rem;
+  }
 }
 
 .quality-img {
@@ -30,6 +34,10 @@
   @include laptop {
     width: 100%;
     transform: translateY(-32%);
+  }
+
+  @include desktopMd {
+    width: 86%;
   }
 }
 

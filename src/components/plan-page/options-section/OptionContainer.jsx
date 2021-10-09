@@ -15,7 +15,8 @@ const OptionContainer = ({ options }) => {
   };
 
   const renderedOptions = options.map((option, index) => {
-    const active = index === activeIndex ? 'active remove-pointer-events' : '';
+    // 'remove-pointer-events';
+    const active = index === activeIndex ? 'active custom-hover' : '';
 
     return (
       <React.Fragment key={option.id}>
@@ -27,7 +28,7 @@ const OptionContainer = ({ options }) => {
           data-parent
         >
           <h2
-            className="option-title"
+            className={`option-title`}
             data-name={option.optionTitle}
             data-type={option.dataType}
             data-child
@@ -35,7 +36,7 @@ const OptionContainer = ({ options }) => {
             {option.optionTitle}
           </h2>
           <p
-            className="option-description"
+            className={`option-description`}
             data-name={option.optionTitle}
             data-type={option.dataType}
             data-child

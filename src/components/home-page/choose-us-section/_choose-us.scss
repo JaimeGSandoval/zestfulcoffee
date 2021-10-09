@@ -35,6 +35,10 @@
   @include laptopLg {
     width: 60%;
   }
+
+  @include desktopLg {
+    width: 52%;
+  }
 }
 
 .perks-bg {

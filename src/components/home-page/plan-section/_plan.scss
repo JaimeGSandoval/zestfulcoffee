@@ -168,4 +168,12 @@
     width: 16%;
     font-size: 1rem;
   }
+
+  @include laptopLg {
+    width: 14%;
+  }
+
+  @include desktop {
+    width: 12%;
+  }
 }
