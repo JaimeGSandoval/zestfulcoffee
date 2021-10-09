@@ -106,10 +106,6 @@
       background: $pale_orange;
     }
   }
-
-  @include desktopXL {
-    padding: 3.2rem 1rem;
-  }
 }
 
 .colorWhite {
@@ -150,7 +146,7 @@
   }
 
   @include desktopXL {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6rem;
   }
 }
