@@ -11,6 +11,11 @@
   @include tabletMd {
     padding: 4rem 0;
   }
+
+  @include laptop {
+    width: 100%;
+    margin: 7rem auto 0 auto;
+  }
 }
 
 .plan-how-to-section div:nth-of-type(1) {
@@ -41,6 +46,14 @@
     text-align: left;
     margin-top: 3rem;
   }
+
+  @include laptop {
+    font-size: 3rem;
+  }
+
+  @include desktopXL {
+    font-size: 3.5rem;
+  }
 }
 
 .plan-step-description:nth-of-type(1) p {
@@ -60,6 +73,16 @@
     text-align: left;
     max-width: 228px;
   }
+
+  @include laptop {
+    max-width: 200px;
+    font-size: 1.5rem;
+    width: 90%;
+  }
+
+  @include desktopXL {
+    font-size: 1.8rem;
+  }
 }
 
 .plan-step-description {
@@ -68,12 +91,17 @@
   line-height: 1.5rem;
   hyphens: auto;
   text-align: center;
-  width: 94%;
+  width: 93%;
   margin: 1.8rem auto 0 auto;
 
   @include tabletMd {
     text-align: left;
     margin: 1.8rem 0 0;
+  }
+
+  @include desktopXL {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
   }
 }
 
@@ -126,6 +154,10 @@
   height: 2px;
   background: $pale_orange;
   display: inline-block;
+
+  @include laptopLg {
+    width: 32%;
+  }
 }
 
 .inner-line-front {

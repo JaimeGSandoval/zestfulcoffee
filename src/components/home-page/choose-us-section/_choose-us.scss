@@ -14,6 +14,10 @@
   font-family: $title_font, serif;
   padding: 4rem 0 2rem 0;
   font-size: 1.7rem;
+
+  @include desktopXL {
+    font-size: 2.1rem;
+  }
 }
 
 .choose-description {
@@ -27,6 +31,23 @@
   @include tabletMd {
     width: 80%;
   }
+
+  @include laptop {
+    width: 64%;
+  }
+
+  @include laptopLg {
+    width: 60%;
+  }
+
+  @include desktopLg {
+    width: 52%;
+  }
+
+  @include desktopXL {
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+  }
 }
 
 .perks-bg {
@@ -37,10 +58,18 @@
   @include tabletMd {
     height: 21.5rem;
   }
+
+  @include laptop {
+    height: 12.3rem;
+  }
 }
 
 .perk-box:nth-of-type(1) {
   margin-top: 4rem;
+
+  @include laptop {
+    margin-top: 4rem;
+  }
 }
 
 .perk-box {
@@ -52,12 +81,21 @@
   @include mobileSm {
     width: 88%;
   }
+
+  @include laptop {
+    margin-top: 4rem;
+  }
 }
 
 .perk-icon {
   margin: auto;
   display: block;
-  padding: 4.5rem 0;
+  padding: 3.5rem 0;
+
+  @include laptop {
+    width: 26%;
+    padding: 2.5rem 0;
+  }
 }
 
 .perk-title {
@@ -72,6 +110,19 @@
 
   @include tabletMd {
     text-align: left;
+  }
+
+  @include laptop {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  @include laptopLg {
+    font-size: 1.2rem;
+  }
+
+  @include desktopXL {
+    font-size: 1.5rem;
   }
 }
 
@@ -95,6 +146,21 @@
     width: 90%;
     padding-top: 1rem;
   }
+
+  @include laptop {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    padding-bottom: 2rem;
+  }
+
+  @include desktopXL {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    padding-top: 1.5rem;
+  }
 }
 
 .exclusive-padding {
@@ -109,6 +175,10 @@
   @include tabletMd {
     height: 21rem;
   }
+
+  @include laptop {
+    height: 12rem;
+  }
 }
 
 .perk-inner-box {
@@ -119,6 +189,16 @@
     margin: auto;
     justify-content: center;
   }
+
+  @include laptop {
+    flex-direction: column;
+  }
+}
+
+.perk-box:nth-of-type(3) div {
+  @include laptop {
+    margin-top: 4%;
+  }
 }
 
 .perk-text-box {
@@ -126,5 +206,20 @@
     width: 82%;
     position: relative;
     left: 4rem;
+    align-items: center;
+  }
+
+  @include laptop {
+    left: 0;
+    margin: auto;
+    width: 100%;
+  }
+}
+
+.perks-container {
+  @include laptop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0;
   }
 }

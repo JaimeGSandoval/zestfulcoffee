@@ -17,6 +17,10 @@
   @include tabletMd {
     text-align: left;
   }
+
+  @include desktopXL {
+    font-size: 1.8rem;
+  }
 }
 
 .step-number {
@@ -31,6 +35,14 @@
     text-align: left;
     margin-top: 0;
   }
+
+  @include laptop {
+    font-size: 3rem;
+  }
+
+  @include desktopXL {
+    font-size: 3.5rem;
+  }
 }
 
 .step-title {
@@ -42,6 +54,16 @@
 
   @include tabletMd {
     text-align: left;
+    max-width: 227px;
+  }
+
+  @include laptop {
+    font-size: 1.5rem;
+    max-width: 200px;
+  }
+
+  @include desktopXL {
+    font-size: 1.8rem;
   }
 }
 
@@ -51,11 +73,19 @@
   line-height: 1.5rem;
   hyphens: auto;
   text-align: center;
-  // width: 88%;
   margin: 1.8rem auto 0 auto;
 
   @include tabletMd {
     text-align: left;
+  }
+
+  @include laptop {
+    font-size: 0.9rem;
+  }
+
+  @include desktopXL {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
   }
 }
 
@@ -82,6 +112,14 @@
   height: 2px;
   background: $pale_orange;
   display: inline-block;
+
+  @include laptop {
+    width: 31%;
+  }
+
+  @include laptopLg {
+    width: 32%;
+  }
 }
 
 .circles-container {
@@ -99,6 +137,10 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 0.5rem;
   }
+
+  @include laptop {
+    column-gap: 2.5rem;
+  }
 }
 
 .create-plan-steps-home-bottom {
@@ -111,17 +153,48 @@
   padding: 1.2rem 1.3rem;
   font-family: $title_font, sans-serif;
   font-size: 1.2rem;
-  width: 63%;
+  width: 48%;
   border-radius: 10px;
   margin: 5rem auto;
   display: block;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: $cyan_hover;
+  }
 
   @include mobileSm {
-    width: 59%;
+    width: 41%;
+  }
+
+  @include mobileLg {
+    width: 37%;
+  }
+
+  @include tabletSm {
+    width: 29%;
   }
 
   @include tabletMd {
     margin: 5rem 0;
-    width: 30%;
+    width: 22%;
+  }
+
+  @include laptop {
+    width: 16%;
+    font-size: 1rem;
+  }
+
+  @include laptopLg {
+    width: 14%;
+  }
+
+  @include desktop {
+    width: 12%;
+  }
+
+  @include desktopXL {
+    font-size: 1.3rem;
+    width: 15%;
   }
 }
