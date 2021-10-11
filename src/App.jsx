@@ -8,6 +8,10 @@ import Plan from './components/plan-page/Plan';
 import Footer from './components/footer/Footer';
 import './sass/main.scss';
 
+// const Home = lazy(() => import('./components/home-page/Home'));
+// const About = lazy(() => import('./components/about-page/About'));
+// const Plan = lazy(() => import('./components/plan-page/Plan'));
+
 const MobileNavModal = lazy(() =>
   import('./components/mobile-nav-modal/mobile-nav-modal')
 );
@@ -31,6 +35,8 @@ function App() {
           <Route exact path="/" render={() => <Home />} />
           <Route exact path="/about" render={() => <About />} />
           <Route exact path="/plan" render={() => <Plan />} />
+          {/* <Suspense fallback={<p>Loading...</p>}>
+          </Suspense> */}
         </Switch>
       </main>
       <Footer />
