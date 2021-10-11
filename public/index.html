@@ -5,9 +5,98 @@
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <style>
+    .mobile-header {
+      display: flex;
+      justify-content: space-between;
+      width: 88%;
+      padding: 2rem 0;
+      margin: auto;
+      align-items: center
+    }
+
+    .hamburger-menu {
+      width: 1.4rem
+    }
+
+    @media (min-width: 600px) {
+      .hamburger-menu {
+        width: 1.6rem
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hamburger-menu {
+        display: none
+      }
+    }
+
+    .mobile-logo {
+      width: 60%
+    }
+
+    @media (min-width: 375px) {
+      .mobile-logo {
+        width: 55%
+      }
+    }
+
+    @media (min-width: 768px) {
+      .mobile-logo {
+        width: 30%
+      }
+    }
+
+    .show-page {
+      display: block
+    }
+
+    .nav-menu-container {
+      width: 40%;
+      display: none
+    }
+
+    @media (min-width: 768px) {
+      .nav-menu-container {
+        display: inline-block
+      }
+    }
+
+    .nav-box {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      position: relative;
+      top: 4px
+    }
+
+    .nav-link {
+      text-transform: uppercase;
+      font-size: .7rem;
+      font-family: "Barlow", sans-serif;
+      font-weight: 600;
+      color: #83888f;
+      transition: color .3s ease-in-out
+    }
+
+    @media(min-width: 900px) {
+      .nav-link {
+
+        font-size: 0.8rem;
+      }
+    }
+
+    .nav-link:hover {
+      color: #333d4b
+    }
+
+    .active-link {
+      color: #333d4b
+    }
+  </style>
   <title>Coffeeroasters</title>
 </head>
 

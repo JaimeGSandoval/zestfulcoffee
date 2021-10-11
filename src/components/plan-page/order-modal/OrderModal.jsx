@@ -84,7 +84,10 @@ const OrderModal = ({ history }) => {
           </p>
         </div>
 
-        <button className="submit-order-btn" onClick={() => handleClick()}>
+        <button
+          className="submit-order-btn-mobile"
+          onClick={() => handleClick()}
+        >
           Checkout -
           <span className="total">
             {calculateTotal(orderData.coffeeAmount, orderData.deliveryType)}

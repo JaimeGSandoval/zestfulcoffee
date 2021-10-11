@@ -3,6 +3,8 @@ import blackcupWebpSm from '../../../assets/images/plan/mobile/hero-blackcup.web
 import blackcupJpgSm from '../../../assets/images/plan/mobile/hero-blackcup.jpg';
 import blackcupWebpMd from '../../../assets/images/plan/tablet/hero-blackcup.webp';
 import blackcupJpgMd from '../../../assets/images/plan/tablet/hero-blackcup.jpg';
+import blackcupWebpLg from '../../../assets/images/plan/desktop/hero-blackcup-lg.webp';
+import blackcupJpgLg from '../../../assets/images/plan/desktop/hero-blackcup-lg.jpg';
 import './_hero-plan.scss';
 
 const Hero = () => {
@@ -10,7 +12,12 @@ const Hero = () => {
     <section className="hero-plan-section">
       <picture>
         <source
-          srcSet={`${blackcupWebpMd} 768w, ${blackcupJpgMd}, 768w`}
+          srcSet={`${blackcupWebpLg} 1024w, ${blackcupJpgLg} 1024w`}
+          type="image/webp"
+          media="(min-width: 1024px)"
+        />
+        <source
+          srcSet={`${blackcupWebpMd} 768w, ${blackcupJpgMd} 768w`}
           type="image/webp"
           media="(min-width: 768px)"
         />

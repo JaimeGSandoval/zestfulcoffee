@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import hamburgerMenu from '../../assets/icons/icon-hamburger.svg';
 import logo from '../../assets/icons/logo.svg';
-import './header';
+// import './header';
 
 const MobileHeader = ({ openModal }) => {
   return (
