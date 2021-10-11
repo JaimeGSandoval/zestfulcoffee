@@ -5,7 +5,7 @@ const CoffeeBox = ({ coffeeType }) => {
     <div className="coffee-box">
       <div className="coffee-img-container">
         <picture>
-          <source srcSet={coffeeType.imgWebp} />
+          <source srcSet={coffeeType.imgWebp} media="(min-width: 320px)" />
           <img
             src={coffeeType.imgPng}
             alt={coffeeType.imgAlt}

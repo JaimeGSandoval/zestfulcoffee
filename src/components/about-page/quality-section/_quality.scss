@@ -32,16 +32,16 @@
   transform: translateY(-50%);
 
   @include laptop {
-    width: 100%;
+    width: 356px;
     transform: translateY(-32%);
   }
 
   @include desktopMd {
-    width: 86%;
+    width: 382px;
   }
 
   @include desktopXL {
-    width: 81%;
+    width: 420px;
   }
 }
 
@@ -112,8 +112,12 @@
     font-size: 1rem;
   }
 
+  @media (min-width: 1800px) {
+    line-height: 1.9rem;
+  }
+
   @include desktopXL {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 2rem;
   }
 }

@@ -31,8 +31,8 @@
     width: 20%;
   }
 
-  @include desktopXL {
-    width: 26%;
+  @include laptop {
+    width: 48px;
   }
 }
 
@@ -41,8 +41,9 @@
     margin: 5rem 0 2.9rem 0;
   }
 
-  @include desktopXL {
-    margin-bottom: 2.3rem;
+  @include laptop {
+    width: 52px;
+    margin-bottom: 41px;
   }
 }
 

@@ -12,7 +12,7 @@ const Hero = () => {
     <section className="hero-about-section">
       <picture>
         <source
-          srcSet={`${whitecupWebpLg} 1024w, ${whitecupJpgLg}, 1024w`}
+          srcSet={`${whitecupWebpLg} 1024w, ${whitecupJpgLg} 1024w`}
           type="image/webp"
           media="(min-width: 1024px)"
         />

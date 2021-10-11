@@ -34,8 +34,16 @@
     width: 46%;
   }
 
+  @include desktopMd {
+    width: 39%;
+  }
+
   @include desktopLg {
     width: 36%;
+  }
+
+  @include desktopXL {
+    width: 28%;
   }
 }
 
@@ -78,6 +86,10 @@
   @include mobileSm {
     font-size: 1.7rem;
   }
+
+  @include desktopXL {
+    font-size: 1.9rem;
+  }
 }
 
 .order-modal-text-box {
@@ -116,6 +128,12 @@
     font-size: 1.1rem;
     padding-top: 2rem;
   }
+
+  @include desktopXL {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    padding: 2rem 0;
+  }
 }
 
 .confirm-text-box {
@@ -134,9 +152,13 @@
     margin: auto;
     font-size: 0.8rem;
   }
+
+  @include desktopXL {
+    font-size: 0.9rem;
+  }
 }
 
-.submit-order-btn {
+.submit-order-btn-mobile {
   width: 90%;
   margin: auto;
   display: block;
@@ -194,6 +216,7 @@
 
   @include desktopLg {
     width: 37%;
+    font-size: 1rem;
   }
 }
 
