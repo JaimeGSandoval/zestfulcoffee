@@ -3,12 +3,19 @@ import whitecupWebpSm from '../../../assets/images/about/mobile/hero-whitecup.we
 import whitecupJpgSm from '../../../assets/images/about/mobile/hero-whitecup.jpg';
 import whitecupWebpMd from '../../../assets/images/about/tablet/hero-whitecup.webp';
 import whitecupJpgMd from '../../../assets/images/about/tablet/hero-whitecup.jpg';
+import whitecupWebpLg from '../../../assets/images/about/desktop/hero-whitecup-lg.webp';
+import whitecupJpgLg from '../../../assets/images/about/desktop/hero-whitecup-lg.jpg';
 import './_hero-about.scss';
 
 const Hero = () => {
   return (
     <section className="hero-about-section">
       <picture>
+        <source
+          srcSet={`${whitecupWebpLg} 1024w, ${whitecupJpgLg} 1024w`}
+          type="image/webp"
+          media="(min-width: 1024px)"
+        />
         <source
           srcSet={`${whitecupWebpMd} 768w, ${whitecupJpgMd}, 768w`}
           type="image/webp"

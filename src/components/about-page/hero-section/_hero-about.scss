@@ -32,6 +32,10 @@
     text-align: left;
     margin-bottom: 1rem;
   }
+
+  @include desktopXL {
+    font-size: 3.2rem;
+  }
 }
 
 .about-us-description {
@@ -60,11 +64,29 @@
     text-align: left;
     margin: 0;
   }
+
+  @include laptop {
+    width: 74%;
+  }
+
+  @include laptopLg {
+    width: 62%;
+  }
+
+  @include desktop {
+    width: 57%;
+  }
+
+  @include desktopXL {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    width: 59%;
+  }
 }
 
 .about-hero-text-box {
   position: absolute;
-  top: 18%;
+  top: 26%;
   left: 0;
   text-align: center;
   width: 100%;

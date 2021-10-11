@@ -25,6 +25,10 @@ const OrderSummary = () => {
       <span style={{ color: '#f3fcf7' }}>as</span>
     );
 
+  const coloredLine = <span className="colored-line"></span>;
+
+  const setOptionText = (data) => (data ? data : coloredLine);
+
   return (
     <>
       <section className="order-container">
@@ -34,26 +38,30 @@ const OrderSummary = () => {
             “I drink my coffee{' '}
             <span className="drinkType order-text">
               {' '}
-              {specialText} {drinkType}
+              {specialText} {setOptionText(drinkType)}
             </span>
             , with a
-            <span className="coffee order-text"> {orderData.coffeeType}</span>{' '}
+            <span className="coffee order-text">
+              {' '}
+              {setOptionText(orderData.coffeeType)}
+            </span>{' '}
             type of bean.
             <span className="amount order-text">
               {' '}
-              {orderData.coffeeAmount}
+              {setOptionText(orderData.coffeeAmount)}
             </span>{' '}
             <span ref={textRef}>
               ground ala
               <span className="grind order-text">
                 {' '}
-                {orderData.grindType}
-              </span>,{' '}
+                {setOptionText(orderData.grindType)}
+              </span>
+              ,{' '}
             </span>
             sent to me
             <span className="deliver order-text">
               {' '}
-              {orderData.deliveryType}
+              {setOptionText(orderData.deliveryType)}
             </span>
             .”
           </p>

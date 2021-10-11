@@ -31,6 +31,10 @@
     font-size: 2.9rem;
     text-align: left;
   }
+
+  @include desktopXL {
+    font-size: 3.2rem;
+  }
 }
 
 .centered-text-bottom {
@@ -50,6 +54,10 @@
     font-size: 2.9rem;
     text-align: left;
   }
+
+  @include desktopXL {
+    font-size: 3.2rem;
+  }
 }
 
 .hero-description {
@@ -58,7 +66,6 @@
   text-align: center;
   width: 88%;
   line-height: 1.9rem;
-  font-weight: bold;
   margin: auto;
   padding: 1.5rem 0 2rem 0;
 
@@ -73,6 +80,14 @@
     text-align: left;
     margin: 0;
   }
+
+  @include laptopLg {
+    width: 72%;
+  }
+
+  @include desktopXL {
+    font-size: 1.3rem;
+  }
 }
 
 .create-plan-btn-hero-home {
@@ -85,15 +100,38 @@
   padding: 1.2rem 1.3rem;
   font-family: $title_font, sans-serif;
   font-size: 1.2rem;
-  width: 63%;
+  width: 48%;
+  margin: auto;
   border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: $cyan_hover;
+  }
 
   @include mobileSm {
-    width: 59%;
+    width: 44%;
+  }
+
+  @include mobileLg {
+    width: 37%;
+  }
+
+  @include tabletSm {
+    width: 29%;
   }
 
   @include tabletMd {
-    width: 45%;
+    margin: 0;
+  }
+
+  @include laptopLg {
+    width: 26%;
+  }
+
+  @include desktop {
+    width: 22%;
   }
 }
 

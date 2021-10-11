@@ -16,7 +16,6 @@
 @import '../components/plan-page/options-section/options';
 @import '../components/plan-page/order-summary/order-summary';
 @import '../components/plan-page/order-modal/order-modal';
-@import '../components/utilities/create-plan-btn';
 @import '../sass/abstract/media-queries';
 
 html {
@@ -31,6 +30,8 @@ body {
 
 #root {
   height: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .App {

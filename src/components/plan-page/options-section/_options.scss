@@ -3,6 +3,19 @@
 
 .options-section {
   margin-top: 8rem;
+
+  @include laptop {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+    width: 100%;
+  }
+}
+
+.content-container {
+  @include laptop {
+    width: 74%;
+  }
 }
 
 .option-container {
@@ -21,6 +34,10 @@
   @include mobileSm {
     font-size: 1.5rem;
   }
+
+  @include desktopXL {
+    font-size: 1.7rem;
+  }
 }
 
 .options-container {
@@ -29,12 +46,32 @@
   display: none;
 }
 
+.option-container:nth-of-type(1) {
+  @include laptop {
+    margin-top: 0;
+  }
+}
+
 .arrow {
   transform: translateX(4.8rem);
+  cursor: pointer;
 
   @include tabletMd {
     transform: translateX(12rem);
   }
+
+  @include laptop {
+    transform: translateX(10rem);
+  }
+
+  @include desktopXL {
+    width: 1.4rem;
+  }
+}
+
+.change-svg {
+  filter: invert(68%) sepia(96%) saturate(0%) hue-rotate(163deg) brightness(90%)
+    contrast(98%);
 }
 
 .option-box {
@@ -44,10 +81,35 @@
   padding-bottom: 2rem;
   margin-bottom: 1rem;
   color: $dark_grey_blue;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  // &--disabled {
+  //   color: $bg_light_cream;
+
+  //   &:hover {
+  //     background-color: unset;
+  //     cursor: unset;
+  //   }
+  // }
+
+  // &:hover {
+  //   background: $pale_orange;
+  // }
 
   @include tabletMd {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
+
+  @include laptop {
+    &:hover {
+      background: $pale_orange;
+    }
+  }
+}
+
+.colorWhite {
+  color: white;
 }
 
 .option-title {
@@ -58,17 +120,34 @@
   @include tabletMd {
     padding-bottom: 1.3rem;
   }
+
+  @include laptop {
+    font-size: 1.2rem;
+  }
+
+  @include desktopXL {
+    font-size: 1.5rem;
+  }
 }
 
 .option-description {
   font-size: 1rem;
   font-family: $description_font;
-  line-height: 1.7rem;
+  line-height: 1.4rem;
   padding-left: 1rem;
   padding-right: 1rem;
 
   @include tabletMd {
     font-size: 1rem;
+  }
+
+  @include laptop {
+    font-size: 0.9rem;
+  }
+
+  @include desktopXL {
+    font-size: 1rem;
+    line-height: 1.6rem;
   }
 }
 
@@ -79,12 +158,71 @@
 
 .create-plan-order-container {
   width: 100%;
+
+  @include laptop {
+    clear: right;
+    content: '';
+    display: flex;
+  }
 }
 
 .create-plan-order {
   color: $bg_light_cream;
   text-align: center;
   background-color: $dark_cyan;
+  outline: 0;
+  border: 0;
+  text-transform: capitalize;
+  padding: 1.2rem 1.3rem;
+  font-family: $title_font, sans-serif;
+  font-size: 1.2rem;
+  width: 69%;
+  border-radius: 10px;
+  margin: 5rem auto 7rem auto;
+  display: block;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: #14b6b3;
+  }
+
+  @include mobileSm {
+    width: 59%;
+  }
+
+  @include mobileLg {
+    width: 53%;
+  }
+
+  @include tabletMd {
+    width: 32%;
+  }
+
+  @include laptop {
+    width: 25%;
+    margin-left: 0;
+    margin: 5rem 0 7rem auto;
+  }
+
+  @include laptopLg {
+    width: 22%;
+  }
+
+  @include desktop {
+    width: 19%;
+  }
+
+  @include desktopXL {
+    width: 22%;
+    font-size: 1.4rem;
+  }
+}
+
+.disabled-btn {
+  background: #bbbbbb;
+  color: $bg_light_cream;
+  text-align: center;
   outline: 0;
   border: 0;
   text-transform: capitalize;
@@ -107,6 +245,24 @@
   @include tabletMd {
     width: 32%;
   }
+
+  @include laptop {
+    width: 25%;
+    margin: 5rem 0 7rem auto;
+  }
+
+  @include laptopLg {
+    width: 22%;
+  }
+
+  @include desktop {
+    width: 19%;
+  }
+
+  @include desktopXL {
+    width: 22%;
+    font-size: 1.4rem;
+  }
 }
 
 .show-option {
@@ -125,8 +281,27 @@
   @include tabletMd {
     transform: scaleY(-1) translateX(12rem);
   }
+
+  @include laptop {
+    transform: scaleY(-1) translateX(10rem);
+  }
 }
 
 .hide {
   display: none;
+}
+
+// .remove-pointer-events {
+//   pointer-events: none;
+// }
+
+.custom-hover {
+  &:hover {
+    background: $dark_cyan;
+    cursor: unset;
+  }
+}
+
+.disabled-font {
+  color: $disabled_font;
 }
