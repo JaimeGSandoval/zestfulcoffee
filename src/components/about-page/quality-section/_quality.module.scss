@@ -1,7 +1,7 @@
 @import '../../../sass/abstract/vars';
 @import '../../../sass/abstract/media-queries';
 
-.quality-section {
+.qualitySection {
   width: 100%;
   margin: 13rem auto 0 auto;
   background-color: $dark_grey_blue;
@@ -22,7 +22,7 @@
   }
 }
 
-.quality-img {
+.qualityImg {
   bottom: 20%;
   margin: auto;
   width: 90%;
@@ -45,7 +45,7 @@
   }
 }
 
-.quality-title {
+.qualityTitle {
   text-align: center;
   font-family: $title_font, serif;
   color: $bg_light_cream;
@@ -73,7 +73,7 @@
   }
 }
 
-.quality-description {
+.qualityDescription {
   font-family: $description_font, sans-serif;
   color: $grey;
   line-height: 1.7rem;
@@ -122,7 +122,7 @@
   }
 }
 
-.quality-text-box {
+.qualityTextBox {
   transform: translateY(-20%);
 
   @include tabletMd {
@@ -135,7 +135,7 @@
   }
 }
 
-.quality-container {
+.qualityContainer {
   @include laptop {
     width: 90%;
     margin: 0 auto;

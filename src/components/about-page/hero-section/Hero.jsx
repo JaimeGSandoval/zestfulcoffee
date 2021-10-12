@@ -5,11 +5,12 @@ import whitecupWebpMd from '../../../assets/images/about/tablet/hero-whitecup.we
 import whitecupJpgMd from '../../../assets/images/about/tablet/hero-whitecup.jpg';
 import whitecupWebpLg from '../../../assets/images/about/desktop/hero-whitecup-lg.webp';
 import whitecupJpgLg from '../../../assets/images/about/desktop/hero-whitecup-lg.jpg';
-import './_hero-about.scss';
+import styles from './_hero-about.module.scss';
+// import './_hero-about.scss';
 
 const Hero = () => {
   return (
-    <section className="hero-about-section">
+    <section className={styles.heroAboutSection}>
       <picture>
         <source
           srcSet={`${whitecupWebpLg} 1024w, ${whitecupJpgLg} 1024w`}
@@ -22,12 +23,16 @@ const Hero = () => {
           media="(min-width: 768px)"
         />
         <source srcSet={whitecupWebpSm} type="image/webp" />
-        <img src={whitecupJpgSm} alt="White cupcake" className="hero-about" />
+        <img
+          src={whitecupJpgSm}
+          alt="White cupcake"
+          className={styles.heroAbout}
+        />
       </picture>
 
-      <div className="about-hero-text-box">
-        <span className="about-us-title">about us</span>
-        <p className="about-us-description">
+      <div className={styles.aboutHeroTextBox}>
+        <span className={styles.aboutUsTitle}>about us</span>
+        <p className={styles.aboutUsDescription}>
           Coffeeroasters began it's journey of exotic discovery in 1998,
           highlighting stories of coffee from around the world. We have since
           been dedicated to bring the perfect cup - from bean to brew - in every

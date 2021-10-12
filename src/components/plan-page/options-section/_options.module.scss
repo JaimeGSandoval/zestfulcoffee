@@ -1,7 +1,7 @@
 @import '../../../sass/abstract/vars';
 @import '../../../sass/abstract/media-queries';
 
-.options-section {
+.optionsSection {
   margin-top: 8rem;
 
   @include laptop {
@@ -12,18 +12,18 @@
   }
 }
 
-.content-container {
+.contentContainer {
   @include laptop {
     width: 74%;
   }
 }
 
-.option-container {
+.optionContainer {
   position: relative;
   margin-top: 7rem;
 }
 
-.option-title-question {
+.optionTitleQuestion {
   color: $grey;
   font-family: $title_font, serif;
   width: 68%;
@@ -40,13 +40,13 @@
   }
 }
 
-.options-container {
+.optionsContainer {
   margin-top: 2rem;
   position: relative;
   display: none;
 }
 
-.option-container:nth-of-type(1) {
+.optionContainer:nth-of-type(1) {
   @include laptop {
     margin-top: 0;
   }
@@ -69,12 +69,12 @@
   }
 }
 
-.change-svg {
+.changeSvg {
   filter: invert(68%) sepia(96%) saturate(0%) hue-rotate(163deg) brightness(90%)
     contrast(98%);
 }
 
-.option-box {
+.optionBox {
   background-color: #e9e9e9;
   border-radius: 0.8rem;
   padding-top: 2rem;
@@ -112,7 +112,7 @@
   color: white;
 }
 
-.option-title {
+.optionTitle {
   padding: 0 0 1rem 1rem;
   font-family: $title_font, serif;
   font-size: 1.3rem;
@@ -130,7 +130,7 @@
   }
 }
 
-.option-description {
+.optionDescription {
   font-size: 1rem;
   font-family: $description_font;
   line-height: 1.4rem;
@@ -156,7 +156,7 @@
   color: $bg_light_cream;
 }
 
-.create-plan-order-container {
+.createPlanOrderContainer {
   width: 100%;
 
   @include laptop {
@@ -166,7 +166,7 @@
   }
 }
 
-.create-plan-order {
+.createPlanOrder {
   color: $bg_light_cream;
   text-align: center;
   background-color: $dark_cyan;
@@ -219,7 +219,7 @@
   }
 }
 
-.disabled-btn {
+.disabledBtn {
   background: #bbbbbb;
   color: $bg_light_cream;
   text-align: center;
@@ -265,7 +265,7 @@
   }
 }
 
-.show-option {
+.showOption {
   display: block;
 
   @include tabletMd {
@@ -275,7 +275,7 @@
   }
 }
 
-.toggle-arrow {
+.toggleArrow {
   transform: scaleY(-1) translateX(4.8rem);
 
   @include tabletMd {
@@ -295,13 +295,13 @@
 //   pointer-events: none;
 // }
 
-.custom-hover {
+.customHover {
   &:hover {
     background: $dark_cyan;
     cursor: unset;
   }
 }
 
-.disabled-font {
+.disabledFont {
   color: $disabled_font;
 }

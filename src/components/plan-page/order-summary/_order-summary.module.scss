@@ -1,6 +1,7 @@
 @import '../../../sass/abstract/vars';
+@import '../../../sass/abstract/media-queries';
 
-.order-container {
+.orderContainer {
   background-color: $dark_grey_blue;
   padding: 4rem 1.4rem;
   border-radius: 0.8rem;
@@ -12,7 +13,7 @@
   }
 }
 
-.order-summary-title {
+.orderSummaryTitle {
   color: $grey;
   text-transform: uppercase;
   font-family: $description_font, sans-serif;
@@ -25,7 +26,7 @@
   }
 }
 
-.order-summary-text {
+.orderSummaryText {
   color: $bg_light_cream;
   font-family: $title_font, serif;
   font-size: 1.4rem;
@@ -41,7 +42,7 @@
   }
 }
 
-.create-plan-order-container {
+.createPlanOrderContainer {
   margin: 4rem 0 7rem 0;
 
   @include laptop {
@@ -49,15 +50,15 @@
   }
 }
 
-.order-text {
+.orderText {
   color: $dark_cyan;
 }
 
-.span-text {
+.spanText {
   color: $bg_light_cream;
 }
 
-.colored-line {
+.coloredLine {
   background: $dark_cyan;
   width: 20%;
   height: 3px;
@@ -68,7 +69,7 @@
   }
 }
 
-.order-summary-text-box {
+.orderSummaryTextBox {
   @include desktopXL {
     padding: 0.5rem 2rem;
   }
