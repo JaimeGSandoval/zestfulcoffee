@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from './_plan-section.module.scss';
 
 const StepBox = ({ step, stepNumber }) => {
   return (
-    <div className="plan-step-box">
-      <span className="plan-step-number">0{`${stepNumber}`}</span>
-      <h3 className="plan-step-title">{step.title}</h3>
-      <p className="plan-step-description">{step.description}</p>
+    <div className={styles.planStepBox}>
+      <span className={styles.planStepNumber}>0{`${stepNumber}`}</span>
+      <h3 className={styles.planStepTitle}>{step.title}</h3>
+      <p className={styles.planStepDescription}>{step.description}</p>
     </div>
   );
 };

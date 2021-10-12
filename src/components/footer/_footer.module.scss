@@ -7,11 +7,11 @@
   background-color: $dark_grey_blue;
 }
 
-.footer-nav {
+.footerNav {
   list-style: none;
 }
 
-.footer-nav {
+.footerNav {
   width: 50%;
   margin: auto;
   text-align: center;
@@ -24,7 +24,7 @@
   }
 }
 
-.footer-nav-link {
+.footerNavLink {
   color: $grey;
   text-transform: uppercase;
   padding: 1rem 0;
@@ -40,7 +40,7 @@
   }
 }
 
-.footer-logo {
+.footerLogo {
   width: 62%;
   margin: auto;
   padding: 2.5rem 0;
@@ -57,7 +57,7 @@
   }
 }
 
-.social-icons-box {
+.socialIconsBox {
   width: 40%;
   display: flex;
   justify-content: space-between;
@@ -70,7 +70,7 @@
   }
 }
 
-.footer-container {
+.footerContainer {
   @include laptop {
     display: flex;
     align-items: center;
@@ -80,7 +80,7 @@
   }
 }
 
-.logo-links-box {
+.logoLinksBox {
   @include laptop {
     width: 55%;
     display: flex;
@@ -89,7 +89,7 @@
   }
 }
 
-.mobile-footer-logo {
+.mobileFooterLogo {
   @include laptop {
     width: 1.3rem;
   }

@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import App from './App';
 import OrderModalProvider from './context/OrderModalContext';
 import StoreProvider from './context/Context';
@@ -10,10 +10,10 @@ ReactDOM.render(
   <React.StrictMode>
     <OrderModalProvider>
       <StoreProvider>
-        <BrowserRouter>
+        <HashRouter>
           <ScrollToTop />
           <App />
-        </BrowserRouter>
+        </HashRouter>
       </StoreProvider>
     </OrderModalProvider>
   </React.StrictMode>,

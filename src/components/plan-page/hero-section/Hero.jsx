@@ -5,11 +5,12 @@ import blackcupWebpMd from '../../../assets/images/plan/tablet/hero-blackcup.web
 import blackcupJpgMd from '../../../assets/images/plan/tablet/hero-blackcup.jpg';
 import blackcupWebpLg from '../../../assets/images/plan/desktop/hero-blackcup-lg.webp';
 import blackcupJpgLg from '../../../assets/images/plan/desktop/hero-blackcup-lg.jpg';
-import './_hero-plan.scss';
+import styles from './_hero-plan.module.scss';
+// import './_hero-plan.scss';
 
 const Hero = () => {
   return (
-    <section className="hero-plan-section">
+    <section className={styles.heroPlanSection}>
       <picture>
         <source
           srcSet={`${blackcupWebpLg} 1024w, ${blackcupJpgLg} 1024w`}
@@ -22,11 +23,15 @@ const Hero = () => {
           media="(min-width: 768px)"
         />
         <source srcSet={`${blackcupWebpSm}`} type="image/webp" />
-        <img src={blackcupJpgSm} alt="White cupcake" className="hero-plan" />
+        <img
+          src={blackcupJpgSm}
+          alt="White cupcake"
+          className={styles.heroPlan}
+        />
       </picture>
-      <div className="plan-hero-text-box">
-        <span className="plan-title">Create a plan</span>
-        <p className="plan-description">
+      <div className={styles.planHeroTextBox}>
+        <span className={styles.planTitle}>Create a plan</span>
+        <p className={styles.planDescription}>
           Build a subscription plan that best fits your needs. We offer an
           assortment of the best artisan coffees from around the globe delivered
           fresh to your door.

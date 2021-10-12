@@ -6,13 +6,13 @@ import heroWebpMd from '../../../assets/images/home/tablet/hero-coffeepress.webp
 import heroJpgMd from '../../../assets/images/home/tablet/hero-coffeepress.jpg';
 import heroWebpLg from '../../../assets/images/home/desktop/hero-coffeepress-lg.webp';
 import heroJpgLg from '../../../assets/images/home/desktop/hero-coffeepress-lg.jpg';
-
-import './_hero-styles.scss';
+import styles from './_hero-styles.module.scss';
+// import './_hero-styles.module.scss';
 
 const Hero = () => {
   return (
     <>
-      <section className="hero-section">
+      <section className={styles.heroSection}>
         <picture>
           <source
             srcSet={`${heroWebpLg}, 1024w, ${heroJpgLg} 1024w`}
@@ -28,15 +28,15 @@ const Hero = () => {
           <img src={heroJpgSm} alt="coffee beans" className="hero" />
         </picture>
 
-        <div className="hero-home-text-box">
-          <span className="centered-text-top">great coffee</span>
-          <span className="centered-text-bottom">made simple.</span>
-          <span className="hero-description" lang="en">
+        <div className={styles.heroHomeTextBox}>
+          <span className={styles.centeredTextTop}>great coffee</span>
+          <span className={styles.centeredTextBottom}>made simple.</span>
+          <span className={styles.heroDescription} lang="en">
             Start your mornings with the world’s best coffees. Try our expertly
             curated artisan coffees from our best roasters delivered directly to
             your door, at your schedule.
           </span>
-          <Link to="/plan" className="create-plan-btn-hero-home">
+          <Link to="/plan" className={styles.createPlanBtnHeroHome}>
             create a plan
           </Link>
         </div>
