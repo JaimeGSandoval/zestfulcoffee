@@ -25,8 +25,9 @@
   color: $grey;
   text-align: center;
   line-height: 1.8rem;
-  width: 100%;
+  width: 98%;
   margin: auto;
+  font-size: 1rem;
 
   @include tabletMd {
     width: 80%;
@@ -114,7 +115,7 @@
 
   @include laptop {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   @include laptopLg {
@@ -130,14 +131,16 @@
   text-align: center;
   color: $bg_light_cream;
   font-family: $description_font, sans-serif;
-  padding: 2rem 0 2.5rem 0;
-  line-height: 1.8rem;
+  padding: 1rem 0 2.5rem 0;
+  line-height: 1.7rem;
   margin: auto;
   hyphens: auto;
   width: 86%;
+  font-size: 1rem;
 
   @include mobileLg {
     width: 76%;
+    max-width: 306px;
   }
 
   @include tabletMd {
@@ -207,12 +210,14 @@
     position: relative;
     left: 4rem;
     align-items: center;
+    padding-top: 2.8rem;
   }
 
   @include laptop {
     left: 0;
     margin: auto;
     width: 100%;
+    padding-top: 0;
   }
 }
 
@@ -221,5 +226,17 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 0;
+  }
+}
+
+.perksContainer div:nth-of-type(3) {
+  padding-top: 1rem;
+
+  @include tabletSm {
+    padding: 0.2rem 0;
+  }
+
+  @include laptop {
+    padding: 0;
   }
 }

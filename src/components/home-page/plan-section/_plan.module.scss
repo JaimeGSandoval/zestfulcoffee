@@ -2,11 +2,11 @@
 @import '../../../sass/abstract/media-queries';
 
 .planHowToHome {
-  margin-top: 10rem;
+  // margin-top: 4rem;
 
-  @include mobileSm {
-    margin-top: 8rem;
-  }
+  // @include mobileSm {
+  //   margin-top: 8rem;
+  // }
 }
 
 .howToTitle {
@@ -16,6 +16,11 @@
 
   @include tabletMd {
     text-align: left;
+    padding-top: 4rem;
+  }
+
+  @include laptopLg {
+    padding-top: 7rem;
   }
 
   @include desktopXL {
@@ -74,13 +79,19 @@
   hyphens: auto;
   text-align: center;
   margin: 1.8rem auto 0 auto;
+  max-width: 504px;
 
   @include tabletMd {
     text-align: left;
+    font-size: 0.9rem;
   }
 
   @include laptop {
     font-size: 0.9rem;
+  }
+
+  @include laptopLg {
+    font-size: 1rem;
   }
 
   @include desktopXL {
@@ -135,7 +146,7 @@
   @include tabletMd {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 0.5rem;
+    column-gap: 1rem;
   }
 
   @include laptop {

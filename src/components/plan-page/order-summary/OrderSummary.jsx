@@ -34,7 +34,9 @@ const OrderSummary = () => {
     <>
       <section className={styles.orderContainer}>
         <div className={styles.orderSummaryTextBox}>
-          <h1 className={styles.orderSummaryTitle}>order summary</h1>
+          <div className={styles.summaryTitleBox}>
+            <h1 className={styles.orderSummaryTitle}>order summary</h1>
+          </div>
           <p className={styles.orderSummaryText}>
             “I drink my coffee{' '}
             <span className={styles.orderText}>

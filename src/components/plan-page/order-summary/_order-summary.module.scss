@@ -13,6 +13,15 @@
   }
 }
 
+.summaryTitleBox {
+  width: 98%;
+  margin: auto;
+
+  @include mobileSm {
+    width: 92%;
+  }
+}
+
 .orderSummaryTitle {
   color: $grey;
   text-transform: uppercase;
@@ -31,6 +40,12 @@
   font-family: $title_font, serif;
   font-size: 1.4rem;
   line-height: 2.6rem;
+  width: 98%;
+  margin: auto;
+
+  @include mobileSm {
+    width: 92%;
+  }
 
   @include tabletMd {
     font-size: 1.6rem;
