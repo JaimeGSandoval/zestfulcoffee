@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/logo.svg';
 import closeIcon from '../../assets/icons/icon-close.svg';
-import './mobile-nav-modal';
+import styles from './_mobile-nav-modal.module.scss';
 
 const MobileNavModal = forwardRef((props, ref) => {
   const [showModal, setShowModal] = useState(false);
@@ -26,29 +26,29 @@ const MobileNavModal = forwardRef((props, ref) => {
 
   if (showModal) {
     return ReactDOM.createPortal(
-      <div className="mobile-nav-page" onClick={closeModalClick}>
-        <div className="mobile-page-header">
+      <div className={styles.mobileNavPage} onClick={closeModalClick}>
+        <div className={styles.mobilePageHeader}>
           <img
             src={logo}
             alt="logo"
-            className="mobile-nav-logo"
+            className={styles.mobileNavLogo}
             onError={(e) => (e.target.onerror = null)}
           />
           <img
             src={closeIcon}
             alt="mobile icon close"
-            className="mobile-close"
+            className={styles.mobileClose}
             onClick={closeModalClick}
             onError={(e) => (e.target.onerror = null)}
           />
         </div>
 
-        <nav className="mobile-nav" aria-label="mobile navigation">
-          <ul className="mobile-nav-list">
+        <nav className={styles.mobileNav} aria-label="mobile navigation">
+          <ul className={styles.mobileNavList}>
             <li>
               <Link
                 to="/"
-                className="mobile-nav-links"
+                className={styles.mobileNavLinks}
                 onClick={closeModalClick}
               >
                 home
@@ -57,7 +57,7 @@ const MobileNavModal = forwardRef((props, ref) => {
             <li>
               <Link
                 to="/about"
-                className="mobile-nav-links"
+                className={styles.mobileNavLinks}
                 onClick={closeModalClick}
               >
                 about
@@ -66,7 +66,7 @@ const MobileNavModal = forwardRef((props, ref) => {
             <li>
               <Link
                 to="/plan"
-                className="mobile-nav-links"
+                className={styles.mobileNavLinks}
                 onClick={closeModalClick}
               >
                 create a plan

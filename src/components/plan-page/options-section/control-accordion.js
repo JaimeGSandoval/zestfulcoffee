@@ -2,11 +2,11 @@ const handleToggle = (dataRef, stateVal, e) => {
   const panel = dataRef.current.nextElementSibling;
 
   if (stateVal) {
-    panel.classList.add('show-option');
-    dataRef.current.classList.add('toggle-arrow');
+    panel.classList.add('showOption');
+    dataRef.current.classList.add('toggleArrow');
   } else {
-    panel.classList.remove('show-option');
-    dataRef.current.classList.remove('toggle-arrow');
+    panel.classList.remove('showOption');
+    dataRef.current.classList.remove('toggleArrow');
   }
 };
 

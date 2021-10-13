@@ -1,12 +1,12 @@
 @import '../../../sass/abstract/vars';
 @import '../../../sass/abstract/media-queries';
 
-.headquarters-section {
+.headquartersSection {
   margin: 9rem 0;
   width: 100%;
 }
 
-.headquarters-title {
+.headquartersTitle {
   color: $grey;
   font-family: $title_font, serif;
   text-align: center;
@@ -21,7 +21,7 @@
   }
 }
 
-.country-icons {
+.countryIcons {
   margin: 5rem auto 3.5rem auto;
   display: block;
   width: 16%;
@@ -36,7 +36,7 @@
   }
 }
 
-.address-container:nth-of-type(1) img {
+.addressContainer:nth-of-type(1) img {
   @include tabletMd {
     margin: 5rem 0 2.9rem 0;
   }
@@ -47,7 +47,7 @@
   }
 }
 
-.country-title {
+.countryTitle {
   color: $dark_grey_blue;
   text-align: center;
   font-size: 2.1rem;
@@ -64,11 +64,11 @@
   }
 }
 
-.address-text-box {
+.addressTextBox {
   margin-top: 2.5rem;
 }
 
-.address-text {
+.addressText {
   display: block;
   text-align: center;
   font-family: $description_font;
@@ -85,11 +85,11 @@
   }
 }
 
-.address-text-box span:nth-of-type(3) {
+.addressTextBox span:nth-of-type(3) {
   padding-bottom: 0.8rem;
 }
 
-.address-box-container {
+.addressBoxContainer {
   @include tabletMd {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

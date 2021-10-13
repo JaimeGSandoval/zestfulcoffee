@@ -1,15 +1,16 @@
 import React from 'react';
+import styles from './_headquarters.module.scss';
 
 const AddressBox = ({ address }) => {
   return (
-    <div className="address-container">
-      <img src={address.icon} alt="UK icon" className="country-icons" />
-      <h2 className="country-title">{address.country}</h2>
-      <div className="address-text-box">
-        <span className="address-text">{address.street}</span>
-        <span className="address-text">{address.city}</span>
-        <span className="address-text">{address.code}</span>
-        <span className="address-text">{address.phone}</span>
+    <div className={styles.addressContainer}>
+      <img src={address.icon} alt="UK icon" className={styles.countryIcons} />
+      <h2 className={styles.countryTitle}>{address.country}</h2>
+      <div className={styles.addressTextBox}>
+        <span className={styles.addressText}>{address.street}</span>
+        <span className={styles.addressText}>{address.city}</span>
+        <span className={styles.addressText}>{address.code}</span>
+        <span className={styles.addressText}>{address.phone}</span>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { StoreContext } from '../../../context/Context';
-import './_aside-titles.scss';
+import styles from './_aside-titles.module.scss';
+// import './_aside-titles.scss';
 
 const AsideTitles = ({
   preference,
@@ -14,9 +15,9 @@ const AsideTitles = ({
   const titleClass = (value) => {
     let textColor = null;
     if (value) {
-      textColor = 'selectedText';
+      textColor = styles.selectedText;
     } else {
-      textColor = 'unselected';
+      textColor = styles.unselected;
     }
     return textColor;
   };
@@ -24,71 +25,81 @@ const AsideTitles = ({
   const numberClass = (value) => {
     let numColor = null;
     if (value) {
-      numColor = 'selectedNumber';
+      numColor = styles.selectedNumber;
     } else {
-      numColor = 'unselected';
+      numColor = styles.unselected;
     }
     return numColor;
   };
 
   return (
     <>
-      <aside className="aside">
-        <div className="section-title-box">
+      <aside className={styles.aside}>
+        <div className={styles.sectionTitleBox}>
           <span
-            className={`section-number ${numberClass(orderData.drinkType)}`}
+            className={`${styles.sectionNumber} ${numberClass(
+              orderData.drinkType
+            )}`}
           >
             01
           </span>
-          <span className={`section-title ${titleClass(preference)}`}>
+          <span className={`${styles.sectionTitle} ${titleClass(preference)}`}>
             preferences
           </span>
         </div>
-        <div className="section-title-box">
+        <div className={styles.sectionTitleBox}>
           <span
-            className={`section-number ${numberClass(orderData.coffeeType)}`}
+            className={`${styles.sectionNumber} ${numberClass(
+              orderData.coffeeType
+            )}`}
           >
             02
           </span>
-          <span className={`section-title ${titleClass(beanType)}`}>
+          <span className={`${styles.sectionTitle} ${titleClass(beanType)}`}>
             bean type
           </span>
         </div>{' '}
-        <div className="section-title-box">
+        <div className={styles.sectionTitleBox}>
           <span
-            className={`section-number ${numberClass(orderData.coffeeAmount)}`}
+            className={`${styles.sectionNumber} ${numberClass(
+              orderData.coffeeAmount
+            )}`}
           >
             03
           </span>
-          <span className={`section-title ${titleClass(amount)}`}>
+          <span className={`${styles.sectionTitle} ${titleClass(amount)}`}>
             quantity
           </span>
         </div>{' '}
-        <div className="section-title-box">
+        <div className={styles.sectionTitleBox}>
           <span
-            className={`section-number ${
+            className={`${styles.sectionNumber} ${
               orderData.drinkType === 'Capsule' && orderData.grindType
-                ? 'unselected'
+                ? styles.unselected
                 : numberClass(orderData.grindType)
             }`}
           >
             04
           </span>
           <span
-            className={`section-title ${
-              grindType ? 'selectedText' : 'unselected'
+            className={`${styles.sectionTitle} ${
+              grindType ? styles.selectedText : styles.unselected
             }`}
           >
             grind options
           </span>
         </div>{' '}
-        <div className="section-title-box">
+        <div className={styles.sectionTitleBox}>
           <span
-            className={`section-number ${numberClass(orderData.deliveryType)}`}
+            className={`${styles.sectionNumber} ${numberClass(
+              orderData.deliveryType
+            )}`}
           >
             05
           </span>
-          <span className={`section-title ${titleClass(deliveryType)}`}>
+          <span
+            className={`${styles.sectionTitle} ${titleClass(deliveryType)}`}
+          >
             deliveries
           </span>
         </div>

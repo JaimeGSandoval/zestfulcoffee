@@ -1,6 +1,7 @@
 import React from 'react';
 import CoffeeBox from './CoffeeBox';
-import './_collection.scss';
+import styles from './_collection.module.scss';
+// import './_collection.scss';
 import danchePng from '../../../assets/images/coffee/danche.png';
 import dancheWebp from '../../../assets/images/coffee/danche.webp';
 import espressoPng from '../../../assets/images/coffee/gran-espresso.png';
@@ -48,9 +49,9 @@ const coffeeTypes = [
 const Collection = () => {
   return (
     <>
-      <section className="collection-section">
-        <h1 className="collection-header-text">our collection</h1>
-        <div className="coffee-types-container">
+      <section className={styles.collectionSection}>
+        <h1 className={styles.collectionHeaderText}>our collection</h1>
+        <div className={styles.coffeeTypesContainer}>
           {coffeeTypes.map((coffee) => {
             return <CoffeeBox coffeeType={coffee} key={coffee.type} />;
           })}

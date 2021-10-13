@@ -1,7 +1,7 @@
 @import '../../../sass/abstract/vars';
 @import '../../../sass/abstract/media-queries';
 
-.plan-how-to-section {
+.planHowToSection {
   margin-top: 7rem;
   background-color: $dark_grey_blue;
   border-radius: 0.8rem;
@@ -18,7 +18,7 @@
   }
 }
 
-.plan-how-to-section div:nth-of-type(1) {
+.planHowToSection div:nth-of-type(1) {
   padding-top: 0.8rem;
 
   @include tabletMd {
@@ -26,7 +26,7 @@
   }
 }
 
-.plan-how-to-section div:last-of-type {
+.planHowToSection div:last-of-type {
   padding-bottom: 2.5rem;
 
   @include tabletMd {
@@ -34,7 +34,7 @@
   }
 }
 
-.plan-step-number {
+.planStepNumber {
   text-align: center;
   color: $pale_orange;
   font-family: $title_font, serif;
@@ -56,13 +56,13 @@
   }
 }
 
-.plan-step-description:nth-of-type(1) p {
+.planStepDescription:nth-of-type(1) p {
   @include tabletMd {
     margin-top: 1.8rem;
   }
 }
 
-.plan-step-title {
+.planStepTitle {
   text-align: center;
   font-family: $title_font, serif;
   color: $bg_light_cream;
@@ -85,7 +85,7 @@
   }
 }
 
-.plan-step-description {
+.planStepDescription {
   font-family: $description_font;
   color: $grey;
   line-height: 1.5rem;
@@ -97,6 +97,7 @@
   @include tabletMd {
     text-align: left;
     margin: 1.8rem 0 0;
+    font-size: 0.9rem;
   }
 
   @include desktopXL {
@@ -105,11 +106,11 @@
   }
 }
 
-.custom-step-padding-1 {
+.customStepPadding-1 {
   padding: 0 1rem;
 }
 
-.create-plan-btn-steps {
+.createPlanBtnSteps {
   color: $bg_light_cream;
   text-align: center;
   background-color: $dark_cyan;
@@ -125,7 +126,7 @@
   display: block;
 }
 
-.plan-boxes-container {
+.planBoxesContainer {
   @include tabletMd {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -133,14 +134,14 @@
   }
 }
 
-.plan-circle {
+.planCircle {
   width: 1.5rem;
   height: 1.5rem;
   border: 2px solid $dark_cyan;
   border-radius: 50%;
 }
 
-.plan-inner-circle {
+.planInnerCircle {
   width: 100%;
   height: 100%;
   background: $dark_grey_blue;
@@ -149,7 +150,7 @@
   align-items: center;
 }
 
-.plan-line {
+.planLine {
   width: 30%;
   height: 2px;
   background: $pale_orange;
@@ -160,7 +161,7 @@
   }
 }
 
-.inner-line-front {
+.innerLineFront {
   width: 50%;
   height: 2px;
   background: $pale_orange;
@@ -168,19 +169,19 @@
   left: 50%;
 }
 
-.inner-line-middle {
+.innerLineMiddle {
   height: 2px;
   background: $pale_orange;
   width: 100%;
 }
 
-.inner-line-end {
+.innerLineEnd {
   width: 50%;
   height: 2px;
   background: $pale_orange;
 }
 
-.plan-circles-container {
+.planCirclesContainer {
   align-items: center;
   display: none;
 
@@ -189,7 +190,7 @@
   }
 }
 
-.plan-how-to-inner-container {
+.planHowToInnerContainer {
   @include tabletMd {
     width: 94%;
     margin: auto;

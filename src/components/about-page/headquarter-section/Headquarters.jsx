@@ -3,7 +3,8 @@ import AddressBox from './AddressBox';
 import ukIcon from '../../../assets/icons/uk.svg';
 import canadaIcon from '../../../assets/icons/canada.svg';
 import australiaIcon from '../../../assets/icons/australia.svg';
-import './_headquarters.scss';
+import styles from './_headquarters.module.scss';
+// import './_headquarters.scss';
 
 const addresses = [
   {
@@ -34,9 +35,9 @@ const addresses = [
 
 const Headquarters = () => {
   return (
-    <section className="headquarters-section">
-      <h1 className="headquarters-title">Our headquarters</h1>
-      <div className="address-box-container">
+    <section className={styles.headquartersSection}>
+      <h1 className={styles.headquartersTitle}>Our headquarters</h1>
+      <div className={styles.addressBoxContainer}>
         {addresses.map((address) => {
           return <AddressBox address={address} key={address.city} />;
         })}

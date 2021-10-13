@@ -3,7 +3,7 @@ import PerkBox from './PerkBox';
 import coffeeBean from '../../../assets/icons/icon-coffee-bean.svg';
 import gift from '../../../assets/icons/icon-gift.svg';
 import truck from '../../../assets/icons/icon-truck.svg';
-import './_choose-us.scss';
+import styles from './_choose-us.module.scss';
 
 const perks = [
   {
@@ -29,10 +29,10 @@ const perks = [
 const ChooseUs = () => {
   return (
     <>
-      <section className="choose-us-section">
-        <div className="choose-description-container">
-          <h2 className="choose-title">Why choose us?</h2>
-          <p className="choose-description" lang="en">
+      <section className={styles.chooseUsSection}>
+        <div className={styles.chooseDescriptionContainer}>
+          <h2 className={styles.chooseTitle}>Why choose us?</h2>
+          <p className={styles.chooseDescription} lang="en">
             A large part of our role is choosing which particular coffees will
             be featured in our range. This means working closely with the best
             coffee growers to give you a more impactful experience on every
@@ -40,15 +40,15 @@ const ChooseUs = () => {
           </p>
         </div>
 
-        <div className="perks-bg">
-          <div className="perks-container">
+        <div className={styles.perksBg}>
+          <div className={styles.perksContainer}>
             {perks.map((perk) => {
               return <PerkBox perk={perk} key={perk.perkTitle} />;
             })}
           </div>
         </div>
       </section>
-      <div className="spacer"></div>
+      <div className={styles.spacer}></div>
     </>
   );
 };
