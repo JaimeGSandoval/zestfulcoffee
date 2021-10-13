@@ -1,6 +1,7 @@
 @import '../../../sass/abstract/media-queries';
+@import '../../../sass/abstract/vars';
 
-.order-summary-modal-container {
+.orderSummaryModalContainer {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -11,7 +12,7 @@
   display: none;
 }
 
-.order-summary-modal-box {
+.orderSummaryModalBox {
   width: 88%;
   margin: 2rem auto;
   background-color: $bg_light_cream;
@@ -47,7 +48,7 @@
   }
 }
 
-.order-modal-title-container {
+.orderModalTitleContainer {
   background-color: $dark_grey_blue;
   width: 100%;
   padding: 1.2rem 0;
@@ -71,7 +72,7 @@
   }
 }
 
-.order-modal-title-box {
+.orderModalTitleBox {
   width: 88%;
   margin: auto;
   background-color: $dark_grey_blue;
@@ -80,7 +81,7 @@
   color: $bg_light_cream;
 }
 
-.order-modal-title {
+.orderModalTitle {
   font-size: 1.4rem;
 
   @include mobileSm {
@@ -92,7 +93,7 @@
   }
 }
 
-.order-modal-text-box {
+.orderModalTextBox {
   width: 90%;
   margin: auto;
   font-family: $title_font, serif;
@@ -136,12 +137,12 @@
   }
 }
 
-.confirm-text-box {
+.confirmTextBox {
   width: 90%;
   margin: auto;
 }
 
-.confirm-text {
+.confirmText {
   font-family: $description_font, sans-serif;
   color: $grey;
   font-size: 1rem;
@@ -158,7 +159,7 @@
   }
 }
 
-.submit-order-btn-mobile {
+.submitOrderBtnMobile {
   width: 90%;
   margin: auto;
   display: block;
@@ -188,7 +189,7 @@
   }
 }
 
-.submit-order-btn-lg {
+.submitOrderBtnLg {
   width: 90%;
   margin: auto;
   display: block;
@@ -220,16 +221,16 @@
   }
 }
 
-.order-text {
+.orderText {
   color: $dark_cyan;
 }
 
-.show-order-modal {
+.showOrderModal {
   display: flex;
   align-items: center;
 }
 
-.order-modal-text {
+.orderModalText {
   @include tabletMd {
     width: 90%;
     margin: auto;
@@ -244,7 +245,7 @@
   }
 }
 
-.checkout-total-container-lg {
+.checkoutTotalContainerLg {
   display: none;
   align-items: center;
   width: 80%;

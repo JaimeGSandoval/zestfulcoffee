@@ -5,11 +5,12 @@ import commitmentWebpMd from '../../../assets/images/about/tablet/commitment.web
 import commitmentJpgMd from '../../../assets/images/about/tablet/commitment.jpg';
 import commitmentWebpLg from '../../../assets/images/about/desktop/commitment-lg.webp';
 import commitmentJpgLg from '../../../assets/images/about/desktop/commitment-lg.jpg';
-import './_commitment.scss';
+import styles from './_commitment.module.scss';
+// import './_commitment.scss';
 
 const Commitment = () => {
   return (
-    <section className="about-commitment-section">
+    <section className={styles.aboutCommitmentSection}>
       <picture>
         <source
           srcSet={`${commitmentWebpLg} 1024w, ${commitmentJpgLg}, 1024w`}
@@ -25,13 +26,13 @@ const Commitment = () => {
         <img
           src={commitmentJpgSm}
           alt="Coffee worker"
-          className="commitment-img"
+          className={styles.commitmentImg}
         />
       </picture>
 
-      <div className="about-commitment-text-box">
-        <h1 className="commitment-title">Our commitment</h1>
-        <p className="commitment-description">
+      <div className={styles.aboutCommitmentTextBox}>
+        <h1 className={styles.commitmentTitle}>Our commitment</h1>
+        <p className={styles.commitmentDescription}>
           We’re built on a simple mission and a commitment to doing good along
           the way. We want to make it easy for you to discover and brew the
           world’s best coffee at home. It all starts at the source. To locate

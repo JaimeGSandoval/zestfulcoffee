@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import { StoreContext } from '../../../context/Context';
+import styles from './_order-summary.module.scss';
 
 const OrderSummary = () => {
   const textRef = useRef();
@@ -25,41 +26,43 @@ const OrderSummary = () => {
       <span style={{ color: '#f3fcf7' }}>as</span>
     );
 
-  const coloredLine = <span className="colored-line"></span>;
+  const coloredLine = <span className={styles.coloredLine}></span>;
 
   const setOptionText = (data) => (data ? data : coloredLine);
 
   return (
     <>
-      <section className="order-container">
-        <div className="order-summary-text-box">
-          <h1 className="order-summary-title">order summary</h1>
-          <p className="order-summary-text">
+      <section className={styles.orderContainer}>
+        <div className={styles.orderSummaryTextBox}>
+          <div className={styles.summaryTitleBox}>
+            <h1 className={styles.orderSummaryTitle}>order summary</h1>
+          </div>
+          <p className={styles.orderSummaryText}>
             “I drink my coffee{' '}
-            <span className="drinkType order-text">
+            <span className={styles.orderText}>
               {' '}
               {specialText} {setOptionText(drinkType)}
             </span>
             , with a
-            <span className="coffee order-text">
+            <span className={styles.orderText}>
               {' '}
               {setOptionText(orderData.coffeeType)}
             </span>{' '}
             type of bean.
-            <span className="amount order-text">
+            <span className={styles.orderText}>
               {' '}
               {setOptionText(orderData.coffeeAmount)}
             </span>{' '}
             <span ref={textRef}>
               ground ala
-              <span className="grind order-text">
+              <span className={styles.orderText}>
                 {' '}
                 {setOptionText(orderData.grindType)}
               </span>
               ,{' '}
             </span>
             sent to me
-            <span className="deliver order-text">
+            <span className={styles.orderText}>
               {' '}
               {setOptionText(orderData.deliveryType)}
             </span>

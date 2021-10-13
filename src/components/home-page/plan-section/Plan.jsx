@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import StepBox from './StepBox';
-import './_plan.scss';
+import styles from './_plan.module.scss';
+// import './_plan.scss';
 
 const steps = [
   {
@@ -23,30 +24,30 @@ const steps = [
 
 const Plan = () => {
   return (
-    <section className="plan-how-to-home">
-      <h2 className="how-to-title">How it works</h2>
-      <div className="circles-container">
-        <div className="circle">
-          <div className="inner-circle"></div>
+    <section className={styles.planHowToHome}>
+      <h2 className={styles.howToTitle}>How it works</h2>
+      <div className={styles.circlesContainer}>
+        <div className={styles.circle}>
+          <div className={styles.innerCircle}></div>
         </div>
-        <div className="line"></div>
+        <div className={styles.line}></div>
 
-        <div className="circle">
-          <div className="inner-circle"></div>
+        <div className={styles.circle}>
+          <div className={styles.innerCircle}></div>
         </div>
-        <div className="line"></div>
+        <div className={styles.line}></div>
 
-        <div className="circle">
-          <div className="inner-circle"></div>
+        <div className={styles.circle}>
+          <div className={styles.innerCircle}></div>
         </div>
       </div>
 
-      <div className="steps-container">
+      <div className={styles.stepsContainer}>
         {steps.map((step, i) => (
           <StepBox step={step} stepNumber={i + 1} key={step.title} />
         ))}
       </div>
-      <Link to="/plan" className="create-plan-steps-home-bottom">
+      <Link to="/plan" className={styles.createPlanStepsHomeBottom}>
         create a plan
       </Link>
     </section>

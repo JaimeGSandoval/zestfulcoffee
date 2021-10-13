@@ -4,12 +4,13 @@ import { withRouter } from 'react-router-dom';
 import { StoreContext } from '../../../context/Context';
 import { OrderModalContext } from '../../../context/OrderModalContext';
 import calculateTotal from './priceTotal';
+import styles from './_order-modal.module.scss';
 
 const OrderModal = ({ history }) => {
   const textRef = useRef();
   const { orderData, setOrderData } = useContext(StoreContext);
   const { showOrderModal, setShowOrderModal } = useContext(OrderModalContext);
-  const show = showOrderModal ? 'show-order-modal' : '';
+  const show = showOrderModal ? styles.showOrderModal : '';
 
   useEffect(() => {
     if (orderData.drinkType === 'Capsule') {
@@ -44,40 +45,40 @@ const OrderModal = ({ history }) => {
   };
 
   return ReactDOM.createPortal(
-    <div className={`order-summary-modal-container ${show}`} aria-modal="true">
-      <div className="order-summary-modal-box">
-        <div className="order-modal-title-container">
-          <div className="order-modal-title-box">
-            <h1 className="order-modal-title">order summary</h1>
+    <div
+      className={`${styles.orderSummaryModalContainer} ${show}`}
+      aria-modal="true"
+    >
+      <div className={styles.orderSummaryModalBox}>
+        <div className={styles.orderModalTitleContainer}>
+          <div className={styles.orderModalTitleBox}>
+            <h1 className={styles.orderModalTitle}>order summary</h1>
           </div>
         </div>
 
-        <div className="order-modal-text-box">
-          <p className="order-modal-text">
+        <div className={styles.orderModalTextBox}>
+          <p className={styles.orderModalText}>
             “I drink my coffee{' '}
-            <span className="drinkType order-text">
+            <span className={styles.orderText}>
               {' '}
               {specialText} {drinkType}
             </span>
             , with a{' '}
-            <span className="coffee order-text"> {orderData.coffeeType}</span>{' '}
+            <span className={styles.orderText}> {orderData.coffeeType}</span>{' '}
             type of bean.{' '}
-            <span className="amount order-text"> {orderData.coffeeAmount}</span>{' '}
+            <span className={styles.orderText}> {orderData.coffeeAmount}</span>{' '}
             <span ref={textRef}>
               ground ala{' '}
-              <span className="grind order-text"> {orderData.grindType}</span>,{' '}
+              <span className={styles.orderText}> {orderData.grindType}</span>,{' '}
             </span>
             sent to me{' '}
-            <span className="deliver order-text">
-              {' '}
-              {orderData.deliveryType}
-            </span>
+            <span className={styles.orderText}> {orderData.deliveryType}</span>
             .”
           </p>
         </div>
 
-        <div className="confirm-text-box">
-          <p className="confirm-text">
+        <div className={styles.confirmTextBox}>
+          <p className={styles.confirmText}>
             Is this correct? You can proceed to checkout or go back to plan
             selection if something is off. Subscription discount codes can also
             be redeemed at the checkout.
@@ -85,22 +86,25 @@ const OrderModal = ({ history }) => {
         </div>
 
         <button
-          className="submit-order-btn-mobile"
+          className={styles.submitOrderBtnMobile}
           onClick={() => handleClick()}
         >
           Checkout -
-          <span className="total">
+          <span className={styles.total}>
             {calculateTotal(orderData.coffeeAmount, orderData.deliveryType)}
           </span>{' '}
           / mo
         </button>
 
-        <div className="checkout-total-container-lg">
-          <span className="total">
+        <div className={styles.checkoutTotalContainerLg}>
+          <span className={styles.total}>
             {calculateTotal(orderData.coffeeAmount, orderData.deliveryType)} /
             mo
           </span>{' '}
-          <button className="submit-order-btn-lg" onClick={() => handleClick()}>
+          <button
+            className={styles.submitOrderBtnLg}
+            onClick={() => handleClick()}
+          >
             Checkout
           </button>
         </div>

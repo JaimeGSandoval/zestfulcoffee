@@ -1,21 +1,21 @@
 @import '../../../sass/abstract/vars';
 @import '../../../sass/abstract/media-queries';
 
-.hero-about-section {
+.heroAboutSection {
   width: 100%;
   height: 29.1rem;
   margin: auto;
   position: relative;
 }
 
-.hero-about {
+.heroAbout {
   width: 100%;
   height: 100%;
   border-radius: 0.8rem;
   object-fit: cover;
 }
 
-.about-us-title {
+.aboutUsTitle {
   font-family: $title_font, serif;
   font-size: 2.2rem;
   color: $bg_light_cream;
@@ -38,7 +38,7 @@
   }
 }
 
-.about-us-description {
+.aboutUsDescription {
   width: 92%;
   font-family: $description_font, sans-serif;
   color: #bdbdbd;
@@ -84,7 +84,7 @@
   }
 }
 
-.about-hero-text-box {
+.aboutHeroTextBox {
   position: absolute;
   top: 26%;
   left: 0;

@@ -14,7 +14,9 @@ import {
   grindTypes,
   deliveryTypes,
 } from './coffeeOptions';
-import './_options.scss';
+import styles from './_options.module.scss';
+
+// import './_options.module.scss';
 
 const Options = () => {
   const drinkRef = useRef();
@@ -54,15 +56,15 @@ const Options = () => {
       setShowGrindTypes(false);
       grindRef.current.style.pointerEvents = 'none';
       grindRef.current.nextElementSibling.classList.add('hide');
-      grindRef.current.classList.remove('toggle-arrow');
-      grindRef.current.classList.add('change-svg');
-      grindRef.current.previousElementSibling.classList.add('disabled-font');
+      grindRef.current.classList.remove('toggleArrow');
+      grindRef.current.classList.add('changeSvg');
+      grindRef.current.previousElementSibling.classList.add('disabledFont');
       return;
     } else {
       grindRef.current.style.pointerEvents = 'auto';
       grindRef.current.nextElementSibling.classList.remove('hide');
-      grindRef.current.classList.remove('change-svg');
-      grindRef.current.previousElementSibling.classList.remove('disabled-font');
+      grindRef.current.classList.remove('changeSvg');
+      grindRef.current.previousElementSibling.classList.remove('disabledFont');
     }
 
     handleToggle(grindRef, showGrindTypes);
@@ -72,7 +74,7 @@ const Options = () => {
 
   return (
     <>
-      <section className="options-section">
+      <section className={styles.optionsSection}>
         <AsideTitles
           preference={showDrinkTypes}
           beanType={showCoffeeTypes}
@@ -81,15 +83,15 @@ const Options = () => {
           deliveryType={showDeliveryTypes}
         />
 
-        <div className="content-container">
-          <div className="option-container">
-            <h1 className="option-title-question">
+        <div className={styles.contentContainer}>
+          <div className={styles.optionContainer}>
+            <h1 className={styles.optionTitleQuestion}>
               How do you drink your coffee?
             </h1>
             <img
               src={arrowIcon}
               alt="Arrow icon"
-              className="arrow"
+              className={styles.arrow}
               data-arrow
               onClick={() => setShowDrinkTypes(!showDrinkTypes)}
               ref={drinkRef}
@@ -97,12 +99,12 @@ const Options = () => {
             <OptionContainer options={drinkTypes} />
           </div>
 
-          <div className="option-container">
-            <h1 className="option-title-question">What type of coffee?</h1>
+          <div className={styles.optionContainer}>
+            <h1 className={styles.optionTitleQuestion}>What type of coffee?</h1>
             <img
               src={arrowIcon}
               alt="Arrow icon"
-              className="arrow"
+              className={styles.arrow}
               data-arrow
               onClick={() => setShowCoffeeTypes(!showCoffeeTypes)}
               ref={coffeeRef}
@@ -110,12 +112,14 @@ const Options = () => {
             <OptionContainer options={coffeeTypes} />
           </div>
 
-          <div className="option-container">
-            <h1 className="option-title-question">How much would you like?</h1>
+          <div className={styles.optionContainer}>
+            <h1 className={styles.optionTitleQuestion}>
+              How much would you like?
+            </h1>
             <img
               src={arrowIcon}
               alt="Arrow icon"
-              className="arrow"
+              className={styles.arrow}
               data-arrow
               onClick={() => setShowCoffeeAmounts(!showCoffeeAmounts)}
               ref={amountRef}
@@ -123,12 +127,14 @@ const Options = () => {
             <OptionContainer options={coffeeAmounts} />
           </div>
 
-          <div className="option-container">
-            <h1 className="option-title-question">Want us to grind them?</h1>
+          <div className={styles.optionContainer}>
+            <h1 className={styles.optionTitleQuestion}>
+              Want us to grind them?
+            </h1>
             <img
               src={arrowIcon}
               alt="Arrow icon"
-              className="arrow"
+              className={styles.arrow}
               data-arrow
               onClick={() => setShowGrindTypes(!showGrindTypes)}
               ref={grindRef}
@@ -136,14 +142,14 @@ const Options = () => {
             <OptionContainer options={grindTypes} />
           </div>
 
-          <div className="option-container">
-            <h1 className="option-title-question">
+          <div className={styles.optionContainer}>
+            <h1 className={styles.optionTitleQuestion}>
               How often should we deliver?
             </h1>
             <img
               src={arrowIcon}
               alt="Arrow icon"
-              className="arrow"
+              className={styles.arrow}
               data-arrow
               onClick={() => setShowDeliveryTypes(!showDeliveryTypes)}
               ref={deliveryRef}
@@ -153,9 +159,9 @@ const Options = () => {
         </div>
       </section>
       <OrderSummary />
-      <div className="create-plan-order-container">
+      <div className={styles.createPlanOrderContainer}>
         <button
-          className={!buttonState ? 'create-plan-order' : 'disabled-btn'}
+          className={!buttonState ? styles.createPlanOrder : styles.disabledBtn}
           data-plan
           onClick={() => setShowOrderModal(true)}
           disabled={buttonState}

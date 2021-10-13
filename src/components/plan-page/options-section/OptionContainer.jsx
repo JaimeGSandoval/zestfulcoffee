@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { StoreContext } from '../../../context/Context';
-import './_options.scss';
+import styles from './_options.module.scss';
+// import './_options.module.scss';
 
 const OptionContainer = ({ options }) => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -16,19 +17,20 @@ const OptionContainer = ({ options }) => {
 
   const renderedOptions = options.map((option, index) => {
     // 'remove-pointer-events';
-    const active = index === activeIndex ? 'active custom-hover' : '';
+    const active =
+      index === activeIndex ? `${styles.active} ${styles.customHover}` : '';
 
     return (
       <React.Fragment key={option.id}>
         <div
-          className={`option-box ${active}`}
+          className={`${styles.optionBox} ${active}`}
           onClick={(e) => handleClick(index, e)}
           data-name={option.optionTitle}
           data-type={option.dataType}
           data-parent
         >
           <h2
-            className={`option-title`}
+            className={styles.optionTitle}
             data-name={option.optionTitle}
             data-type={option.dataType}
             data-child
@@ -36,7 +38,7 @@ const OptionContainer = ({ options }) => {
             {option.optionTitle}
           </h2>
           <p
-            className={`option-description`}
+            className={styles.optionDescription}
             data-name={option.optionTitle}
             data-type={option.dataType}
             data-child
@@ -48,7 +50,7 @@ const OptionContainer = ({ options }) => {
     );
   });
 
-  return <div className="options-container">{renderedOptions}</div>;
+  return <div className={styles.optionsContainer}>{renderedOptions}</div>;
 };
 
 export default OptionContainer;
