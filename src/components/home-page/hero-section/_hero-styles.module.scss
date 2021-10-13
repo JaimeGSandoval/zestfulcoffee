@@ -65,7 +65,8 @@
   color: $grey;
   text-align: center;
   width: 88%;
-  line-height: 1.9rem;
+  // line-height: 1.9rem;
+  line-height: 1.8rem;
   margin: auto;
   padding: 1.5rem 0 2rem 0;
 
@@ -124,6 +125,7 @@
 
   @include tabletMd {
     margin: 0;
+    width: 34%;
   }
 
   @include laptopLg {
