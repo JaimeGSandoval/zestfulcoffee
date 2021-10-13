@@ -1,17 +1,23 @@
 {
   "files": {
-    "main.css": "/coffeeroasters/static/css/main.2cc4237b.chunk.css",
-    "main.js": "/coffeeroasters/static/js/main.0912fe09.chunk.js",
-    "main.js.map": "/coffeeroasters/static/js/main.0912fe09.chunk.js.map",
-    "runtime-main.js": "/coffeeroasters/static/js/runtime-main.8ece6212.js",
-    "runtime-main.js.map": "/coffeeroasters/static/js/runtime-main.8ece6212.js.map",
-    "static/js/2.22dd941a.chunk.js": "/coffeeroasters/static/js/2.22dd941a.chunk.js",
-    "static/js/2.22dd941a.chunk.js.map": "/coffeeroasters/static/js/2.22dd941a.chunk.js.map",
-    "static/js/3.680d6f4f.chunk.js": "/coffeeroasters/static/js/3.680d6f4f.chunk.js",
-    "static/js/3.680d6f4f.chunk.js.map": "/coffeeroasters/static/js/3.680d6f4f.chunk.js.map",
+    "main.css": "/coffeeroasters/static/css/main.6d730878.chunk.css",
+    "main.js": "/coffeeroasters/static/js/main.e07aa9ef.chunk.js",
+    "main.js.map": "/coffeeroasters/static/js/main.e07aa9ef.chunk.js.map",
+    "runtime-main.js": "/coffeeroasters/static/js/runtime-main.8e68849d.js",
+    "runtime-main.js.map": "/coffeeroasters/static/js/runtime-main.8e68849d.js.map",
+    "static/js/2.a4d94539.chunk.js": "/coffeeroasters/static/js/2.a4d94539.chunk.js",
+    "static/js/2.a4d94539.chunk.js.map": "/coffeeroasters/static/js/2.a4d94539.chunk.js.map",
+    "static/css/3.1ff6ab39.chunk.css": "/coffeeroasters/static/css/3.1ff6ab39.chunk.css",
+    "static/js/3.8d623110.chunk.js": "/coffeeroasters/static/js/3.8d623110.chunk.js",
+    "static/js/3.8d623110.chunk.js.map": "/coffeeroasters/static/js/3.8d623110.chunk.js.map",
+    "static/css/4.bb9f2b4e.chunk.css": "/coffeeroasters/static/css/4.bb9f2b4e.chunk.css",
+    "static/js/4.251923eb.chunk.js": "/coffeeroasters/static/js/4.251923eb.chunk.js",
+    "static/js/4.251923eb.chunk.js.map": "/coffeeroasters/static/js/4.251923eb.chunk.js.map",
     "index.html": "/coffeeroasters/index.html",
-    "static/css/main.2cc4237b.chunk.css.map": "/coffeeroasters/static/css/main.2cc4237b.chunk.css.map",
-    "static/js/2.22dd941a.chunk.js.LICENSE.txt": "/coffeeroasters/static/js/2.22dd941a.chunk.js.LICENSE.txt",
+    "static/css/3.1ff6ab39.chunk.css.map": "/coffeeroasters/static/css/3.1ff6ab39.chunk.css.map",
+    "static/css/4.bb9f2b4e.chunk.css.map": "/coffeeroasters/static/css/4.bb9f2b4e.chunk.css.map",
+    "static/css/main.6d730878.chunk.css.map": "/coffeeroasters/static/css/main.6d730878.chunk.css.map",
+    "static/js/2.a4d94539.chunk.js.LICENSE.txt": "/coffeeroasters/static/js/2.a4d94539.chunk.js.LICENSE.txt",
     "static/media/australia.090e2b81.svg": "/coffeeroasters/static/media/australia.090e2b81.svg",
     "static/media/main.scss": "/coffeeroasters/static/media/fraunces.e28128b4.woff2",
     "static/media/canada.30bd3439.svg": "/coffeeroasters/static/media/canada.30bd3439.svg",
@@ -65,9 +71,9 @@
     "static/media/uk.ef38b5a9.svg": "/coffeeroasters/static/media/uk.ef38b5a9.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8ece6212.js",
-    "static/js/2.22dd941a.chunk.js",
-    "static/css/main.2cc4237b.chunk.css",
-    "static/js/main.0912fe09.chunk.js"
+    "static/js/runtime-main.8e68849d.js",
+    "static/js/2.a4d94539.chunk.js",
+    "static/css/main.6d730878.chunk.css",
+    "static/js/main.e07aa9ef.chunk.js"
   ]
 }
