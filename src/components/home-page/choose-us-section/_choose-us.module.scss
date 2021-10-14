@@ -28,6 +28,7 @@
   width: 98%;
   margin: auto;
   font-size: 1rem;
+  max-width: 429px;
 
   @include tabletMd {
     width: 80%;
@@ -39,13 +40,16 @@
 
   @include laptopLg {
     width: 60%;
+    max-width: 526px;
   }
 
   @include desktopLg {
     width: 52%;
+    max-width: 100%;
   }
 
   @include desktopXL {
+    width: 57%;
     font-size: 1.3rem;
     line-height: 2.1rem;
   }
@@ -78,9 +82,14 @@
   margin: 1.5rem auto 0 auto;
   background-color: $dark_cyan;
   border-radius: 0.8rem;
+  max-width: 350px;
 
   @include mobileSm {
     width: 88%;
+  }
+
+  @include tabletMd {
+    max-width: 100%;
   }
 
   @include laptop {
@@ -131,7 +140,7 @@
   text-align: center;
   color: $bg_light_cream;
   font-family: $description_font, sans-serif;
-  padding: 1rem 0 2.5rem 0;
+  padding: 1rem 0 3.5rem 0;
   line-height: 1.7rem;
   margin: auto;
   hyphens: auto;
@@ -144,10 +153,11 @@
   }
 
   @include tabletMd {
+    padding-bottom: 2.5rem;
     text-align: left;
     margin: 0;
     width: 90%;
-    padding-top: 1rem;
+    // padding-top: 1rem;
   }
 
   @include laptop {
