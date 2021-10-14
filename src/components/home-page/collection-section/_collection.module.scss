@@ -115,3 +115,13 @@
     column-gap: 1rem;
   }
 }
+
+.coffeeTypeTextBox {
+  @include tabletMd {
+    margin-right: 5rem;
+  }
+
+  @include laptop {
+    margin-right: 0;
+  }
+}

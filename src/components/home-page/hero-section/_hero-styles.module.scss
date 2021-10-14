@@ -113,6 +113,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
+  max-width: 155px;
 
   &:hover {
     background: $cyan_hover;
