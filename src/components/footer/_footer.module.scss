@@ -45,6 +45,7 @@
   margin: auto;
   padding: 2.5rem 0;
   display: block;
+  max-width: 263px;
 
   @include tabletMd {
     width: 34%;

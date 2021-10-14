@@ -13,6 +13,11 @@
   text-align: center;
   font-family: $title_font, serif;
   color: $grey;
+  margin-top: 2rem;
+
+  @include mobileXL {
+    margin-top: 4rem;
+  }
 
   @include tabletMd {
     text-align: left;
@@ -79,7 +84,7 @@
   hyphens: auto;
   text-align: center;
   margin: 1.8rem auto 0 auto;
-  max-width: 504px;
+  max-width: 467px;
 
   @include tabletMd {
     text-align: left;
