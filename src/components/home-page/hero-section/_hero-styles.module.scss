@@ -5,6 +5,13 @@
   width: 100%;
   height: 33rem;
   position: relative;
+  // max-width: 514px;
+  margin: auto;
+
+  @include tabletMd {
+    max-width: 100%;
+    margin: 0;
+  }
 }
 
 .hero {
@@ -68,6 +75,7 @@
   line-height: 1.8rem;
   margin: auto;
   padding: 1.5rem 0 2rem 0;
+  max-width: 450px;
 
   @include mobileLg {
     width: 85%;
@@ -105,6 +113,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
+  max-width: 155px;
 
   &:hover {
     background: $cyan_hover;
@@ -119,7 +128,7 @@
   }
 
   @include tabletSm {
-    width: 29%;
+    width: 31%;
   }
 
   @include tabletMd {

@@ -54,15 +54,21 @@
   @include mobileLg {
     width: 88%;
     font-size: 1.1rem;
+    max-width: 445px;
   }
 
   @include mobileI12Pro {
     top: 54%;
   }
 
+  @include tabletSm {
+    line-height: 1.8rem;
+  }
+
   @include tabletMd {
     text-align: left;
     margin: 0;
+    max-width: 100%;
   }
 
   @include laptop {
