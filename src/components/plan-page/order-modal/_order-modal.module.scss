@@ -104,13 +104,13 @@
   padding: 1.2rem 0 1rem 0;
 
   @include mobileSm {
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
     line-height: 2.3rem;
     padding: 2rem 0 1rem 0;
   }
 
   @include mobileLg {
-    line-height: 2.5rem;
+    // line-height: 2.5rem;
   }
 
   @include mobileLandscapeSm {
@@ -125,9 +125,19 @@
     font-size: 1.3rem;
   }
 
+  @include tabletSm {
+    font-size: 1.3rem;
+  }
+
   @include tabletMd {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     padding-top: 2rem;
+    line-height: 2.2rem;
+  }
+
+  @include laptop {
+    padding: 2.5rem 0;
+    line-height: 2.4rem;
   }
 
   @include desktopXL {
@@ -145,13 +155,28 @@
 .confirmText {
   font-family: $description_font, sans-serif;
   color: $grey;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  margin: auto;
+  width: 98%;
+
+  @include mobileLg {
+    width: 89%;
+  }
+
+  @include tabletSm {
+    width: 85%;
+  }
 
   @include tabletMd {
     width: 91%;
     margin: auto;
     font-size: 0.8rem;
+  }
+
+  @include laptop {
+    width: 85%;
+    font-size: 0.9rem;
   }
 
   @include desktopXL {
@@ -160,7 +185,7 @@
 }
 
 .submitOrderBtnMobile {
-  width: 90%;
+  width: 89%;
   margin: auto;
   display: block;
   border: 0;
@@ -169,19 +194,29 @@
   color: $bg_light_cream;
   font-size: 1rem;
   font-family: $title_font, serif;
-  padding: 1.4rem 1rem;
+  // padding: 1.4rem 1rem;
+  padding: 1.1rem 1rem;
   border-radius: 0.8rem;
   letter-spacing: 1px;
   margin: 1.2rem auto 1.2rem auto;
+  max-width: 296px;
 
   @include mobileSm {
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
+  }
+
+  @include mobileLg {
+    width: 69%;
   }
 
   @include mobileLandscapeSm {
     font-size: 1rem;
     padding: 1rem;
     width: 70%;
+  }
+
+  @include tabletSm {
+    width: 60%;
   }
 
   @include tabletMd {
@@ -205,6 +240,10 @@
   margin: 1.2rem auto 1.2rem auto;
   cursor: pointer;
 
+  @include tabletSm {
+    width: 48%;
+  }
+
   @include tabletMd {
     display: inline-block;
     width: 50%;
@@ -213,6 +252,11 @@
     border-radius: 0.4rem;
     font-size: 0.8rem;
     margin-left: 1rem;
+    max-width: 187px;
+  }
+
+  @include laptop {
+    font-size: 1.1rem;
   }
 
   @include desktopLg {
@@ -231,10 +275,26 @@
 }
 
 .orderModalText {
-  @include tabletMd {
-    width: 90%;
-    margin: auto;
+  width: 96%;
+  margin: auto;
+  @include mobileLg {
+    width: 89%;
+    // margin: auto;
   }
+
+  @media (min-width: 500px) {
+    width: 92%;
+    // width: 85%;
+  }
+
+  @include tabletSm {
+    width: 85%;
+    // margin: auto;
+  }
+  // @include tabletMd {
+  //   width: 90%;
+  //   // margin: auto;
+  // }
 }
 
 .total {
