@@ -44,7 +44,7 @@
   }
 
   @include desktopXL {
-    width: 28%;
+    // width: 28%;
   }
 }
 
@@ -98,7 +98,8 @@
   margin: auto;
   font-family: $title_font, serif;
   color: $grey;
-  font-size: 1.3rem;
+  // font-size: 1.3rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
   line-height: 2rem;
   padding: 1.2rem 0 1rem 0;
@@ -161,7 +162,12 @@
   width: 98%;
 
   @include mobileLg {
-    width: 89%;
+    // width: 89%;
+    width: 96%;
+  }
+
+  @media (min-width: 500px) {
+    width: 92%;
   }
 
   @include tabletSm {
@@ -169,8 +175,8 @@
   }
 
   @include tabletMd {
-    width: 91%;
-    margin: auto;
+    // width: 85%;
+    // margin: auto;
     font-size: 0.8rem;
   }
 
@@ -185,7 +191,7 @@
 }
 
 .submitOrderBtnMobile {
-  width: 89%;
+  width: 92%;
   margin: auto;
   display: block;
   border: 0;
@@ -206,7 +212,7 @@
   }
 
   @include mobileLg {
-    width: 69%;
+    width: 72%;
   }
 
   @include mobileLandscapeSm {
@@ -278,7 +284,8 @@
   width: 96%;
   margin: auto;
   @include mobileLg {
-    width: 89%;
+    // width: 89%;
+    width: 96%;
     // margin: auto;
   }
 

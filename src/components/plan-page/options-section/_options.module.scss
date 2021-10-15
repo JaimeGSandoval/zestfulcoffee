@@ -215,6 +215,10 @@
     width: 53%;
   }
 
+  @media (min-width: 500px) {
+    max-width: 200px;
+  }
+
   @include tabletMd {
     width: 32%;
   }
@@ -234,7 +238,7 @@
   }
 
   @include desktopXL {
-    width: 22%;
+    max-width: 228px;
     font-size: 1.4rem;
   }
 }
