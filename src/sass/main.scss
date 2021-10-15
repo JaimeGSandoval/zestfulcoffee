@@ -43,4 +43,8 @@ body {
 .container {
   width: 88%;
   margin: auto;
+
+  @include desktopLg {
+    width: 100%;
+  }
 }

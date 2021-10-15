@@ -2,8 +2,7 @@ export const drinkTypes = [
   {
     id: 'Capsule-0',
     optionTitle: 'Capsule',
-    optionDescription:
-      'Compatible with Nespresso systems and and similar brewers',
+    optionDescription: 'Compatible with Nespresso systems and similar brewers',
     dataType: 'drinkType',
   },
   {
