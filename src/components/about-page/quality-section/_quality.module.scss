@@ -3,9 +3,23 @@
 
 .qualitySection {
   width: 100%;
-  margin: 13rem auto 0 auto;
+  margin: 62% auto 0 auto;
   background-color: $dark_grey_blue;
   border-radius: 0.8rem;
+  margin-top: 11rem;
+
+  @include mobileLg {
+    margin-top: 13rem;
+  }
+
+  @media (min-width: 500px) {
+    // margin-top: 51%;
+    margin-top: 15rem;
+  }
+
+  @include tabletSm {
+    margin-top: 17rem;
+  }
 
   @include tabletMd {
     margin-top: 22rem;
@@ -83,10 +97,11 @@
   text-align: center;
   display: block;
   margin: auto;
+  padding-bottom: 4rem;
 
   @include mobileSm {
     width: 90%;
-    font-size: 1.1rem;
+    // font-size: 1.1rem;
   }
 
   @include mobileI12Pro {
@@ -97,19 +112,27 @@
     width: 89%;
   }
 
+  @include tabletSm {
+    line-height: 1.6rem;
+  }
+
   @include tabletMd {
-    padding-bottom: 2rem;
+    // padding-bottom: 4rem;
   }
 
   @include laptop {
     text-align: left;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 0;
-    line-height: 1.6rem;
+    // line-height: 1.6rem;
   }
 
-  @include laptopLg {
-    font-size: 1rem;
+  // @include laptopLg {
+  //   font-size: 1rem;
+  // }
+
+  @include desktop {
+    line-height: 1.7rem;
   }
 
   @media (min-width: 1800px) {
@@ -118,20 +141,15 @@
 
   @include desktopXL {
     font-size: 1.1rem;
-    line-height: 2rem;
   }
 }
 
 .qualityTextBox {
-  transform: translateY(-20%);
-
-  @include tabletMd {
-    margin-top: -20%;
-  }
+  margin-top: -29%;
 
   @include laptop {
+    margin-top: -16%;
     width: 81%;
-    margin-top: 0;
   }
 }
 

@@ -93,6 +93,7 @@
   text-align: center;
   width: 93%;
   margin: 1.8rem auto 0 auto;
+  max-width: 467px;
 
   @include tabletMd {
     text-align: left;
@@ -131,6 +132,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 0.5rem;
+  }
+
+  @include desktopLg {
+    column-gap: 1.5rem;
   }
 }
 
