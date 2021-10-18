@@ -64,7 +64,7 @@
   }
 
   @include mobileLandscapeLg {
-    padding: 1rem 0;
+    // padding: 1rem 0;
   }
 
   @include tabletMd {
@@ -322,5 +322,35 @@
 
   @include tabletMd {
     display: flex;
+  }
+}
+
+@media (min-width: 568px) and (min-height: 320px) and (orientation: landscape) {
+  .orderModalTitle {
+    padding: 0.7rem 0;
+  }
+}
+
+@media (min-width: 812px) and (min-height: 375px) and (orientation: landscape) {
+  .orderModalTextBox {
+    font-size: initial;
+    padding-top: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .orderModalTitleContainer {
+    padding: 0;
+  }
+}
+
+@media (min-width: 780px) and (max-height: 360px) and (orientation: landscape) {
+  .orderModalTextBox {
+    font-size: initial;
+    padding-top: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .orderModalTitleContainer {
+    padding: 0;
   }
 }
