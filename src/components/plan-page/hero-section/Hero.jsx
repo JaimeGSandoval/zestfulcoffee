@@ -6,7 +6,6 @@ import blackcupJpgMd from '../../../assets/images/plan/tablet/hero-blackcup.jpg'
 import blackcupWebpLg from '../../../assets/images/plan/desktop/hero-blackcup-lg.webp';
 import blackcupJpgLg from '../../../assets/images/plan/desktop/hero-blackcup-lg.jpg';
 import styles from './_hero-plan.module.scss';
-// import './_hero-plan.scss';
 
 const Hero = () => {
   return (

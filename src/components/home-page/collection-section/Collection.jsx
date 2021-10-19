@@ -1,7 +1,6 @@
 import React from 'react';
 import CoffeeBox from './CoffeeBox';
 import styles from './_collection.module.scss';
-// import './_collection.scss';
 import danchePng from '../../../assets/images/coffee/danche.png';
 import dancheWebp from '../../../assets/images/coffee/danche.webp';
 import espressoPng from '../../../assets/images/coffee/gran-espresso.png';

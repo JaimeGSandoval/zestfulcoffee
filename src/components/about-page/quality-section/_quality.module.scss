@@ -13,7 +13,6 @@
   }
 
   @media (min-width: 500px) {
-    // margin-top: 51%;
     margin-top: 15rem;
   }
 
@@ -101,7 +100,6 @@
 
   @include mobileSm {
     width: 90%;
-    // font-size: 1.1rem;
   }
 
   @include mobileI12Pro {
@@ -116,20 +114,11 @@
     line-height: 1.6rem;
   }
 
-  @include tabletMd {
-    // padding-bottom: 4rem;
-  }
-
   @include laptop {
     text-align: left;
     font-size: 1rem;
     margin: 0;
-    // line-height: 1.6rem;
   }
-
-  // @include laptopLg {
-  //   font-size: 1rem;
-  // }
 
   @include desktop {
     line-height: 1.7rem;

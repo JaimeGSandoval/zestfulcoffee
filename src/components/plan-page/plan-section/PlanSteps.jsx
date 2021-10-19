@@ -1,7 +1,6 @@
 import React from 'react';
 import StepBox from './StepBox';
 import styles from './_plan-section.module.scss';
-// import './_plan-section.scss';
 
 const steps = [
   {

@@ -53,25 +53,11 @@
 }
 
 .arrow {
-  // transform: translateX(4.8rem);
   display: block;
   cursor: pointer;
   position: absolute;
   top: 1rem;
   right: 0;
-  // display: block;
-  // margin-left: auto;
-  // margin-right: 0;
-  // position: relative;
-  // bottom: 2rem;
-
-  // @include tabletMd {
-  //   transform: translateX(12rem);
-  // }
-
-  // @include laptop {
-  //   transform: translateX(10rem);
-  // }
 
   @include desktopXL {
     width: 1.4rem;
@@ -94,19 +80,6 @@
   transition: background 0.3s ease-in-out;
   max-width: 350px;
   margin: 0 auto 1rem;
-
-  // &--disabled {
-  //   color: $bg_light_cream;
-
-  //   &:hover {
-  //     background-color: unset;
-  //     cursor: unset;
-  //   }
-  // }
-
-  // &:hover {
-  //   background: $pale_orange;
-  // }
 
   @include mobileSm {
     padding: 2rem 1.5rem;

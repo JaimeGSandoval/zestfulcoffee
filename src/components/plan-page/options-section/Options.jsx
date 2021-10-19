@@ -16,8 +16,6 @@ import {
 } from './coffeeOptions';
 import styles from './_options.module.scss';
 
-// import './_options.module.scss';
-
 const Options = () => {
   const drinkRef = useRef();
   const coffeeRef = useRef();
