@@ -2,44 +2,42 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import hamburgerMenu from '../../assets/icons/icon-hamburger.svg';
 import logo from '../../assets/icons/logo.svg';
-import styles from './_header.module.scss';
-// import './header';
 
 const MobileHeader = ({ openModal }) => {
   return (
     <>
-      <header className={styles.mobileHeader}>
-        <img src={logo} className={styles.mobileLogo} alt="logo" />
+      <header className="mobile-header">
+        <img src={logo} className="mobile-logo" alt="logo" />
         <img
           src={hamburgerMenu}
-          className={styles.hamburgerMenu}
+          className="hamburger-menu"
           alt="mobile menu icon"
           onClick={openModal}
         />
 
-        <nav className={styles.navMenuContainer}>
-          <div className={styles.navBox}>
+        <nav className="nav-menu-container">
+          <div className="nav-box">
             <NavLink
               exact
               to="/"
-              activeClassName={styles.activeLink}
-              className={styles.navLink}
+              activeClassName="active-link"
+              className="nav-link"
             >
               home
             </NavLink>
             <NavLink
               exact
               to="/about"
-              className={styles.navLink}
-              activeClassName={styles.activeLink}
+              className="nav-link"
+              activeClassName="active-link"
             >
               about us
             </NavLink>
             <NavLink
               exact
               to="/plan"
-              className={styles.navLink}
-              activeClassName={styles.activeLink}
+              className="nav-link"
+              activeClassName="active-link"
             >
               create your plan
             </NavLink>

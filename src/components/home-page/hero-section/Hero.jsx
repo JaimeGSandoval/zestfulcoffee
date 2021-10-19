@@ -7,7 +7,6 @@ import heroJpgMd from '../../../assets/images/home/tablet/hero-coffeepress.jpg';
 import heroWebpLg from '../../../assets/images/home/desktop/hero-coffeepress-lg.webp';
 import heroJpgLg from '../../../assets/images/home/desktop/hero-coffeepress-lg.jpg';
 import styles from './_hero-styles.module.scss';
-// import './_hero-styles.module.scss';
 
 const Hero = () => {
   return (

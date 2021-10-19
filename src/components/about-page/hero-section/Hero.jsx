@@ -6,7 +6,6 @@ import whitecupJpgMd from '../../../assets/images/about/tablet/hero-whitecup.jpg
 import whitecupWebpLg from '../../../assets/images/about/desktop/hero-whitecup-lg.webp';
 import whitecupJpgLg from '../../../assets/images/about/desktop/hero-whitecup-lg.jpg';
 import styles from './_hero-about.module.scss';
-// import './_hero-about.scss';
 
 const Hero = () => {
   return (

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import StepBox from './StepBox';
 import styles from './_plan.module.scss';
-// import './_plan.scss';
 
 const steps = [
   {

@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { StoreContext } from '../../../context/Context';
 import styles from './_options.module.scss';
-// import './_options.module.scss';
 
 const OptionContainer = ({ options }) => {
   const [activeIndex, setActiveIndex] = useState(null);

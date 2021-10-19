@@ -30,7 +30,6 @@
   font-family: $title_font, serif;
   color: $dark_grey_blue;
   font-size: 1.7rem;
-  // margin: 5rem 0 3rem 0;
   margin: 5rem 0 1.5rem 0;
 
   @include mobileSm {
@@ -70,7 +69,6 @@
 
   @include tabletMd {
     text-align: left;
-    // font-size: 1rem;
   }
 
   @include laptop {
