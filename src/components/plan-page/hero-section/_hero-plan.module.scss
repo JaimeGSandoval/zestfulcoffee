@@ -46,6 +46,7 @@
   line-height: 1.7rem;
   width: 93%;
   margin: auto;
+  max-width: 445px;
 
   @include mobileSm {
     top: 51%;
@@ -63,7 +64,7 @@
   }
 
   @include laptopLg {
-    width: 65%;
+    width: 53%;
   }
 
   @include desktop {
@@ -73,7 +74,7 @@
   @include desktopXL {
     font-size: 1.3rem;
     line-height: 1.9rem;
-    width: 57%;
+    width: 53%;
   }
 }
 

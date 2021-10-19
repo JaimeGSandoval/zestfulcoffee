@@ -53,16 +53,11 @@
 }
 
 .arrow {
-  transform: translateX(4.8rem);
+  display: block;
   cursor: pointer;
-
-  @include tabletMd {
-    transform: translateX(12rem);
-  }
-
-  @include laptop {
-    transform: translateX(10rem);
-  }
+  position: absolute;
+  top: 1rem;
+  right: 0;
 
   @include desktopXL {
     width: 1.4rem;
@@ -83,19 +78,12 @@
   color: $dark_grey_blue;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
+  max-width: 350px;
+  margin: 0 auto 1rem;
 
-  // &--disabled {
-  //   color: $bg_light_cream;
-
-  //   &:hover {
-  //     background-color: unset;
-  //     cursor: unset;
-  //   }
-  // }
-
-  // &:hover {
-  //   background: $pale_orange;
-  // }
+  @include mobileSm {
+    padding: 2rem 1.5rem;
+  }
 
   @include tabletMd {
     padding: 3rem 0;
@@ -136,12 +124,17 @@
   line-height: 1.4rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  hyphens: auto;
 
   @include tabletMd {
     font-size: 1rem;
   }
 
   @include laptop {
+    font-size: 0.8rem;
+  }
+
+  @include laptopLg {
     font-size: 0.9rem;
   }
 
@@ -195,6 +188,10 @@
     width: 53%;
   }
 
+  @media (min-width: 500px) {
+    max-width: 200px;
+  }
+
   @include tabletMd {
     width: 32%;
   }
@@ -214,7 +211,7 @@
   }
 
   @include desktopXL {
-    width: 22%;
+    max-width: 228px;
     font-size: 1.4rem;
   }
 }
@@ -276,15 +273,12 @@
 }
 
 .toggleArrow {
-  transform: scaleY(-1) translateX(4.8rem);
-
-  @include tabletMd {
-    transform: scaleY(-1) translateX(12rem);
-  }
-
-  @include laptop {
-    transform: scaleY(-1) translateX(10rem);
-  }
+  cursor: pointer;
+  transform: scale(-1);
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 0;
 }
 
 .hide {

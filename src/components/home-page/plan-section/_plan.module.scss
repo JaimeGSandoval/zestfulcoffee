@@ -1,18 +1,15 @@
 @import '../../../sass/abstract/vars';
 @import '../../../sass/abstract/media-queries';
 
-.planHowToHome {
-  // margin-top: 4rem;
-
-  // @include mobileSm {
-  //   margin-top: 8rem;
-  // }
-}
-
 .howToTitle {
   text-align: center;
   font-family: $title_font, serif;
   color: $grey;
+  margin-top: 2rem;
+
+  @include mobileXL {
+    margin-top: 4rem;
+  }
 
   @include tabletMd {
     text-align: left;
@@ -79,7 +76,11 @@
   hyphens: auto;
   text-align: center;
   margin: 1.8rem auto 0 auto;
-  max-width: 504px;
+  max-width: 467px;
+
+  @include tabletSm {
+    line-height: 1.7rem;
+  }
 
   @include tabletMd {
     text-align: left;
@@ -169,6 +170,7 @@
   margin: 5rem auto;
   display: block;
   transition: background 0.3s ease-in-out;
+  max-width: 155px;
 
   &:hover {
     background: $cyan_hover;

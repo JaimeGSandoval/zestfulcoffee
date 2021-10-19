@@ -3,7 +3,6 @@
 @import './abstract/vars';
 @import '../sass/abstract/media-queries';
 @import '../components/mobile-nav-modal/mobile-nav-modal.module';
-@import '../components/header/header.module';
 @import '../components/footer/footer.module';
 @import '../components/home-page/hero-section/hero-styles.module';
 @import '../components/home-page/collection-section/collection.module';
@@ -43,4 +42,8 @@ body {
 .container {
   width: 88%;
   margin: auto;
+
+  @include desktopLg {
+    width: 100%;
+  }
 }
