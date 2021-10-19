@@ -5,7 +5,7 @@ import facebook from '../../assets/icons/icon-facebook.svg';
 import twitter from '../../assets/icons/icon-twitter.svg';
 import instagram from '../../assets/icons/icon-instagram.svg';
 import styles from './_footer.module.scss';
-// import './_footer.scss';
+
 const Footer = () => {
   return (
     <footer className={styles.footer}>

@@ -4,7 +4,6 @@ import ukIcon from '../../../assets/icons/uk.svg';
 import canadaIcon from '../../../assets/icons/canada.svg';
 import australiaIcon from '../../../assets/icons/australia.svg';
 import styles from './_headquarters.module.scss';
-// import './_headquarters.scss';
 
 const addresses = [
   {

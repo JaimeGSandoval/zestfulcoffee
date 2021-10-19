@@ -4,7 +4,6 @@ import qualityJpg from '../../../assets/images/about/mobile/quality.jpg';
 import qualityWebpLg from '../../../assets/images/about/desktop/quality-lg.webp';
 import qualityJpgLg from '../../../assets/images/about/desktop/quality-lg.jpg';
 import styles from './_quality.module.scss';
-// import './_quality.scss';
 
 const Quality = () => {
   return (

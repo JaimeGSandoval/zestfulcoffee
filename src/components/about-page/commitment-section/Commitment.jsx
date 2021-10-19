@@ -6,7 +6,6 @@ import commitmentJpgMd from '../../../assets/images/about/tablet/commitment.jpg'
 import commitmentWebpLg from '../../../assets/images/about/desktop/commitment-lg.webp';
 import commitmentJpgLg from '../../../assets/images/about/desktop/commitment-lg.jpg';
 import styles from './_commitment.module.scss';
-// import './_commitment.scss';
 
 const Commitment = () => {
   return (
