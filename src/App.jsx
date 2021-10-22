@@ -27,9 +27,9 @@ function App() {
 
       <main className="container">
         <Switch>
-          <Route exact path="/" render={() => <Home />} />
-          <Route exact path="/about" render={() => <About />} />
-          <Route exact path="/plan" render={() => <Plan />} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/plan" component={Plan} />
         </Switch>
       </main>
       <Footer />
