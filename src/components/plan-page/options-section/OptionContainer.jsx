@@ -15,7 +15,6 @@ const OptionContainer = ({ options }) => {
   };
 
   const renderedOptions = options.map((option, index) => {
-    // 'remove-pointer-events';
     const active =
       index === activeIndex ? `${styles.active} ${styles.customHover}` : '';
 
