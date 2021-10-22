@@ -1,4 +1,4 @@
-const handleToggle = (dataRef, stateVal, e) => {
+const handleToggle = (dataRef, stateVal) => {
   const panel = dataRef.current.nextElementSibling;
 
   if (stateVal) {
