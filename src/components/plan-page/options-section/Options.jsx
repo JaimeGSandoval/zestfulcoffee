@@ -13,7 +13,7 @@ import {
   coffeeAmounts,
   grindTypes,
   deliveryTypes,
-} from './coffeeOptions';
+} from './data';
 import styles from './_options.module.scss';
 
 const Options = () => {

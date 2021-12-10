@@ -13,6 +13,7 @@ const PlanSteps = () => {
               <div className={styles.innerLineFront}></div>
             </div>
           </div>
+
           <div className={styles.planLine}></div>
 
           <div className={styles.planCircle}>
@@ -20,6 +21,7 @@ const PlanSteps = () => {
               <div className={styles.innerLineMiddle}></div>
             </div>
           </div>
+
           <div className={styles.planLine}></div>
 
           <div className={styles.planCircle}>
