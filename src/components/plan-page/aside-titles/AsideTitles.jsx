@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { StoreContext } from '../context/Context';
+import { StoreContext } from '../../../context/Context';
 import styles from './_aside-titles.module.scss';
 
 const AsideTitles = ({

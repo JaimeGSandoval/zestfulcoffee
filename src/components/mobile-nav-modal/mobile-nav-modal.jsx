@@ -1,32 +1,21 @@
-import React, { useState, forwardRef, useImperativeHandle } from 'react';
+import React, { useContext } from 'react';
+import { ModalContext } from '../../context/ModalContext';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/logo.svg';
 import closeIcon from '../../assets/icons/icon-close.svg';
 import styles from './_mobile-nav-modal.module.scss';
 
-const MobileNavModal = forwardRef((props, ref) => {
-  const [showModal, setShowModal] = useState(false);
+const MobileNavModal = () => {
+  const { modalState, setModalState } = useContext(ModalContext);
 
-  const openModalClick = () => {
-    setShowModal(true);
+  const modalControl = () => {
+    setModalState(!modalState);
   };
 
-  const closeModalClick = () => {
-    setShowModal(false);
-  };
-
-  // attaching functions to the ref that can be used in the component where the ref lives
-  useImperativeHandle(ref, () => {
-    return {
-      open: () => openModalClick(),
-      close: () => closeModalClick(),
-    };
-  });
-
-  if (showModal) {
+  if (modalState) {
     return ReactDOM.createPortal(
-      <div className={styles.mobileNavPage} onClick={closeModalClick}>
+      <div className={styles.mobileNavPage} onClick={modalControl}>
         <div className={styles.mobilePageHeader}>
           <img
             src={logo}
@@ -38,7 +27,7 @@ const MobileNavModal = forwardRef((props, ref) => {
             src={closeIcon}
             alt="mobile icon close"
             className={styles.mobileClose}
-            onClick={closeModalClick}
+            onClick={modalControl}
             onError={(e) => (e.target.onerror = null)}
           />
         </div>
@@ -49,7 +38,7 @@ const MobileNavModal = forwardRef((props, ref) => {
               <Link
                 to="/"
                 className={styles.mobileNavLinks}
-                onClick={closeModalClick}
+                onClick={modalControl}
               >
                 home
               </Link>
@@ -58,7 +47,7 @@ const MobileNavModal = forwardRef((props, ref) => {
               <Link
                 to="/about"
                 className={styles.mobileNavLinks}
-                onClick={closeModalClick}
+                onClick={modalControl}
               >
                 about
               </Link>
@@ -67,7 +56,7 @@ const MobileNavModal = forwardRef((props, ref) => {
               <Link
                 to="/plan"
                 className={styles.mobileNavLinks}
-                onClick={closeModalClick}
+                onClick={modalControl}
               >
                 create a plan
               </Link>
@@ -80,6 +69,6 @@ const MobileNavModal = forwardRef((props, ref) => {
   }
 
   return null;
-});
+};
 
 export default MobileNavModal;
