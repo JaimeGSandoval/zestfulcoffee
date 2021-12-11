@@ -13,8 +13,8 @@ export default ({ children }) => {
   });
 
   const store = {
-    orderData: orderData,
-    setOrderData: setOrderData,
+    orderData,
+    setOrderData,
   };
 
   return (

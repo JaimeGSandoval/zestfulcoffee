@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ModalContext } from '../../context/ModalContext';
 import { NavLink } from 'react-router-dom';
 import hamburgerMenu from '../../assets/icons/icon-hamburger.svg';
 import logo from '../../assets/icons/logo.svg';
 
 const MobileHeader = ({ openModal }) => {
+  const context = useContext(ModalContext);
+  const { modalState, setModalState } = context;
+
+  const modalControl = () => {
+    setModalState(!modalState);
+  };
+
   return (
     <>
       <header className="mobile-header">
@@ -12,7 +20,7 @@ const MobileHeader = ({ openModal }) => {
           src={hamburgerMenu}
           className="hamburger-menu"
           alt="mobile menu icon"
-          onClick={openModal}
+          onClick={modalControl}
         />
 
         <nav className="nav-menu-container">

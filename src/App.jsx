@@ -1,4 +1,4 @@
-import React, { useRef, Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/header/header';
 import Home from './components/home-page/Home';
@@ -12,18 +12,12 @@ const MobileNavModal = lazy(() =>
 );
 
 function App() {
-  const modalRef = useRef();
-
-  const openModal = () => {
-    modalRef.current.open();
-  };
-
   return (
     <div className="App">
       <Suspense fallback={<div>...</div>}>
-        <MobileNavModal ref={modalRef} />
+        <MobileNavModal />
       </Suspense>
-      <Header openModal={openModal} />
+      <Header />
 
       <main className="container">
         <Switch>
