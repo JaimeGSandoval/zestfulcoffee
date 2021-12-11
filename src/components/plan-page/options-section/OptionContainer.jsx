@@ -7,42 +7,28 @@ const OptionContainer = ({ options }) => {
   const { setOrderData } = useContext(StoreContext);
 
   const handleClick = (index, e) => {
+    const closest = e.target.closest('.optionBox');
     setOrderData((prev) => ({
       ...prev,
-      [e.target.dataset.type]: e.target.dataset.name,
+      [closest.dataset.type]: closest.dataset.name,
     }));
     setActiveIndex(index);
   };
 
   const renderedOptions = options.map((option, index) => {
-    const active =
-      index === activeIndex ? `${styles.active} ${styles.customHover}` : '';
+    const active = index === activeIndex ? 'active customHover' : '';
+    console.log(active);
 
     return (
       <React.Fragment key={option.id}>
         <div
-          className={`${styles.optionBox} ${active}`}
+          className={`optionBox ${active}`}
           onClick={(e) => handleClick(index, e)}
           data-name={option.optionTitle}
           data-type={option.dataType}
-          data-parent
         >
-          <h2
-            className={styles.optionTitle}
-            data-name={option.optionTitle}
-            data-type={option.dataType}
-            data-child
-          >
-            {option.optionTitle}
-          </h2>
-          <p
-            className={styles.optionDescription}
-            data-name={option.optionTitle}
-            data-type={option.dataType}
-            data-child
-          >
-            {option.optionDescription}
-          </p>
+          <h2 className={styles.optionTitle}>{option.optionTitle}</h2>
+          <p className={styles.optionDescription}>{option.optionDescription}</p>
         </div>
       </React.Fragment>
     );
