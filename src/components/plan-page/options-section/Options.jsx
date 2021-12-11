@@ -1,7 +1,7 @@
 import React, { useState, useRef, useContext, useEffect } from 'react';
 import OrderSummary from '../order-summary/OrderSummary';
-import { OrderModalContext } from '../context/OrderModalContext';
-import { StoreContext } from '../context/Context';
+import { OrderModalContext } from '../../../context/OrderModalContext';
+import { StoreContext } from '../../../context/Context';
 import OptionContainer from './OptionContainer';
 import AsideTitles from '../aside-titles/AsideTitles';
 import arrowIcon from '../../../assets/icons/icon-arrow.svg';

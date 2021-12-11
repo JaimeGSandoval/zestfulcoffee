@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import { StoreContext } from '../context/Context';
+import { StoreContext } from '../../../context/Context';
 import styles from './_order-summary.module.scss';
 
 const OrderSummary = () => {

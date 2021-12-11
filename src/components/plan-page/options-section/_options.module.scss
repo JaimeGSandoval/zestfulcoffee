@@ -263,7 +263,7 @@
 }
 
 .showOption {
-  // display: block;
+  display: block;
 
   @include tabletMd {
     display: grid;
