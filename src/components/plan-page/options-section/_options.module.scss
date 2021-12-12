@@ -43,7 +43,13 @@
 .optionsContainer {
   margin-top: 2rem;
   position: relative;
-  display: none;
+  // display: block;
+
+  // @include tabletMd {
+  //   display: grid;
+  //   grid-template-columns: repeat(3, 1fr);
+  //   column-gap: 1rem;
+  // }
 }
 
 .optionContainer:nth-of-type(1) {
@@ -80,6 +86,7 @@
   transition: background 0.3s ease-in-out;
   max-width: 350px;
   margin: 0 auto 1rem;
+  display: block;
 
   @include mobileSm {
     padding: 2rem 1.5rem;
@@ -269,6 +276,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1rem;
+    margin-top: 3rem;
   }
 }
 

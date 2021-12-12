@@ -2,32 +2,16 @@ import React, { useContext } from 'react';
 import { StoreContext } from '../../../context/Context';
 import styles from './_aside-titles.module.scss';
 
-const AsideTitles = ({
-  preference,
-  beanType,
-  amount,
-  grindType,
-  deliveryType,
-}) => {
+const AsideTitles = () => {
   const { orderData } = useContext(StoreContext);
 
   const titleClass = (value) => {
-    let textColor = null;
-    if (value) {
-      textColor = styles.selectedText;
-    } else {
-      textColor = styles.unselected;
-    }
+    let textColor = value ? styles.selectedText : styles.unselected;
     return textColor;
   };
 
   const numberClass = (value) => {
-    let numColor = null;
-    if (value) {
-      numColor = styles.selectedNumber;
-    } else {
-      numColor = styles.unselected;
-    }
+    let numColor = value ? styles.selectedNumber : styles.unselected;
     return numColor;
   };
 
@@ -42,7 +26,11 @@ const AsideTitles = ({
           >
             01
           </span>
-          <span className={`${styles.sectionTitle} ${titleClass(preference)}`}>
+          <span
+            className={`${styles.sectionTitle} ${titleClass(
+              orderData.drinkType
+            )}`}
+          >
             preferences
           </span>
         </div>
@@ -54,7 +42,11 @@ const AsideTitles = ({
           >
             02
           </span>
-          <span className={`${styles.sectionTitle} ${titleClass(beanType)}`}>
+          <span
+            className={`${styles.sectionTitle} ${titleClass(
+              orderData.coffeeType
+            )}`}
+          >
             bean type
           </span>
         </div>{' '}
@@ -66,7 +58,11 @@ const AsideTitles = ({
           >
             03
           </span>
-          <span className={`${styles.sectionTitle} ${titleClass(amount)}`}>
+          <span
+            className={`${styles.sectionTitle} ${titleClass(
+              orderData.coffeeAmount
+            )}`}
+          >
             quantity
           </span>
         </div>{' '}
@@ -82,7 +78,9 @@ const AsideTitles = ({
           </span>
           <span
             className={`${styles.sectionTitle} ${
-              grindType ? styles.selectedText : styles.unselected
+              orderData.drinkType === 'Capsule' && orderData.grindType
+                ? styles.unselected
+                : titleClass(orderData.grindType)
             }`}
           >
             grind options
@@ -97,7 +95,9 @@ const AsideTitles = ({
             05
           </span>
           <span
-            className={`${styles.sectionTitle} ${titleClass(deliveryType)}`}
+            className={`${styles.sectionTitle} ${titleClass(
+              orderData.deliveryType
+            )}`}
           >
             deliveries
           </span>
