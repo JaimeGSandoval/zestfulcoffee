@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { ModalProvider } from './context/ModalContext';
 import { HashRouter } from 'react-router-dom';
 import App from './App';
-import ScrollToTop from './components/utilities/ScrollToTop';
+import ScrollToTop from './utilities/ScrollToTop';
 
 ReactDOM.render(
   <React.StrictMode>
