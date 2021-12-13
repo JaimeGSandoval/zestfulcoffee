@@ -3,7 +3,7 @@ import OrderSummary from '../order-summary/OrderSummary';
 import { OrderModalContext } from '../../../context/OrderModalContext';
 import { StoreContext } from '../../../context/Context';
 import AsideTitles from '../aside-titles/AsideTitles';
-import calculateButtonState from './calculate-btn-state';
+import calculateButtonState from '../../../utilities/calculate-btn-state';
 import OptionsType from './OptionsType';
 
 import {
