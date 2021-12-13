@@ -25,7 +25,7 @@ const Options = ({ options }) => {
     setActiveIndex(index);
   };
 
-  const handleDisableClick = () => {
+  const handleTabDisable = () => {
     if (orderData.drinkType === 'Capsule' && options.id === 'grindType') {
       grindRef.current.style.pointerEvents = 'none';
     } else if (grindRef.current) {
@@ -33,9 +33,10 @@ const Options = ({ options }) => {
     }
 
     if (orderData.drinkType === 'Capsule' && options.id === 'grindType') {
-      return `${styles.changeSvg}`;
+      return `${styles.disabledSvg}`;
     }
 
+    // conditional check to flip the toggleArrow in the right direction after grindType disable class is removed from grindType accordion tab
     if (
       orderData.drinkType !== 'Capsule' &&
       options.id === 'grindType' &&
@@ -66,13 +67,20 @@ const Options = ({ options }) => {
     );
   });
 
+  const customMargin =
+    orderData.drinkType === 'Capsule' && options.id === 'grindType'
+      ? styles.customMargin
+      : '';
+
   return (
     <div className={styles.optionContainer}>
-      <h1 className={styles.optionTitleQuestion}>{options.question}</h1>
+      <h1 className={`${styles.optionTitleQuestion} ${customMargin}`}>
+        {options.question}
+      </h1>
       <img
         src={arrowIcon}
         alt="Arrow icon"
-        className={handleDisableClick()}
+        className={handleTabDisable()}
         data-arrow
         onClick={(e) => handleArrowToggle(e)}
         ref={options.id === 'grindType' ? grindRef : null}
