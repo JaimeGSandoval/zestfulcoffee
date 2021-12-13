@@ -1,12 +1,20 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import { StoreContext } from '../../../context/Context';
 import arrowIcon from '../../../assets/icons/icon-arrow.svg';
 import styles from './_options.module.scss';
 
 const Options = ({ options }) => {
   const [activeIndex, setActiveIndex] = useState(null);
-  const { setOrderData } = useContext(StoreContext);
   const [isActive, setIsActive] = useState(false);
+  const [grindTab, setGrindTab] = useState(false);
+  const { orderData, setOrderData } = useContext(StoreContext);
+  const grindRef = useRef();
+
+  const handleArrowToggle = (e) => {
+    if (e.target.dataset.type === 'grindType') setGrindTab(!grindTab);
+    setIsActive(!isActive);
+    e.target.classList.toggle(styles.toggleArrow);
+  };
 
   const handleClick = (index, e) => {
     const closest = e.target.closest('.optionBox');
@@ -17,9 +25,31 @@ const Options = ({ options }) => {
     setActiveIndex(index);
   };
 
+  const handleDisableClick = () => {
+    if (orderData.drinkType === 'Capsule' && options.id === 'grindType') {
+      grindRef.current.style.pointerEvents = 'none';
+    } else if (grindRef.current) {
+      grindRef.current.style.pointerEvents = 'auto';
+    }
+
+    if (orderData.drinkType === 'Capsule' && options.id === 'grindType') {
+      return `${styles.changeSvg}`;
+    }
+
+    if (
+      orderData.drinkType !== 'Capsule' &&
+      options.id === 'grindType' &&
+      orderData.drinkType &&
+      grindTab
+    ) {
+      return `${styles.toggleArrow}`;
+    }
+
+    return styles.arrow;
+  };
+
   const renderedOptions = options.types.map((option, index) => {
     const active = index === activeIndex ? 'active customHover' : '';
-    console.log(active);
 
     return (
       <React.Fragment key={option.id}>
@@ -42,14 +72,21 @@ const Options = ({ options }) => {
       <img
         src={arrowIcon}
         alt="Arrow icon"
-        className={styles.arrow}
+        className={handleDisableClick()}
         data-arrow
-        onClick={(e) => {
-          e.target.classList.toggle(styles.toggleArrow);
-          setIsActive(!isActive);
-        }}
+        onClick={(e) => handleArrowToggle(e)}
+        ref={options.id === 'grindType' ? grindRef : null}
+        data-type={options.id}
       />
-      <div className={isActive ? styles.showOption : ''}>
+      <div
+        className={
+          isActive &&
+          orderData.drinkType === 'Capsule' &&
+          options.id === 'grindType'
+            ? styles.hide
+            : styles.showOption
+        }
+      >
         {isActive && renderedOptions}
       </div>
     </div>
