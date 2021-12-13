@@ -1,27 +1,5 @@
-// export const drinkTypes = [
-//   {
-//     id: 'Capsule-0',
-//     optionTitle: 'Capsule',
-//     optionDescription: 'Compatible with Nespresso systems and similar brewers',
-//     dataType: 'drinkType',
-//   },
-//   {
-//     id: 'Filter-1',
-//     optionTitle: 'Filter',
-//     optionDescription:
-//       'For pour over or drip methods like Aeropress, Chemex, and V60',
-//     dataType: 'drinkType',
-//   },
-//   {
-//     id: 'Espresso-2',
-//     optionTitle: 'Espresso',
-//     optionDescription:
-//       'Dense and finely ground beans for an intense, flavorful experience',
-//     dataType: 'drinkType',
-//   },
-// ];
-
 export const drinkTypes = {
+  id: 'drinkType',
   question: 'How do you drink your coffee?',
   types: [
     {
@@ -49,6 +27,7 @@ export const drinkTypes = {
 };
 
 export const coffeeTypes = {
+  id: 'coffeeType',
   question: 'What type of coffee?',
   types: [
     {
@@ -76,6 +55,7 @@ export const coffeeTypes = {
 };
 
 export const coffeeAmounts = {
+  id: 'coffeeAmount',
   question: 'How much would you like?',
   types: [
     {
@@ -103,6 +83,7 @@ export const coffeeAmounts = {
 };
 
 export const grindTypes = {
+  id: 'grindType',
   question: 'Want us to grind them?',
   types: [
     {
@@ -130,6 +111,7 @@ export const grindTypes = {
 };
 
 export const deliveryTypes = {
+  id: 'deliveryType',
   question: 'How often should we deliver?',
   types: [
     {

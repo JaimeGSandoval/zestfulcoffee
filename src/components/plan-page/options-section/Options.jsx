@@ -15,28 +15,15 @@ import {
 } from './data';
 import styles from './_options.module.scss';
 
+const types = [
+  drinkTypes,
+  coffeeTypes,
+  coffeeAmounts,
+  grindTypes,
+  deliveryTypes,
+];
+
 const Options = () => {
-  // useEffect(() => {
-  //   if (
-  //     (orderData.drinkType === 'Capsule' && showGrindTypes) ||
-  //     orderData.drinkType === 'Capsule'
-  //   ) {
-  //     setShowGrindTypes(false);
-  //     grindRef.current.style.pointerEvents = 'none';
-  //     grindRef.current.nextElementSibling.classList.add('hide');
-  //     grindRef.current.classList.add('changeSvg');
-  //     grindRef.current.previousElementSibling.classList.add('disabledFont');
-  //     return;
-  //   } else {
-  //     grindRef.current.style.pointerEvents = 'auto';
-  //     grindRef.current.nextElementSibling.classList.remove('hide');
-  //     grindRef.current.classList.remove('changeSvg');
-  //     grindRef.current.previousElementSibling.classList.remove('disabledFont');
-  //   }
-
-  //   handleToggle(grindRef, showGrindTypes);
-  // }, [showGrindTypes, orderData.drinkType]);
-
   const { setShowOrderModal } = useContext(OrderModalContext);
   const { orderData } = useContext(StoreContext);
 
@@ -47,11 +34,9 @@ const Options = () => {
       <section className={styles.optionsSection}>
         <AsideTitles />
         <div className={styles.contentContainer}>
-          <OptionsType options={drinkTypes} />
-          <OptionsType options={coffeeTypes} />
-          <OptionsType options={coffeeAmounts} />
-          <OptionsType options={grindTypes} />
-          <OptionsType options={deliveryTypes} />
+          {types.map((type) => {
+            return <OptionsType options={type} key={type.id} />;
+          })}
         </div>
       </section>
       <OrderSummary />
@@ -70,3 +55,24 @@ const Options = () => {
 };
 
 export default Options;
+
+// useEffect(() => {
+//   if (
+//     (orderData.drinkType === 'Capsule' && showGrindTypes) ||
+//     orderData.drinkType === 'Capsule'
+//   ) {
+//     setShowGrindTypes(false);
+//     grindRef.current.style.pointerEvents = 'none';
+//     grindRef.current.nextElementSibling.classList.add('hide');
+//     grindRef.current.classList.add('changeSvg');
+//     grindRef.current.previousElementSibling.classList.add('disabledFont');
+//     return;
+//   } else {
+//     grindRef.current.style.pointerEvents = 'auto';
+//     grindRef.current.nextElementSibling.classList.remove('hide');
+//     grindRef.current.classList.remove('changeSvg');
+//     grindRef.current.previousElementSibling.classList.remove('disabledFont');
+//   }
+
+//   handleToggle(grindRef, showGrindTypes);
+// }, [showGrindTypes, orderData.drinkType]);
