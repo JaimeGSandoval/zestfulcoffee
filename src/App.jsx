@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/header/header';
-import Home from './components/home-page/Home';
-import About from './components/about-page/About';
-import Plan from './components/plan-page/Plan';
+import Home from './pages/home-page/Home';
+import About from './pages/about-page/About';
+import Plan from './pages/plan-page/Plan';
 import Footer from './components/footer/Footer';
 import './sass/main.scss';
 

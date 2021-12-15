@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
 import { StoreContext } from '../../../context/Context';
 import { OrderModalContext } from '../../../context/OrderModalContext';
-import calculateTotal from './priceTotal';
+import calculateTotal from '../../../utilities/priceTotal';
 import styles from './_order-modal.module.scss';
 
 const OrderModal = ({ history }) => {
