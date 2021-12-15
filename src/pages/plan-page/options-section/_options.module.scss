@@ -43,30 +43,12 @@
 .optionsContainer {
   margin-top: 2rem;
   position: relative;
-  display: none;
 }
 
 .optionContainer:nth-of-type(1) {
   @include laptop {
     margin-top: 0;
   }
-}
-
-.arrow {
-  display: block;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 0;
-
-  @include desktopXL {
-    width: 1.4rem;
-  }
-}
-
-.changeSvg {
-  filter: invert(68%) sepia(96%) saturate(0%) hue-rotate(163deg) brightness(90%)
-    contrast(98%);
 }
 
 .optionBox {
@@ -80,6 +62,7 @@
   transition: background 0.3s ease-in-out;
   max-width: 350px;
   margin: 0 auto 1rem;
+  display: block;
 
   @include mobileSm {
     padding: 2rem 1.5rem;
@@ -264,11 +247,25 @@
 
 .showOption {
   display: block;
+  margin-top: 3rem;
 
   @include tabletMd {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1rem;
+    margin-top: 3rem;
+  }
+}
+
+.arrow {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+
+  @include desktopXL {
+    width: 1.4rem;
   }
 }
 
@@ -281,8 +278,30 @@
   right: 0;
 }
 
+.disabledSvg {
+  filter: invert(68%) sepia(96%) saturate(0%) hue-rotate(163deg) brightness(90%)
+    contrast(98%);
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+
+  @include desktopXL {
+    width: 1.4rem;
+  }
+}
+
 .hide {
   display: none;
+}
+
+.customMargin {
+  margin-bottom: 1rem;
+
+  @include laptop {
+    margin-bottom: 3rem;
+  }
 }
 
 .customHover {
