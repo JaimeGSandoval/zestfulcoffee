@@ -34,7 +34,7 @@ Try the live demo at https://zestfulcoffee.jamessandoval.dev/
 
 ## Preview
 
-![productfeedback-app](/src/assets/images/demo/feedback_demo.gif)
+![zestfulcoffee](/src/assets/images/demo.gif)
 
 ## Getting Started
 
