@@ -89,7 +89,7 @@
   width: 90%;
   margin: auto;
   font-family: $title_font, serif;
-  color: white;
+  color: $dark_grey_blue;
   font-size: 1.1rem;
   letter-spacing: 1px;
   line-height: 2rem;
@@ -266,10 +266,6 @@
 
   @media (min-width: 500px) {
     width: 92%;
-  }
-
-  @include tabletSm {
-    width: 85%;
   }
 }
 
