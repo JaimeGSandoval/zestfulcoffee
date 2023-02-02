@@ -2,18 +2,17 @@
 @import '../../../sass/abstract/media-queries';
 
 .planHowToSection {
-  margin-top: 7rem;
+  margin: 7rem auto 0;
   background-color: $dark_grey_blue;
   border-radius: 0.8rem;
-  width: 100vw;
-  margin-left: -7%;
+  width: 88%;
+  max-width: 1200px;
 
   @include tabletMd {
     padding: 4rem 0;
   }
 
   @include laptop {
-    width: 100%;
     margin: 7rem auto 0 auto;
   }
 }

@@ -27,11 +27,11 @@ body {
   height: 100%;
   width: 100vw;
   max-width: 100%;
+  background: #181a1b;
 }
 
 #root {
   height: 100%;
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -40,7 +40,6 @@ body {
 }
 
 .container {
-  width: 88%;
   margin: auto;
 
   @include desktopLg {

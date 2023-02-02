@@ -2,13 +2,13 @@
 @import '../../../sass/abstract/media-queries';
 
 .optionsSection {
-  margin-top: 8rem;
+  margin: 8rem auto 0;
+  width: 88%;
+  max-width: 1200px;
 
   @include laptop {
     display: flex;
     justify-content: space-between;
-    margin-right: 1rem;
-    width: 100%;
   }
 }
 
@@ -24,7 +24,7 @@
 }
 
 .optionTitleQuestion {
-  color: $grey;
+  color: white;
   font-family: $title_font, serif;
   width: 70%;
   display: inline-block;
@@ -133,7 +133,9 @@
 }
 
 .createPlanOrderContainer {
-  width: 100%;
+  width: 88%;
+  max-width: 49.5rem;
+  margin: auto;
 
   @include laptop {
     clear: right;
@@ -152,7 +154,7 @@
   padding: 1.2rem 1.3rem;
   font-family: $title_font, sans-serif;
   font-size: 1.2rem;
-  width: 69%;
+  width: 9.5rem;
   border-radius: 10px;
   margin: 5rem auto 7rem auto;
   display: block;
@@ -163,38 +165,12 @@
     background: #14b6b3;
   }
 
-  @include mobileSm {
-    width: 59%;
-  }
-
-  @include mobileLg {
-    width: 53%;
-  }
-
-  @media (min-width: 500px) {
-    max-width: 200px;
-  }
-
-  @include tabletMd {
-    width: 32%;
-  }
-
   @include laptop {
-    width: 25%;
     margin-left: 0;
     margin: 5rem 0 7rem auto;
   }
 
-  @include laptopLg {
-    width: 22%;
-  }
-
-  @include desktop {
-    width: 19%;
-  }
-
   @include desktopXL {
-    max-width: 228px;
     font-size: 1.4rem;
   }
 }
@@ -209,38 +185,15 @@
   padding: 1.2rem 1.3rem;
   font-family: $title_font, sans-serif;
   font-size: 1.2rem;
-  width: 69%;
   border-radius: 10px;
   margin: 5rem auto 7rem auto;
   display: block;
 
-  @include mobileSm {
-    width: 59%;
-  }
-
-  @include mobileLg {
-    width: 53%;
-  }
-
-  @include tabletMd {
-    width: 32%;
-  }
-
   @include laptop {
-    width: 25%;
     margin: 5rem 0 7rem auto;
   }
 
-  @include laptopLg {
-    width: 22%;
-  }
-
-  @include desktop {
-    width: 19%;
-  }
-
   @include desktopXL {
-    width: 22%;
     font-size: 1.4rem;
   }
 }
@@ -279,8 +232,7 @@
 }
 
 .disabledSvg {
-  filter: invert(68%) sepia(96%) saturate(0%) hue-rotate(163deg) brightness(90%)
-    contrast(98%);
+  filter: invert(68%) sepia(96%) saturate(0%) hue-rotate(163deg) brightness(90%) contrast(98%);
   display: block;
   cursor: pointer;
   position: absolute;

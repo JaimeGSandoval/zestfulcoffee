@@ -5,10 +5,11 @@
   background-color: $dark_grey_blue;
   padding: 4rem 1.4rem;
   border-radius: 0.8rem;
-  margin-top: 7rem;
+  margin: 7rem auto 0;
+  width: 80%;
+  max-width: 49.5rem;
 
   @include laptop {
-    width: 74%;
     margin-left: auto;
   }
 }
@@ -23,7 +24,7 @@
 }
 
 .orderSummaryTitle {
-  color: $grey;
+  color: white;
   text-transform: uppercase;
   font-family: $description_font, sans-serif;
   font-size: 1rem;

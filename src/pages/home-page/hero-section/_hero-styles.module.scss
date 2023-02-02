@@ -11,12 +11,15 @@
     max-width: 100%;
     margin: 0;
   }
+
+  @include laptopLg {
+    height: 39rem;
+  }
 }
 
 .hero {
   width: 100%;
   height: 100%;
-  border-radius: 0.8rem;
   object-fit: cover;
 }
 
@@ -107,40 +110,20 @@
   padding: 1.2rem 1.3rem;
   font-family: $title_font, sans-serif;
   font-size: 1.2rem;
-  width: 48%;
+  width: 8.75rem;
   margin: auto;
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
-  max-width: 155px;
-
-  &:hover {
-    background: $cyan_hover;
-  }
-
-  @include mobileSm {
-    width: 44%;
-  }
-
-  @include mobileLg {
-    width: 37%;
-  }
-
-  @include tabletSm {
-    width: 31%;
-  }
 
   @include tabletMd {
     margin: 0;
-    width: 34%;
   }
 
-  @include laptopLg {
-    width: 26%;
-  }
-
-  @include desktop {
-    width: 22%;
+  @include laptop {
+    &:hover {
+      background: $cyan_hover;
+    }
   }
 }
 
@@ -156,7 +139,7 @@
   @include tabletMd {
     text-align: left;
     top: 18%;
-    left: 5%;
+    left: 15%;
     width: 60%;
   }
 }

@@ -2,11 +2,12 @@
 @import '../../../sass/abstract/media-queries';
 
 .qualitySection {
-  width: 100%;
+  width: 88%;
   margin: 62% auto 0 auto;
   background-color: $dark_grey_blue;
   border-radius: 0.8rem;
   margin-top: 11rem;
+  max-width: 1200px;
 
   @include mobileLg {
     margin-top: 13rem;
