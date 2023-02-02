@@ -1,111 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <base href="/zestfulcoffee/" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <style>
+      .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        width: 88%;
+        padding: 1rem 0;
 
-<head>
-  <base href="/coffeeroasters/" />
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <style>
-    .mobile-header {
-      display: flex;
-      justify-content: space-between;
-      width: 88%;
-      padding: 2rem 0;
-      margin: auto;
-      align-items: center
-    }
+        margin: auto;
+        align-items: center;
+      }
 
-    .hamburger-menu {
-      width: 1.4rem
-    }
-
-    @media (min-width: 600px) {
       .hamburger-menu {
-        width: 1.6rem
+        width: 1.4rem;
       }
-    }
 
-    @media (min-width: 768px) {
-      .hamburger-menu {
-        display: none
+      @media (min-width: 600px) {
+        .hamburger-menu {
+          width: 1.6rem;
+        }
       }
-    }
 
-    .mobile-logo {
-      width: 60%
-    }
+      @media (min-width: 768px) {
+        .hamburger-menu {
+          display: none;
+        }
+      }
 
-    @media (min-width: 375px) {
       .mobile-logo {
-        width: 55%
+        width: 60%;
       }
-    }
 
-    @media (min-width: 768px) {
-      .mobile-logo {
-        width: 30%
+      @media (min-width: 375px) {
+        .mobile-logo {
+          width: 55%;
+        }
       }
-    }
 
-    .show-page {
-      display: block
-    }
+      @media (min-width: 768px) {
+        .mobile-logo {
+          width: 30%;
+        }
+      }
 
-    .nav-menu-container {
-      width: 40%;
-      display: none
-    }
+      .show-page {
+        display: block;
+      }
 
-    @media (min-width: 768px) {
       .nav-menu-container {
-        display: inline-block
+        width: 40%;
+        display: none;
       }
-    }
 
-    .nav-box {
-      width: 100%;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: flex-end;
-      position: relative;
-      top: 4px
-    }
+      @media (min-width: 768px) {
+        .nav-menu-container {
+          display: inline-block;
+        }
+      }
 
-    .nav-link {
-      text-transform: uppercase;
-      font-size: .7rem;
-      font-family: "Barlow", sans-serif;
-      font-weight: 600;
-      color: #83888f;
-      transition: color .3s ease-in-out
-    }
+      .nav-box {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        position: relative;
+        top: 4px;
+      }
 
-    @media(min-width: 900px) {
       .nav-link {
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        color: white;
 
-        font-size: 0.8rem;
+        transition: color 0.3s ease-in-out;
       }
-    }
 
-    .nav-link:hover {
-      color: #333d4b
-    }
+      @media (min-width: 900px) {
+        .nav-link {
+          font-size: 0.8rem;
+        }
 
-    .active-link {
-      color: #333d4b
-    }
-  </style>
-  <title>Coffeeroasters</title>
-</head>
+        .nav-link:hover {
+          color: #fdd6ba;
+        }
+      }
 
-<body>
-  <div id="order-modal"></div>
-  <div id="modal-root"></div>
-  <div id="root"></div>
+      .active-link {
+        color: #fdd6ba;
+      }
+    </style>
+    <title>Zestful Coffee</title>
+  </head>
 
-</body>
-
+  <body>
+    <div id="order-modal"></div>
+    <div id="modal-root"></div>
+    <div id="root"></div>
+  </body>
 </html>

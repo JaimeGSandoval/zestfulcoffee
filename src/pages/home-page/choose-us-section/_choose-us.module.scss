@@ -2,10 +2,12 @@
 @import '../../../sass/abstract/media-queries';
 
 .chooseUsSection {
-  margin-top: 7rem;
+  margin: 7rem auto 0;
   padding: 1rem;
   background-color: $dark_grey_blue;
   border-radius: 0.8rem;
+  max-width: 1200px;
+  width: 88%;
 }
 
 .chooseTitle {

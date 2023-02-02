@@ -1,10 +1,16 @@
 @import '../../../sass/abstract/vars';
 @import '../../../sass/abstract/media-queries';
 
+.planHowToHome {
+  max-width: 1200px;
+  margin: auto;
+  width: 88%;
+}
+
 .howToTitle {
   text-align: center;
   font-family: $title_font, serif;
-  color: $grey;
+  color: white;
   margin-top: 2rem;
 
   @include mobileXL {
@@ -50,7 +56,8 @@
 .stepTitle {
   text-align: center;
   font-family: $title_font, serif;
-  color: $dark_grey_blue;
+  color: white;
+
   font-size: 1.7rem;
   margin-top: 1.4rem;
 
@@ -71,7 +78,7 @@
 
 .stepDescription {
   font-family: $description_font;
-  color: $grey;
+  color: white;
   line-height: 1.5rem;
   hyphens: auto;
   text-align: center;
@@ -165,49 +172,19 @@
   padding: 1.2rem 1.3rem;
   font-family: $title_font, sans-serif;
   font-size: 1.2rem;
-  width: 48%;
+  width: 8.75rem;
   border-radius: 10px;
   margin: 5rem auto;
   display: block;
   transition: background 0.3s ease-in-out;
-  max-width: 155px;
-
-  &:hover {
-    background: $cyan_hover;
-  }
-
-  @include mobileSm {
-    width: 41%;
-  }
-
-  @include mobileLg {
-    width: 37%;
-  }
-
-  @include tabletSm {
-    width: 29%;
-  }
 
   @include tabletMd {
     margin: 5rem 0;
-    width: 22%;
   }
 
   @include laptop {
-    width: 16%;
-    font-size: 1rem;
-  }
-
-  @include laptopLg {
-    width: 14%;
-  }
-
-  @include desktop {
-    width: 12%;
-  }
-
-  @include desktopXL {
-    font-size: 1.3rem;
-    width: 15%;
+    &:hover {
+      background: $cyan_hover;
+    }
   }
 }

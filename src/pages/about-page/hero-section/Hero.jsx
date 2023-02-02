@@ -13,29 +13,24 @@ const Hero = () => {
       <picture>
         <source
           srcSet={`${whitecupWebpLg} 1024w, ${whitecupJpgLg} 1024w`}
-          type="image/webp"
-          media="(min-width: 1024px)"
+          type='image/webp'
+          media='(min-width: 1024px)'
         />
         <source
           srcSet={`${whitecupWebpMd} 768w, ${whitecupJpgMd}, 768w`}
-          type="image/webp"
-          media="(min-width: 768px)"
+          type='image/webp'
+          media='(min-width: 768px)'
         />
-        <source srcSet={whitecupWebpSm} type="image/webp" />
-        <img
-          src={whitecupJpgSm}
-          alt="White cupcake"
-          className={styles.heroAbout}
-        />
+        <source srcSet={whitecupWebpSm} type='image/webp' />
+        <img src={whitecupJpgSm} alt='White cupcake' className={styles.heroAbout} />
       </picture>
 
       <div className={styles.aboutHeroTextBox}>
         <span className={styles.aboutUsTitle}>about us</span>
         <p className={styles.aboutUsDescription}>
-          Coffeeroasters began it's journey of exotic discovery in 1998,
-          highlighting stories of coffee from around the world. We have since
-          been dedicated to bring the perfect cup - from bean to brew - in every
-          shipment.
+          Zestful Coffee began it's journey of exotic discovery in 1998, highlighting stories of
+          coffee from around the world. We have since been dedicated to bring the perfect cup - from
+          bean to brew - in every shipment.
         </p>
       </div>
     </section>

@@ -2,8 +2,9 @@
 @import '../../../sass/abstract/media-queries';
 
 .aboutCommitmentSection {
-  width: 100%;
+  width: 88%;
   margin: 9rem auto 0 auto;
+  max-width: 1200px;
 
   @include tabletMd {
     display: grid;
@@ -28,7 +29,8 @@
 .commitmentTitle {
   text-align: center;
   font-family: $title_font, serif;
-  color: $dark_grey_blue;
+  color: $pale_orange;
+
   font-size: 1.7rem;
   margin: 5rem 0 1.5rem 0;
 
@@ -53,7 +55,7 @@
 
 .commitmentDescription {
   font-family: $description_font, sans-serif;
-  color: $grey;
+  color: white;
   line-height: 1.7rem;
   text-align: center;
 

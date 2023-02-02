@@ -5,6 +5,7 @@
   margin: 0 auto;
   width: 100%;
   background-color: $dark_grey_blue;
+  padding: 2rem 0;
 }
 
 .footerNav {
@@ -25,7 +26,7 @@
 }
 
 .footerNavLink {
-  color: $grey;
+  color: white;
   text-transform: uppercase;
   padding: 1rem 0;
   text-decoration: none;
@@ -63,11 +64,15 @@
   display: flex;
   justify-content: space-between;
   margin: auto;
-  padding: 2.1rem 0;
+  padding: 2.1rem 0 0;
 
   @include tabletMd {
     justify-content: space-evenly;
     width: 28%;
+  }
+
+  @include laptop {
+    padding-bottom: 2rem;
   }
 }
 
@@ -82,9 +87,14 @@
 }
 
 .logoLinksBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   @include laptop {
+    flex-direction: row;
     width: 55%;
-    display: flex;
     margin: auto;
     justify-content: space-between;
   }
@@ -98,4 +108,23 @@
   @include desktopXL {
     width: 1.7rem;
   }
+}
+
+.logoText {
+  font-size: 1.2rem;
+  font-family: $title_font;
+  color: white;
+
+  @include laptopLg {
+    font-size: 1.7rem;
+  }
+
+  @include desktop {
+    font-size: 2.3rem;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
 }
