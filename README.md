@@ -2,6 +2,12 @@
 
 Zestful Coffee provides a variety of top tier roasted coffee beans that can delivered to your home or work place when you sign up for subscription plan.
 
+## Live Demo
+
+Try the live demo at https://zestfulcoffee.jamessandoval.dev/
+
+![zestfulcoffee](/public/og-image.png)
+
 ## Technologies Used
 
 - React.js
@@ -11,11 +17,6 @@ Zestful Coffee provides a variety of top tier roasted coffee beans that can deli
 - CSS3
 - HTML5
 - AWS EC2
-
-
-## Live Demo
-
-Try the live demo at https://zestfulcoffee.jamessandoval.dev/
 
 ## Features
 
@@ -31,10 +32,6 @@ Try the live demo at https://zestfulcoffee.jamessandoval.dev/
 - User login
 - User Authentication
 - Upgrade to a full stack application by implementing Node.js and PostgreSQL
-
-## Preview
-
-![zestfulcoffee](/src/assets/images/demo.gif)
 
 ## Getting Started
 
